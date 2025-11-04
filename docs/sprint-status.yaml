@@ -68,7 +68,7 @@ development_status:
   3-3-implement-entity-resolution-and-contact-deduplication: done
   3-4-build-daily-insights-aggregation: done
   3-5-add-analysis-quality-validation-and-monitoring: done
-  epic-3-retrospective: optional
+  epic-3-retrospective: completed
 
   # Epic 4: Semantic Search & RAG (5 stories)
   epic-4: backlog
@@ -81,7 +81,7 @@ development_status:
 
   # Epic 5: API & Access Layer (6 stories)
   epic-5: backlog
-  5-1-implement-aws-cognito-authentication: backlog
+  5-1-implement-aws-cognito-authentication: done
   5-2-build-analytics-api-endpoints: backlog
   5-3-implement-api-rate-limiting-and-throttling: backlog
   5-4-add-comprehensive-api-requestresponse-logging: backlog
