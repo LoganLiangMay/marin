@@ -44,12 +44,12 @@ development_status:
   1-1-initialize-terraform-project-structure: done
   1-2-create-vpc-and-networking-infrastructure: done
   1-3-configure-s3-buckets-with-lifecycle-policies: done
-  1-4-set-up-mongodb-atlas-cluster: review
-  1-5-deploy-elasticache-redis-cluster: review
-  1-6-create-iam-roles-and-policies: review
-  1-7-set-up-github-actions-cicd-pipeline: review
+  1-4-set-up-mongodb-atlas-cluster: done
+  1-5-deploy-elasticache-redis-cluster: done
+  1-6-create-iam-roles-and-policies: review  # Blocked: requires manual file restoration
+  1-7-set-up-github-actions-cicd-pipeline: done
   1-8-create-development-and-staging-environments: done
-  epic-1-retrospective: optional
+  epic-1-retrospective: completed
 
   # Epic 2: Audio Upload & Transcription Pipeline (6 stories)
   epic-2: backlog
@@ -64,8 +64,8 @@ development_status:
   # Epic 3: AI-Powered Analysis & Insights (5 stories)
   epic-3: backlog
   3-1-design-consolidated-gpt4o-analysis-prompt-and-schema: done
-  3-2-implement-ai-analysis-celery-worker: backlog
-  3-3-implement-entity-resolution-and-contact-deduplication: backlog
+  3-2-implement-ai-analysis-celery-worker: done
+  3-3-implement-entity-resolution-and-contact-deduplication: done
   3-4-build-daily-insights-aggregation: backlog
   3-5-add-analysis-quality-validation-and-monitoring: backlog
   epic-3-retrospective: optional
