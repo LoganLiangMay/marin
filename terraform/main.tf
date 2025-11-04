@@ -40,7 +40,10 @@ provider "mongodbatlas" {
 module "networking" {
   source = "./modules/networking"
 
-  # Variables will be passed in subsequent stories
+  project_name = var.project_name
+  environment  = var.environment
+
+  # Additional variables will be passed in subsequent stories
 }
 
 # Storage Module
@@ -48,7 +51,24 @@ module "networking" {
 module "storage" {
   source = "./modules/storage"
 
-  # Variables will be passed in subsequent stories
+  project_name = var.project_name
+  environment  = var.environment
+
+  # Optional: Override default bucket names if needed
+  # recordings_bucket_name  = "custom-recordings-bucket-name"
+  # transcripts_bucket_name = "custom-transcripts-bucket-name"
+
+  # Optional: Override default lifecycle policies
+  # recordings_glacier_transition_days = 365
+  # recordings_expiration_days         = 1095
+  # transcripts_expiration_days        = 1095
+
+  # Optional: Override CORS configuration
+  # cors_allowed_origins = ["https://dashboard.example.com"]
+
+  # Optional: Enable CloudTrail for audit logging
+  # enable_cloudtrail           = true
+  # cloudtrail_log_bucket_name  = "cloudtrail-logs-bucket"
 }
 
 # Database Module
