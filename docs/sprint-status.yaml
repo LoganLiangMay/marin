@@ -56,8 +56,8 @@ development_status:
   2-1-create-fastapi-application-structure: done
   2-2-implement-audio-upload-endpoint-with-s3: done
   2-3-set-up-sqs-queues-for-async-processing: done
-  2-4-create-celery-worker-infrastructure: backlog
-  2-5-implement-openai-whisper-transcription-worker: backlog
+  2-4-create-celery-worker-infrastructure: done
+  2-5-implement-openai-whisper-transcription-worker: done
   2-6-build-call-status-tracking-and-retrieval-api: backlog
   epic-2-retrospective: optional
 

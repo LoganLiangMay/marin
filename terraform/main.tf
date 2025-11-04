@@ -126,6 +126,20 @@ module "cache" {
   # alarm_evictions_threshold    = 100
 }
 
+# ECR Module
+# Creates Elastic Container Registry repositories for Docker images (Story 1.7)
+module "ecr" {
+  source = "./modules/ecr"
+
+  project_name = var.project_name
+  environment  = var.environment
+
+  # Optional: Override default settings
+  # image_tag_mutability    = "IMMUTABLE"  # Set to IMMUTABLE for production
+  # scan_on_push            = true         # Enable vulnerability scanning (default)
+  # lifecycle_policy_days   = 7            # Keep untagged images for 7 days
+}
+
 # ECS Module
 # Creates ECS clusters, task definitions, and services
 module "ecs" {
