@@ -30,4 +30,10 @@ variable "mongodb_atlas_private_key" {
   sensitive   = true
 }
 
+variable "atlas_org_id" {
+  description = "MongoDB Atlas organization ID"
+  type        = string
+  sensitive   = true
+}
+
 # Additional variables will be added as modules are populated in subsequent stories

@@ -13,6 +13,10 @@ terraform {
       source  = "mongodb/mongodbatlas"
       version = "~> 1.0"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.0"
+    }
   }
 }
 
@@ -72,11 +76,28 @@ module "storage" {
 }
 
 # Database Module
-# Creates MongoDB Atlas cluster configuration
+# Creates MongoDB Atlas cluster with PrivateLink and Secrets Manager integration
 module "database" {
   source = "./modules/database"
 
-  # Variables will be passed in subsequent stories
+  project_name = var.project_name
+  environment  = var.environment
+
+  # MongoDB Atlas Configuration
+  atlas_org_id = var.atlas_org_id
+
+  # VPC Integration (from networking module)
+  vpc_id             = module.networking.vpc_id
+  private_subnet_ids = module.networking.private_subnet_ids
+  vpc_cidr           = module.networking.vpc_cidr
+
+  # Optional: Override defaults if needed
+  # cluster_tier              = "M10"  # Upgrade to M10 for production
+  # mongodb_version           = "7.0"
+  # database_name             = "audio_pipeline"
+  # enable_continuous_backup  = true
+  # backup_retention_days     = 7
+  # enable_privatelink        = true
 }
 
 # ECS Module

@@ -44,7 +44,7 @@ development_status:
   1-1-initialize-terraform-project-structure: done
   1-2-create-vpc-and-networking-infrastructure: done
   1-3-configure-s3-buckets-with-lifecycle-policies: review
-  1-4-set-up-mongodb-atlas-cluster: in-progress
+  1-4-set-up-mongodb-atlas-cluster: review
   1-5-deploy-elasticache-redis-cluster: backlog
   1-6-create-iam-roles-and-policies: backlog
   1-7-set-up-github-actions-cicd-pipeline: backlog
