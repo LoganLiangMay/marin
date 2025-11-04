@@ -1,0 +1,111 @@
+# Sprint Status - marin Project
+# This file tracks the status of all epics and stories through the development lifecycle
+
+# generated: 2025-11-04
+# project: marin
+# project_key: marin
+# tracking_system: file-system
+# story_location: {project-root}/docs/stories
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic exists in epic file but not contexted
+#   - contexted: Epic tech context created (required before drafting stories)
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - drafted: Story file created in stories folder
+#   - ready-for-dev: Draft approved and story context created
+#   - in-progress: Developer actively working on implementation
+#   - review: Under SM review (via code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - completed: Retrospective has been done
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epics should be 'contexted' before stories can be 'drafted'
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically drafts next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', SM reviews, then Dev moves to 'done'
+
+generated: 2025-11-04
+project: marin
+project_key: marin
+tracking_system: file-system
+story_location: "{project-root}/docs/stories"
+
+development_status:
+  # Epic 1: Foundation & Infrastructure (8 stories)
+  epic-1: backlog
+  1-1-initialize-terraform-project-structure: review
+  1-2-create-vpc-and-networking-infrastructure: backlog
+  1-3-configure-s3-buckets-with-lifecycle-policies: backlog
+  1-4-set-up-mongodb-atlas-cluster: backlog
+  1-5-deploy-elasticache-redis-cluster: backlog
+  1-6-create-iam-roles-and-policies: backlog
+  1-7-set-up-github-actions-cicd-pipeline: backlog
+  1-8-create-development-and-staging-environments: backlog
+  epic-1-retrospective: optional
+
+  # Epic 2: Audio Upload & Transcription Pipeline (6 stories)
+  epic-2: backlog
+  2-1-create-fastapi-application-structure: backlog
+  2-2-implement-audio-upload-endpoint-with-s3: backlog
+  2-3-set-up-sqs-queues-for-async-processing: backlog
+  2-4-create-celery-worker-infrastructure: backlog
+  2-5-implement-openai-whisper-transcription-worker: backlog
+  2-6-build-call-status-tracking-and-retrieval-api: backlog
+  epic-2-retrospective: optional
+
+  # Epic 3: AI-Powered Analysis & Insights (5 stories)
+  epic-3: backlog
+  3-1-design-consolidated-gpt4o-analysis-prompt-and-schema: backlog
+  3-2-implement-ai-analysis-celery-worker: backlog
+  3-3-implement-entity-resolution-and-contact-deduplication: backlog
+  3-4-build-daily-insights-aggregation: backlog
+  3-5-add-analysis-quality-validation-and-monitoring: backlog
+  epic-3-retrospective: optional
+
+  # Epic 4: Semantic Search & RAG (5 stories)
+  epic-4: backlog
+  4-1-set-up-aws-opensearch-serverless-collection: backlog
+  4-2-implement-text-chunking-strategy: backlog
+  4-3-implement-bedrock-titan-embedding-generation-worker: backlog
+  4-4-build-semantic-search-api-endpoint: backlog
+  4-5-implement-rag-enhanced-answer-generation: backlog
+  epic-4-retrospective: optional
+
+  # Epic 5: API & Access Layer (6 stories)
+  epic-5: backlog
+  5-1-implement-aws-cognito-authentication: backlog
+  5-2-build-analytics-api-endpoints: backlog
+  5-3-implement-api-rate-limiting-and-throttling: backlog
+  5-4-add-comprehensive-api-requestresponse-logging: backlog
+  5-5-generate-openapi-documentation-and-api-client: backlog
+  5-6-implement-health-checks-and-metrics-endpoints: backlog
+  epic-5-retrospective: optional
+
+  # Epic 6: Internal Dashboard (7 stories)
+  epic-6: backlog
+  6-1-nextjs-project-setup-with-authentication: backlog
+  6-2-call-library-view-with-pagination-and-filters: backlog
+  6-3-call-detail-view-with-audio-playback-and-transcript: backlog
+  6-4-semantic-search-interface: backlog
+  6-5-analytics-dashboard-with-visualizations: backlog
+  6-6-real-time-processing-status-updates: backlog
+  6-7-responsive-design-and-mobile-optimization: backlog
+  epic-6-retrospective: optional
+
+  # Epic 7: Production Readiness & Operations (6 stories)
+  epic-7: backlog
+  7-1-production-environment-setup-iac-hardening: backlog
+  7-2-comprehensive-monitoring-alerting: backlog
+  7-3-centralized-logging-distributed-tracing: backlog
+  7-4-deployment-automation-rollback-disaster-recovery: backlog
+  7-5-performance-testing-optimization: backlog
+  7-6-security-hardening-compliance-operational-documentation: backlog
+  epic-7-retrospective: optional

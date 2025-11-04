@@ -1,0 +1,17 @@
+# Terraform Variables Example
+# Copy this file to terraform.tfvars and fill in your values
+# IMPORTANT: Never commit terraform.tfvars to version control
+
+# Environment Configuration
+environment = "dev" # Options: dev, staging, production
+
+# AWS Configuration
+aws_region   = "us-east-1"
+project_name = "audio-pipeline"
+
+# MongoDB Atlas Configuration
+# Obtain these from MongoDB Atlas Organization Settings > API Keys
+mongodb_atlas_public_key  = "your-mongodb-atlas-public-key"
+mongodb_atlas_private_key = "your-mongodb-atlas-private-key"
+
+# Additional module-specific variables will be added as modules are populated

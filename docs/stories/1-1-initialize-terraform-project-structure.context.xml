@@ -1,0 +1,156 @@
+<story-context id="bmad/bmm/workflows/4-implementation/story-context/template" v="1.0">
+  <metadata>
+    <epicId>1</epicId>
+    <storyId>1</storyId>
+    <title>Initialize Terraform Project Structure</title>
+    <status>drafted</status>
+    <generatedAt>2025-11-04</generatedAt>
+    <generator>BMAD Story Context Workflow</generator>
+    <sourceStoryPath>docs/stories/1-1-initialize-terraform-project-structure.md</sourceStoryPath>
+  </metadata>
+
+  <story>
+    <asA>DevOps engineer</asA>
+    <iWant>a properly structured Terraform project with modules</iWant>
+    <soThat>infrastructure is organized, reusable, and follows best practices</soThat>
+    <tasks>
+      <task id="1" ac="1">
+        <description>Create Terraform project directory structure</description>
+        <subtasks>
+          <subtask>Create `terraform/` directory at project root</subtask>
+          <subtask>Create `terraform/modules/` directory</subtask>
+          <subtask>Create module subdirectories: networking, storage, database, ecs, monitoring, iam, queue</subtask>
+          <subtask>Create placeholder `main.tf`, `variables.tf`, `outputs.tf` in each module directory</subtask>
+        </subtasks>
+      </task>
+      <task id="2" ac="3">
+        <description>Configure remote state backend</description>
+        <subtasks>
+          <subtask>Create `terraform/backend.tf` with S3 backend configuration</subtask>
+          <subtask>Configure S3 bucket name for state storage (e.g., `{company}-terraform-state`)</subtask>
+          <subtask>Configure DynamoDB table for state locking (e.g., `terraform-state-lock`)</subtask>
+          <subtask>Set region to us-east-1</subtask>
+          <subtask>Add encryption configuration for state files</subtask>
+        </subtasks>
+      </task>
+      <task id="3" ac="2">
+        <description>Create root Terraform configuration</description>
+        <subtasks>
+          <subtask>Create `terraform/main.tf` with provider configuration (AWS, Terraform version 1.5+)</subtask>
+          <subtask>Add module declarations for all seven modules</subtask>
+          <subtask>Configure variable passing between root and modules</subtask>
+          <subtask>Create `terraform/variables.tf` with required variables</subtask>
+          <subtask>Create `terraform/outputs.tf` to expose module outputs</subtask>
+        </subtasks>
+      </task>
+      <task id="4" ac="4,6">
+        <description>Create variable template and documentation</description>
+        <subtasks>
+          <subtask>Create `terraform/terraform.tfvars.example` with all required variables</subtask>
+          <subtask>Document variable descriptions and example values</subtask>
+          <subtask>Create `terraform/README.md` with module structure overview, prerequisites, usage instructions, and variable configuration guide</subtask>
+        </subtasks>
+      </task>
+      <task id="5" ac="5">
+        <description>Configure Git ignore rules</description>
+        <subtasks>
+          <subtask>Create/update `terraform/.gitignore`</subtask>
+          <subtask>Add exclusions: `*.tfvars` (except .example), `.terraform/`, `*.tfstate`, `*.tfstate.backup`, `.terraform.lock.hcl`</subtask>
+        </subtasks>
+      </task>
+      <task id="6" ac="7">
+        <description>Validate Terraform configuration</description>
+        <subtasks>
+          <subtask>Run `terraform init` and verify successful initialization</subtask>
+          <subtask>Run `terraform validate` and verify no errors</subtask>
+          <subtask>Run `terraform fmt -check` to verify formatting</subtask>
+          <subtask>Document any validation warnings for future resolution</subtask>
+        </subtasks>
+      </task>
+    </tasks>
+  </story>
+
+  <acceptanceCriteria>
+    <criterion id="1">Terraform project created with module structure: `terraform/modules/{networking, storage, database, ecs, monitoring, iam, queue}`</criterion>
+    <criterion id="2">Root `main.tf` imports all modules with proper variable passing</criterion>
+    <criterion id="3">Remote state configured in S3 with DynamoDB locking table</criterion>
+    <criterion id="4">`terraform.tfvars.example` provides template for all required variables</criterion>
+    <criterion id="5">`.gitignore` excludes `*.tfvars`, `.terraform/`, `*.tfstate`</criterion>
+    <criterion id="6">`README.md` documents module structure and usage</criterion>
+    <criterion id="7">Successfully runs `terraform init` and `terraform validate`</criterion>
+  </acceptanceCriteria>
+
+  <artifacts>
+    <docs>
+      <doc>
+        <path>docs/epics.md</path>
+        <title>Epic Breakdown - marin Project</title>
+        <section>Epic 1: Foundation &amp; Infrastructure - Story 1.1</section>
+        <snippet>Establishes core infrastructure that enables all development. Terraform project with module structure for networking, storage, database, ecs, monitoring, iam, and queue. Modules follow single responsibility principle with proper variable types.</snippet>
+      </doc>
+      <doc>
+        <path>docs/stories/audio-ingestion-pipeline-architecture.md</path>
+        <title>System Architecture: Audio Call Data Ingestion Pipeline</title>
+        <section>Infrastructure as Code - Technology Stack</section>
+        <snippet>Cloud-Native First principle leveraging AWS managed services. All infrastructure managed through Terraform with serverless compute (Fargate). AWS region: us-east-1. Comprehensive infrastructure across presentation, API gateway, application, data/storage, async processing, and observability layers.</snippet>
+      </doc>
+      <doc>
+        <path>docs/stories/audio-ingestion-pipeline-prd.md</path>
+        <title>Product Requirements Document - Audio Call Data Ingestion Pipeline</title>
+        <section>Technical Requirements - Infrastructure</section>
+        <snippet>Internal tool for processing sales call recordings. Target scale: 20 users, 5,000 calls/month. Infrastructure must support transcription, AI analysis, and semantic search using AWS-native services with auto-scaling and cost optimization.</snippet>
+      </doc>
+    </docs>
+    <code>
+      <!-- No existing Terraform infrastructure - this is the foundation story -->
+    </code>
+    <dependencies>
+      <terraform>
+        <binary>Terraform CLI 1.5+</binary>
+        <providers>
+          <provider name="aws" constraint="~> 5.0" purpose="AWS resource management"/>
+          <provider name="mongodbatlas" constraint="~> 1.0" purpose="MongoDB Atlas integration (for database module)"/>
+        </providers>
+      </terraform>
+      <tools>
+        <tool name="AWS CLI" purpose="AWS credentials and configuration"/>
+        <tool name="Git" purpose="Version control"/>
+      </tools>
+      <note>Application dependencies (Python, Node.js) will be added in later epics when application code is introduced</note>
+    </dependencies>
+  </artifacts>
+
+  <constraints>
+    <constraint type="terraform-version">Terraform 1.5+ required</constraint>
+    <constraint type="aws-region">All resources must be deployed in us-east-1</constraint>
+    <constraint type="module-design">Each module follows single responsibility principle for specific resource categories</constraint>
+    <constraint type="backend-state">S3 backend with DynamoDB locking must be configured before terraform init</constraint>
+    <constraint type="security">State encryption at rest is mandatory for security compliance</constraint>
+    <constraint type="variable-types">Variables must use proper types (string, number, list, map)</constraint>
+    <constraint type="testing">Validation should pass with empty/placeholder module configurations - no actual resource creation in this story</constraint>
+  </constraints>
+  <interfaces>
+    <!-- No existing interfaces - this story creates the foundation -->
+  </interfaces>
+  <tests>
+    <standards>For infrastructure-as-code stories, testing consists of Terraform validation commands rather than traditional unit/integration tests. All Terraform configurations must pass `terraform init`, `terraform validate`, and `terraform fmt -check`. Module configurations should be structurally valid even with placeholder/empty resource definitions. State backend configuration must be syntactically correct but may reference pre-requisite resources (S3 bucket, DynamoDB table) that will be created manually or in bootstrap step.</standards>
+    <locations>
+      <location>terraform/ - All .tf files must be formatted and validated</location>
+      <location>terraform/modules/*/ - Each module must have valid placeholder structure</location>
+    </locations>
+    <ideas>
+      <idea ac="1">Verify terraform/ directory structure exists with all seven module subdirectories (networking, storage, database, ecs, monitoring, iam, queue)</idea>
+      <idea ac="1">Verify each module directory contains main.tf, variables.tf, outputs.tf placeholder files</idea>
+      <idea ac="2">Verify terraform/main.tf contains provider configuration with AWS provider and Terraform version constraint >= 1.5</idea>
+      <idea ac="2">Verify all seven modules are declared in root main.tf with proper module blocks</idea>
+      <idea ac="3">Verify terraform/backend.tf exists and configures S3 backend with bucket, key, region, and dynamodb_table for locking</idea>
+      <idea ac="3">Verify backend configuration includes encryption = true</idea>
+      <idea ac="4">Verify terraform.tfvars.example exists and contains all required variable declarations with example values</idea>
+      <idea ac="5">Verify terraform/.gitignore exists and excludes *.tfvars (except .example), .terraform/, *.tfstate, *.tfstate.backup</idea>
+      <idea ac="6">Verify terraform/README.md exists and documents module structure, prerequisites, and usage instructions</idea>
+      <idea ac="7">Run `terraform init` and verify successful initialization (may require manual S3/DynamoDB setup first)</idea>
+      <idea ac="7">Run `terraform validate` and verify no validation errors</idea>
+      <idea ac="7">Run `terraform fmt -check` and verify all files are properly formatted</idea>
+    </ideas>
+  </tests>
+</story-context>
