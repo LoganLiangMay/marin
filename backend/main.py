@@ -72,7 +72,7 @@ app.include_router(
 
 app.include_router(
     calls.router,
-    prefix=settings.api_v1_prefix,
+    prefix=f"{settings.api_v1_prefix}/calls",
     tags=["Calls"]
 )
 
