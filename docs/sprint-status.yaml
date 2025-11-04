@@ -48,7 +48,7 @@ development_status:
   1-5-deploy-elasticache-redis-cluster: review
   1-6-create-iam-roles-and-policies: backlog
   1-7-set-up-github-actions-cicd-pipeline: backlog
-  1-8-create-development-and-staging-environments: backlog
+  1-8-create-development-and-staging-environments: drafted
   epic-1-retrospective: optional
 
   # Epic 2: Audio Upload & Transcription Pipeline (6 stories)
