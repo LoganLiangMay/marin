@@ -46,7 +46,7 @@ development_status:
   1-3-configure-s3-buckets-with-lifecycle-policies: done
   1-4-set-up-mongodb-atlas-cluster: done
   1-5-deploy-elasticache-redis-cluster: done
-  1-6-create-iam-roles-and-policies: review  # Blocked: requires manual file restoration
+  1-6-create-iam-roles-and-policies: done
   1-7-set-up-github-actions-cicd-pipeline: done
   1-8-create-development-and-staging-environments: done
   epic-1-retrospective: completed
@@ -62,17 +62,17 @@ development_status:
   epic-2-retrospective: optional
 
   # Epic 3: AI-Powered Analysis & Insights (5 stories)
-  epic-3: backlog
+  epic-3: done
   3-1-design-consolidated-gpt4o-analysis-prompt-and-schema: done
   3-2-implement-ai-analysis-celery-worker: done
   3-3-implement-entity-resolution-and-contact-deduplication: done
-  3-4-build-daily-insights-aggregation: backlog
-  3-5-add-analysis-quality-validation-and-monitoring: backlog
+  3-4-build-daily-insights-aggregation: done
+  3-5-add-analysis-quality-validation-and-monitoring: done
   epic-3-retrospective: optional
 
   # Epic 4: Semantic Search & RAG (5 stories)
   epic-4: backlog
-  4-1-set-up-aws-opensearch-serverless-collection: backlog
+  4-1-set-up-aws-opensearch-serverless-collection: done
   4-2-implement-text-chunking-strategy: backlog
   4-3-implement-bedrock-titan-embedding-generation-worker: backlog
   4-4-build-semantic-search-api-endpoint: backlog

@@ -156,15 +156,7 @@ module "monitoring" {
   # Variables will be passed in subsequent stories
 }
 
-# IAM Module
-# Creates IAM roles, policies, and service-to-service access
-module "iam" {
-  source = "./modules/iam"
-
-  # Variables will be passed in subsequent stories
-}
-
-# Queue Module
+# Queue Module (MUST come before IAM - IAM module depends on queue outputs)
 # Creates SQS queues for async processing with DLQ and CloudWatch alarms
 module "queue" {
   source = "./modules/queue"
@@ -172,10 +164,10 @@ module "queue" {
   project_name = var.project_name
   environment  = var.environment
 
-  # IAM Role ARNs (placeholders until Story 1.6 - IAM Roles)
-  # These will be replaced with actual role ARNs from the IAM module
-  api_role_arn    = "*" # TODO: Replace with module.iam.api_role_arn
-  worker_role_arn = "*" # TODO: Replace with module.iam.worker_role_arn
+  # IAM Role ARNs (placeholders - queue doesn't actually need these)
+  # Queue module uses "*" wildcards which is fine for queue creation
+  api_role_arn    = "*"
+  worker_role_arn = "*"
 
   # Optional: Override default queue configuration
   # visibility_timeout_seconds     = 600    # 10 minutes (default)
@@ -194,4 +186,70 @@ module "queue" {
 
   # Optional: Enable SNS topic for alarm notifications (disabled by default)
   # create_sns_topic               = false
+}
+
+# IAM Module
+# Creates IAM roles, policies, and service-to-service access
+module "iam" {
+  source = "./modules/iam"
+
+  project_name = var.project_name
+  environment  = var.environment
+
+  # S3 Bucket References (from Storage Module)
+  recordings_bucket_arn   = module.storage.recordings_bucket_arn
+  recordings_bucket_name  = module.storage.recordings_bucket_name
+  transcripts_bucket_arn  = module.storage.transcripts_bucket_arn
+  transcripts_bucket_name = module.storage.transcripts_bucket_name
+
+  # SQS Queue References (from Queue Module)
+  processing_queue_arn = module.queue.processing_queue_arn
+  processing_queue_url = module.queue.processing_queue_url
+
+  # OpenSearch Collection Reference (optional - for Epic 4)
+  # opensearch_collection_arn = module.opensearch.collection_arn
+}
+
+# Cognito Module (Story 5.1)
+# Creates Cognito User Pool for API authentication
+module "cognito" {
+  source = "./modules/cognito"
+
+  project_name = var.project_name
+  environment  = var.environment
+
+  # Optional: Enable MFA for production
+  # enable_mfa = var.environment == "prod" ? true : false
+
+  # Optional: Override callback and logout URLs
+  # callback_urls = ["https://app.example.com/callback"]
+  # logout_urls   = ["https://app.example.com"]
+
+  # Optional: Override log retention
+  # log_retention_days = 90
+}
+
+# OpenSearch Serverless Module (Epic 4)
+# Creates OpenSearch Serverless collection for vector search
+module "opensearch" {
+  source = "./modules/opensearch"
+
+  project_name = var.project_name
+  environment  = var.environment
+
+  # VPC Integration (from networking module)
+  vpc_id     = module.networking.vpc_id
+  subnet_ids = module.networking.private_subnet_ids
+
+  # IAM Role ARNs for data access policy
+  worker_task_role_arn = "*" # TODO: Replace with module.iam.worker_task_role_arn
+  api_task_role_arn    = "*" # TODO: Replace with module.iam.api_task_role_arn
+
+  # Optional: Override default index name
+  # index_name = "call-transcripts"
+
+  # Optional: Additional tags
+  # tags = {
+  #   Component = "VectorSearch"
+  # }
 }
