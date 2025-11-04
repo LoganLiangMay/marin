@@ -1,0 +1,50 @@
+# Environment-Specific Configuration Template
+# Copy this file to dev.tfvars, staging.tfvars, or prod.tfvars and customize
+
+# Project Configuration
+project_name = "marin"
+environment  = "dev"  # Options: dev, staging, prod
+aws_region   = "us-east-1"
+
+# MongoDB Atlas Configuration (Required)
+# Create API keys at: https://cloud.mongodb.com/v2#/org/{YOUR_ORG}/access/apiKeys
+# atlas_org_id              = "YOUR_ORG_ID_HERE"
+# mongodb_atlas_public_key  = "YOUR_PUBLIC_KEY_HERE"
+# mongodb_atlas_private_key = "YOUR_PRIVATE_KEY_HERE"
+
+# Recommended: Set via environment variables instead:
+# export TF_VAR_atlas_org_id="your-org-id"
+# export TF_VAR_mongodb_atlas_public_key="your-key"
+# export TF_VAR_mongodb_atlas_private_key="your-secret"
+
+# Storage Configuration (S3) - Optional overrides
+# recordings_bucket_name  = "marin-{environment}-call-recordings"
+# transcripts_bucket_name = "marin-{environment}-call-transcripts"
+
+# Cache Configuration (ElastiCache Redis) - Optional overrides
+# node_type                = "cache.t4g.micro"  # Options: micro, small, medium
+# num_cache_clusters       = 1                  # 1 = no replica, 2 = HA
+# enable_automatic_failover = false             # Requires num_cache_clusters >= 2
+# snapshot_retention_limit = 1                  # Days to keep backups
+
+# Database Configuration (MongoDB Atlas) - Optional overrides
+# cluster_tier = "M0"  # Options: M0 (free), M10, M20, M30...
+
+# ECS Configuration - Optional overrides
+# api_cpu           = 256   # CPU units (256 = 0.25 vCPU)
+# api_memory        = 512   # Memory in MB
+# worker_cpu        = 256
+# worker_memory     = 512
+# api_desired_count = 1     # Number of API containers
+# worker_desired_count = 1  # Number of worker containers
+
+# CloudWatch Logs - Optional overrides
+# log_retention_days = 7  # Days to keep logs
+
+# Tagging - Customize for your organization
+tags = {
+  Environment = "dev"
+  CostCenter  = "Engineering"
+  Owner       = "YourName"
+  Purpose     = "Development"
+}

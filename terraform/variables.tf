@@ -8,14 +8,24 @@ variable "aws_region" {
 }
 
 variable "project_name" {
-  description = "Project name for resource tagging"
+  description = "Project name for resource tagging and naming"
   type        = string
-  default     = "audio-pipeline"
+  default     = "marin"
+
+  validation {
+    condition     = length(var.project_name) > 0 && length(var.project_name) <= 32
+    error_message = "Project name must be between 1 and 32 characters"
+  }
 }
 
 variable "environment" {
-  description = "Environment name (dev, staging, production)"
+  description = "Environment name (dev, staging, prod)"
   type        = string
+
+  validation {
+    condition     = contains(["dev", "staging", "prod"], var.environment)
+    error_message = "Environment must be dev, staging, or prod"
+  }
 }
 
 variable "mongodb_atlas_public_key" {

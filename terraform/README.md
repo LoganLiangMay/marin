@@ -188,6 +188,225 @@ Ensure you've created `terraform.tfvars` from the example template and filled in
 - [MongoDB Atlas Provider Documentation](https://registry.terraform.io/providers/mongodb/mongodbatlas/latest/docs)
 - [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
 
+## Environment Management
+
+### Multi-Environment Strategy
+
+The infrastructure supports three isolated environments using Terraform workspaces and environment-specific configuration files:
+
+| Environment | Purpose | Sizing | Uptime | Cost/Month |
+|-------------|---------|--------|--------|------------|
+| **dev** | Feature development and testing | Cost-optimized | Business hours | ~$378 |
+| **staging** | Pre-production validation & QA | Production-like | 24/7 | ~$617 |
+| **prod** | Live customer-facing system | Production-optimized | 24/7 HA | ~$970 |
+
+### Environment Configuration Files
+
+Environment-specific settings are stored in `environments/` directory:
+
+```
+terraform/environments/
+├── .tfvars.example    # Template for creating new environment configs
+├── dev.tfvars         # Development environment configuration
+├── staging.tfvars     # Staging environment configuration
+└── prod.tfvars        # Production environment configuration
+```
+
+### Deploying to Different Environments
+
+#### 1. Deploy to Development
+
+```bash
+# Initialize (first time only)
+terraform init
+
+# Select or create dev workspace
+terraform workspace select dev || terraform workspace new dev
+
+# Plan with dev configuration
+terraform plan -var-file=environments/dev.tfvars
+
+# Apply changes
+terraform apply -var-file=environments/dev.tfvars
+```
+
+#### 2. Deploy to Staging
+
+```bash
+# Switch to staging workspace
+terraform workspace select staging || terraform workspace new staging
+
+# Plan with staging configuration
+terraform plan -var-file=environments/staging.tfvars
+
+# Apply changes (review carefully!)
+terraform apply -var-file=environments/staging.tfvars
+```
+
+#### 3. Deploy to Production
+
+```bash
+# Switch to prod workspace
+terraform workspace select prod || terraform workspace new prod
+
+# Plan with production configuration
+terraform plan -var-file=environments/prod.tfvars -out=prod.tfplan
+
+# Review the plan carefully!
+terraform show prod.tfplan
+
+# Apply with explicit plan file
+terraform apply prod.tfplan
+```
+
+### Workspace Management
+
+#### List all workspaces
+```bash
+terraform workspace list
+```
+
+#### Check current workspace
+```bash
+terraform workspace show
+```
+
+#### Switch workspaces
+```bash
+terraform workspace select dev
+```
+
+#### Create new workspace
+```bash
+terraform workspace new staging
+```
+
+### Environment-Specific Resource Naming
+
+All resources automatically include the environment in their names:
+
+```
+{project_name}-{environment}-{resource_type}
+
+Examples:
+- marin-dev-vpc
+- marin-staging-ecs-cluster
+- marin-prod-call-recordings
+```
+
+This ensures no naming conflicts between environments.
+
+### Environment Configuration Differences
+
+#### Development (dev)
+- **MongoDB**: M0 (free tier, 512 MB)
+- **Redis**: cache.t4g.micro (0.5 GB)
+- **ECS**: 256 CPU / 512 MB memory
+- **Instances**: Single instance (no HA)
+- **Logs**: 7 days retention
+- **Auto-stop**: Can be stopped overnight to save costs
+
+#### Staging (staging)
+- **MongoDB**: M10 (2 GB RAM, 10 GB storage)
+- **Redis**: cache.t4g.small (1.5 GB, HA enabled)
+- **ECS**: 512 CPU / 1024 MB memory
+- **Instances**: 2 instances (HA)
+- **Logs**: 14 days retention
+- **Data**: Anonymized production data
+
+#### Production (prod)
+- **MongoDB**: M20 (4 GB RAM, 20 GB storage)
+- **Redis**: cache.t4g.medium (3.1 GB, HA enabled)
+- **ECS**: 1024 CPU / 2048 MB memory
+- **Instances**: 3 instances (HA + load balancing)
+- **Logs**: 30 days retention
+- **Backups**: Continuous with 30-day retention
+- **Security**: Enhanced monitoring, WAF, deletion protection
+
+### Best Practices
+
+1. **Always specify environment file explicitly**:
+   ```bash
+   terraform apply -var-file=environments/dev.tfvars
+   ```
+
+2. **Check your workspace before applying**:
+   ```bash
+   terraform workspace show  # Should match intended environment
+   ```
+
+3. **Use different AWS accounts for production** (optional but recommended):
+   - Dev/Staging: Shared AWS account
+   - Production: Separate AWS account for isolation
+
+4. **Never modify production directly**:
+   - Always test changes in dev first
+   - Validate in staging before promoting to production
+   - Use explicit plan files for production deployments
+
+5. **Environment variable precedence**:
+   - tfvars file settings override defaults
+   - Environment variables (TF_VAR_*) override tfvars
+   - Command-line `-var` flags override everything
+
+### Secrets Management by Environment
+
+Secrets are namespaced by environment in AWS Secrets Manager:
+
+```
+dev/audio-pipeline/mongodb-uri
+dev/audio-pipeline/redis-endpoint
+staging/audio-pipeline/mongodb-uri
+staging/audio-pipeline/redis-endpoint
+prod/audio-pipeline/mongodb-uri
+prod/audio-pipeline/redis-endpoint
+```
+
+### Troubleshooting Multi-Environment Issues
+
+#### Wrong workspace selected
+```bash
+# Check current workspace
+terraform workspace show
+
+# Switch to correct workspace
+terraform workspace select dev
+```
+
+#### Resource name conflicts
+Ensure all resources use `${var.environment}` in their names. Check module code for hard-coded names.
+
+#### State file confusion
+Each workspace has its own state file. To see where state is stored:
+```bash
+terraform state list
+```
+
+#### Variables not being applied
+Make sure you're using the correct tfvars file:
+```bash
+terraform plan -var-file=environments/dev.tfvars
+```
+
+### Cost Optimization Tips
+
+**Development Environment:**
+- Stop ECS services overnight (manual process or scheduled)
+- Use MongoDB M0 free tier
+- Delete unused snapshots
+- Set short log retention (7 days)
+
+**Staging Environment:**
+- Can be stopped on weekends if not needed
+- Use smaller instance sizes than production
+- Share with multiple feature branches
+
+**Production Environment:**
+- Use Reserved Instances or Savings Plans for ECS
+- Enable MongoDB auto-scaling
+- Set up cost alerts in AWS Billing
+- Review and optimize monthly
+
 ## Support
 
 For questions or issues, refer to the project documentation or contact the development team.
