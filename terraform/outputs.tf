@@ -55,4 +55,96 @@ output "queue_sns_topic_arn" {
   value       = module.queue.sns_topic_arn
 }
 
+# OpenSearch Module Outputs (Epic 4)
+# Expose OpenSearch Serverless collection details for application configuration
+
+output "opensearch_collection_id" {
+  description = "ID of the OpenSearch Serverless collection"
+  value       = module.opensearch.collection_id
+}
+
+output "opensearch_collection_arn" {
+  description = "ARN of the OpenSearch Serverless collection"
+  value       = module.opensearch.collection_arn
+}
+
+output "opensearch_collection_endpoint" {
+  description = "Endpoint of the OpenSearch Serverless collection"
+  value       = module.opensearch.collection_endpoint
+}
+
+output "opensearch_collection_name" {
+  description = "Name of the OpenSearch Serverless collection"
+  value       = module.opensearch.collection_name
+}
+
+output "opensearch_index_name" {
+  description = "Name of the vector search index"
+  value       = module.opensearch.index_name
+}
+
+output "opensearch_index_config" {
+  description = "Vector index configuration for application initialization"
+  value       = module.opensearch.index_config
+}
+
+# Cognito Module Outputs (Story 5.1)
+# Expose Cognito User Pool details for application authentication
+
+output "cognito_user_pool_id" {
+  description = "ID of the Cognito User Pool"
+  value       = module.cognito.user_pool_id
+}
+
+output "cognito_user_pool_arn" {
+  description = "ARN of the Cognito User Pool"
+  value       = module.cognito.user_pool_arn
+}
+
+output "cognito_app_client_id" {
+  description = "App Client ID for API authentication"
+  value       = module.cognito.app_client_id
+  sensitive   = true
+}
+
+output "cognito_user_pool_domain" {
+  description = "Cognito User Pool domain"
+  value       = module.cognito.user_pool_domain
+}
+
+output "cognito_hosted_ui_url" {
+  description = "Cognito Hosted UI URL"
+  value       = module.cognito.cognito_hosted_ui_url
+}
+
+output "cognito_jwks_uri" {
+  description = "JWKS URI for JWT token verification"
+  value       = module.cognito.cognito_jwks_uri
+}
+
+output "cognito_issuer" {
+  description = "JWT issuer URL for token validation"
+  value       = module.cognito.cognito_issuer
+}
+
+output "cognito_region" {
+  description = "AWS region where Cognito is deployed"
+  value       = module.cognito.cognito_region
+}
+
+output "cognito_user_groups" {
+  description = "Cognito user group names"
+  value = {
+    admins   = module.cognito.admin_group_name
+    analysts = module.cognito.analyst_group_name
+    users    = module.cognito.user_group_name
+  }
+}
+
+output "cognito_api_env_vars" {
+  description = "Environment variables for backend API Cognito configuration"
+  value       = module.cognito.api_environment_variables
+  sensitive   = false
+}
+
 # Outputs will be populated as modules are implemented in subsequent stories
