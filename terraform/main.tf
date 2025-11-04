@@ -100,6 +100,32 @@ module "database" {
   # enable_privatelink        = true
 }
 
+# Cache Module
+# Creates ElastiCache Redis cluster for caching and Celery result backend
+module "cache" {
+  source = "./modules/cache"
+
+  project_name = var.project_name
+  environment  = var.environment
+
+  # VPC Integration (from networking module)
+  vpc_id                  = module.networking.vpc_id
+  private_subnet_ids      = module.networking.private_subnet_ids
+  redis_security_group_id = module.networking.redis_security_group_id
+
+  # Optional: Override defaults if needed
+  # node_type                    = "cache.t4g.small"  # Upgrade for production
+  # num_cache_clusters           = 2  # 1 primary + 1 replica
+  # redis_version                = "7.0"
+  # enable_automatic_failover    = true
+  # enable_at_rest_encryption    = true
+  # enable_transit_encryption    = true
+  # snapshot_retention_limit     = 7
+  # alarm_cpu_threshold          = 80
+  # alarm_memory_threshold       = 85
+  # alarm_evictions_threshold    = 100
+}
+
 # ECS Module
 # Creates ECS clusters, task definitions, and services
 module "ecs" {
@@ -125,9 +151,33 @@ module "iam" {
 }
 
 # Queue Module
-# Creates SQS queues for async processing
+# Creates SQS queues for async processing with DLQ and CloudWatch alarms
 module "queue" {
   source = "./modules/queue"
 
-  # Variables will be passed in subsequent stories
+  project_name = var.project_name
+  environment  = var.environment
+
+  # IAM Role ARNs (placeholders until Story 1.6 - IAM Roles)
+  # These will be replaced with actual role ARNs from the IAM module
+  api_role_arn    = "*" # TODO: Replace with module.iam.api_role_arn
+  worker_role_arn = "*" # TODO: Replace with module.iam.worker_role_arn
+
+  # Optional: Override default queue configuration
+  # visibility_timeout_seconds     = 600    # 10 minutes (default)
+  # message_retention_seconds      = 1209600  # 14 days (default)
+  # receive_wait_time_seconds      = 20     # Long polling enabled (default)
+  # max_receive_count              = 3      # Attempts before DLQ (default)
+
+  # Optional: Override DLQ configuration
+  # dlq_message_retention_seconds  = 1209600  # 14 days (default)
+
+  # Optional: Override CloudWatch alarm thresholds
+  # dlq_alarm_threshold            = 10     # Messages in DLQ (default)
+  # queue_depth_alarm_threshold    = 100    # Messages in main queue (default)
+  # alarm_evaluation_periods       = 2      # Evaluation periods (default)
+  # alarm_period_seconds           = 300    # 5 minutes (default)
+
+  # Optional: Enable SNS topic for alarm notifications (disabled by default)
+  # create_sns_topic               = false
 }
