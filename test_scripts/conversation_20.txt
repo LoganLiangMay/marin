@@ -1,0 +1,52 @@
+Conversation 20: Marketing Operations/Technical Marketer
+Profile:
+* Role: Marketing Operations Manager at SaaS company
+* Experience: 7 years in marketing operations
+* Manages: Not directly managing ad spend, but supports team that manages $300K monthly
+* Platforms: All platforms via integrations/APIs
+Opening: Rep: "Hey Raj, thanks for making time. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams to understand how they're running campaigns  what's working, what's painful, where automation could help. This isn't a sales call - just learning. Sound good?"
+Raj: "Yeah, though I should clarify - I don't actually run campaigns. I'm marketing ops, so I build the infrastructure and systems that the campaign teams use. Different angle, but happy to share."
+Warm-Up: Rep: "Actually, that's a really valuable perspective. Tell me about your role."
+Raj: "I'm the marketing ops manager. My job is owning our marketing tech stack, data infrastructure, and automation. So I'm managing integrations between our ad platforms, CRM, data warehouse, BI tools. I build dashboards, set up tracking, automate data flows. The campaign team focuses on creative and strategy - I make sure they have the data and tools they need."
+Rep: "What's your day like?"
+Raj: "Mix of firefighting and building. Firefighting is when something breaks - an integration stops working, data isn't flowing, a report is showing wrong numbers. Building is when I'm implementing new tools, creating new dashboards, optimizing our data pipeline. I'm also in a lot of meetings - requirements gathering with campaign team, vendor calls, IT coordination. It's very cross-functional."
+Rep: "What's going well?"
+Raj: "We've built a pretty solid data infrastructure over the last two years. We have all our marketing data flowing into Snowflake, then into Looker for dashboards. The campaign team can self-serve most of their reporting needs. We've also automated a lot of manual work - like, lead scoring is now automated, campaign tagging is automated. It's way more mature than when I started."
+Rep: "What's tough?"
+Raj: "Constant vendor changes. Ad platforms change their APIs, tools deprecate features, integrations break. I spend probably 30% of my time just maintaining existing systems. Also, the campaign team always wants more - new data sources, new metrics, new dashboards. There's always a backlog. And honestly, data quality is an ongoing battle - garbage in, garbage out."
+Deep Dive: Rep: "Tell me about data quality issues. What does that look like?"
+Raj: "Lots of things. UTM parameters not being used consistently - someone on the team launches a campaign without proper tagging, and now we can't attribute it. Conversion tracking breaks - maybe a pixel stops firing, or server-side tracking has an issue. Duplicate records in our CRM from form fills. Discrepancies between platform reporting and our internal reporting. I'm constantly doing data hygiene - cleaning up, standardizing, fixing gaps."
+Rep: "How do you handle integration maintenance?"
+Raj: "We use tools like Fivetran and Segment for some data pipelines, which helps. But we also have custom scripts and API calls I wrote that require maintenance. When a platform changes their API, I need to update our code. Sometimes platforms sunset features entirely and we need to rebuild. It's like technical debt - always there, always growing."
+Rep: "What's your tech stack look like?"
+Raj: "Pretty extensive. Ad platforms obviously - Meta, Google, LinkedIn. Salesforce is our CRM. Marketo for marketing automation. Segment for data collection. Snowflake for data warehouse. Looker for BI. We use Zapier for some lightweight automations. And a bunch of smaller tools - call tracking, form tracking, attribution. Probably 20+ marketing tools total."
+Rep: "How do you evaluate new tools?"
+Raj: "Pretty rigorous process. I need to see: does it solve a real problem, does it integrate with our stack, is the pricing reasonable, is their support good. I do proof-of-concepts before committing. And I involve stakeholders - if the campaign team won't actually use it, it doesn't matter how good it is technically. I've seen too many tools get bought and then abandoned."
+Rep: "What's the biggest challenge in your role?"
+Raj: "Balancing innovation with stability. The campaign team wants new capabilities - 'can we track this?' 'can we integrate with that tool?' But every new thing I add increases complexity and maintenance burden. So I'm constantly making trade-offs - will this new thing provide enough value to justify the ongoing maintenance cost? Sometimes the answer is no, and the team is frustrated."
+Rep: "Where do you spend the most time?"
+Raj: "Dashboard and report building. Everyone wants custom dashboards - sales wants a dashboard, marketing wants a dashboard, executives want a dashboard, each with different cuts of the data. I'm probably spending 15-20 hours per week just building and maintaining dashboards. The other big time sink is troubleshooting - figuring out why data looks wrong, why an integration failed, why numbers don't match."
+Strategy + Measurement: Rep: "How do you approach attribution from a technical standpoint?"
+Raj: "We've built a multi-touch attribution model in Snowflake. We capture all touchpoints - ad clicks, website visits, email opens, form fills - and store them with timestamps. Then we apply attribution logic - linear, time-decay, position-based, whatever the marketing team wants. The hard part is connecting touchpoints across devices and sessions. We use probabilistic matching, but it's not perfect."
+Rep: "What's your take on incrementality measurement?"
+Raj: "We've done a few geo holdout tests, but it's operationally complex. Requires coordinating with the campaign team, making sure they don't accidentally advertise in holdout regions, running statistical analysis. It's high-effort. I'd love to have a more systematic incrementality testing framework, but we don't have the resources to build it."
+Vision & Desired Future: Rep: "If you could snap your fingers and fix one thing, what would it be?"
+Raj: "Standardized data schemas and APIs across platforms. Every platform calls things something different, stores data differently, has different API quirks. So much of my time goes to translating between platforms. If there were industry standards, my life would be so much easier."
+Rep: "What else?"
+Raj: "Better data quality enforcement. I want tools that prevent bad data from getting into our systems in the first place. Like, if someone tries to launch a campaign without proper UTM tags, the system blocks them. Or if a pixel isn't firing, I get alerted immediately instead of finding out weeks later."
+Rep: "Where do you see marketing ops heading?"
+Raj: "More automation, more AI. A lot of what I do manually - data cleaning, dashboard building, troubleshooting - could probably be automated or AI-assisted. The role should shift from manual execution to strategic thinking about data architecture and measurement."
+Wrap-Up: Rep: "This has been really insightful. Sounds like integration maintenance overhead, data quality enforcement, and dashboard/report building are your main pain points?"
+Raj: "Exactly. Marketing ops is all about enabling the team, but we spend too much time on infrastructure maintenance."
+Rep: "Would you be interested in seeing what we're building?"
+Raj: "For sure. I evaluate marketing tools all the time, so always happy to look at new solutions."
+Post-Call Notes:
+* Company: SaaS company, marketing ops role, supports $300K monthly spend
+* Top 3 Pains: (1) Integration maintenance - APIs changing, 30% of time on upkeep, (2) Data quality enforcement - UTM tagging inconsistencies, tracking breaks, (3) Custom dashboard/report building - 15-20 hrs/week
+* Tools Used: Meta, Google, LinkedIn, Salesforce, Marketo, Segment, Snowflake, Looker, Fivetran, Zapier
+* Workarounds: Custom scripts for API maintenance, manual data hygiene, probabilistic cross-device matching
+* Key Quotes: "Constant vendor changes", "Garbage in, garbage out", "Balancing innovation with stability"
+* Emotional Energy: Technical and systematic, frustrated by lack of standardization
+* Follow-up: Yes, actively evaluates tools
+
+

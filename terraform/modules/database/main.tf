@@ -76,7 +76,6 @@ resource "mongodbatlas_cluster" "main" {
   # Backup Configuration
   backup_enabled               = var.enable_continuous_backup
   pit_enabled                  = var.enable_continuous_backup # Point-in-time recovery
-  cloud_backup                 = var.enable_continuous_backup
   auto_scaling_disk_gb_enabled = true
 
   # Advanced Configuration

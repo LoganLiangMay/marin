@@ -1,0 +1,45 @@
+Conversation 18: Creator/Influencer Managing Own Ads
+Profile:
+* Role: Content creator/influencer running own digital products
+* Experience: 3 years building audience, 1 year running paid ads
+* Manages: $10K-20K monthly ad spend (varies)
+* Platforms: Meta, YouTube
+Opening: Rep: "Hey Tyler, thanks for making time. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams to understand how they're running campaigns  what's working, what's painful, where automation could help. This isn't a sales call - just learning from your experience. Sound good?"
+Tyler: "Yeah, sure. Though I should say up front - I'm not like a 'real' marketer. I'm a creator who happens to run some ads. So my setup is probably pretty basic compared to what you usually hear."
+Warm-Up: Rep: "That's actually perfect - we want different perspectives. Tell me what you're working on."
+Tyler: "I'm a YouTube creator in the productivity/business space - about 300K subscribers. I make money from YouTube ads, brand deals, and I sell a course and a Notion template. The ads I run are basically to promote my digital products - drive people to a landing page where they can buy. I'm self-taught on all the marketing stuff, just figuring it out as I go."
+Rep: "What's your typical process?"
+Tyler: "Pretty simple. I create content for YouTube organically. Some videos perform really well. So I'll take that video, cut it down into 30-60 second clips, and run them as ads on YouTube and Facebook. The ad drives people to a landing page where they can buy my course or template. If the ad is profitable - meaning I make more than I spend - I keep running it. If not, I turn it off."
+Rep: "What's working?"
+Tyler: "YouTube ads perform best because my audience is already on YouTube. They see my ad, recognize my face from my channel, click through. Facebook is more hit or miss. The content that works best is actual value - like, teaching something useful in the ad, then offering the course as a way to learn more. Hard pitches don't work as well."
+Rep: "What's tough?"
+Tyler: "Honestly, I don't really know what I'm doing. I'm learning from YouTube tutorials and random blog posts. I don't know if my campaigns are set up optimally. I don't understand all the targeting options. And I'm doing everything myself - creative production, ad setup, landing pages, customer support. It's a lot."
+Deep Dive: Rep: "Let's dig into the challenges. What feels most confusing?"
+Tyler: "The ad platforms themselves are overwhelming. There are so many buttons and settings and options. I don't know what half of them do. Like, what's the difference between a conversion campaign and a traffic campaign? When should I use lookalike audiences versus broad targeting? I'm just guessing based on what I've seen other creators do."
+Rep: "How are you measuring success?"
+Tyler: "Super basic - I look at how much I spent on ads and how much revenue came in from the landing page. If revenue is higher than ad spend, I'm happy. I use Google Analytics to see how many people visited the landing page from ads. That's about as sophisticated as I get. I know there are probably better ways to track this, but I don't know what they are."
+Rep: "What's your creative process?"
+Tyler: "I'm repurposing my YouTube content. I'll take a 15-minute video, pull out the best 60-second clip, add captions, export it, upload to Meta and YouTube ad managers. Then I write ad copy - usually something like 'Want to learn more? Check out my course.' It's not fancy, but it works. The hard part is the editing - reformatting videos for different aspect ratios, adding captions, exporting. That takes a few hours per video."
+Rep: "How much time do you spend on ads each week?"
+Tyler: "Maybe 5-10 hours total? A few hours creating ad creatives, an hour or two setting up campaigns, and then checking performance daily. It's not my main thing - I'm primarily focused on content creation. Ads are like a side hustle to monetize my audience better."
+Rep: "What would make this easier for you?"
+Tyler: "Templates or presets for campaign setup. Like, 'here's how to set up a course sales campaign' with recommended settings. I'm always worried I'm leaving money on the table because I don't know the optimal way to configure things. Also, better explanations of what everything means - the platforms are so complex and I don't have time to become an expert."
+Rep: "What about creative production?"
+Tyler: "If there was a tool that could take my full YouTube video, automatically find the best clips, reformat them for different platforms, add captions, and export - that would save me hours. Right now I'm doing all that manually in Premiere Pro. It's tedious."
+Vision & Desired Future: Rep: "If you could design the perfect system for someone like you - a creator running ads but not a marketer - what would it look like?"
+Tyler: "Simple and automated. I upload my content, it automatically creates ad variations, sets up campaigns with proven templates, and then just runs. I check a dashboard that shows me: are you making money or losing money? If making money, it automatically scales. If losing money, it pauses. I don't want to think about it - I want to focus on making content."
+Rep: "Anything else?"
+Tyler: "Education and support would be huge. Most marketing tools assume you already know what you're doing. For creators like me, we need onboarding, tutorials, support. I'm willing to learn, but I need help."
+Wrap-Up: Rep: "This is super valuable perspective. Sounds like simplified campaign setup, automated creative production, and more educational resources are what you need?"
+Tyler: "Yeah, exactly. Tools built for people who aren't professional marketers."
+Rep: "Would you want to see what we're building, especially if it's designed for creators?"
+Tyler: "Definitely. If it makes ads easier for non-experts, I'm all ears."
+Post-Call Notes:
+* Company: Individual creator, 300K YouTube subscribers, digital products
+* Top 3 Pains: (1) Campaign setup complexity - doesn't understand all options/settings, (2) Manual creative production - reformatting videos for ads, (3) Need for education and simple explanations
+* Tools Used: YouTube Ads, Meta Ads, Google Analytics, Premiere Pro
+* Workarounds: Learning from YouTube tutorials, basic ROI tracking (spend vs revenue)
+* Key Quotes: "I don't really know what I'm doing", "I'm just guessing", "Tools assume you already know what you're doing"
+* Emotional Energy: Overwhelmed but willing to learn, focused on content creation over marketing expertise
+* Follow-up: Yes, especially if creator-focused
+

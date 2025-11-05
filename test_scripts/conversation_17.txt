@@ -1,0 +1,51 @@
+Conversation 17: Fashion/Apparel Brand Marketer
+Profile:
+* Role: Performance Marketing Manager at direct-to-consumer fashion brand
+* Experience: 5 years in e-commerce/fashion
+* Manages: $500K monthly ad spend
+* Platforms: Meta, TikTok, Pinterest, Google Shopping
+Opening: Rep: "Hey Sophie, thanks so much for taking the time today. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Sophie: "Yeah, totally! I'm always down to talk about what's working in DTC right now. It's a wild space."
+Warm-Up: Rep: "Love the energy. Tell me about your brand and what you do."
+Sophie: "We're a sustainable fashion brand - think elevated basics, ethically made. We're DTC-only, about $20M in annual revenue and growing fast. I run all our paid acquisition - Meta, TikTok, Pinterest, Google Shopping. My goal is profitable customer acquisition while building brand. Fashion is super competitive, so creative and brand positioning matter a lot."
+Rep: "What does your day look like?"
+Sophie: "Mornings I'm checking performance - revenue, ROAS, new customer acquisition. Then I'm in creative reviews - we produce a ton of content and I'm constantly evaluating what's performing. I work closely with our creative team on concepts. Afternoons are campaign optimization and planning. We also do a lot of influencer collabs, so I'm coordinating with our partnerships team. It's a mix of analytical and creative work, which I love."
+Rep: "What's working really well?"
+Sophie: "TikTok is fire for us right now - super cheap reach and our content resonates with Gen Z. UGC-style content performs way better than polished brand content. Pinterest is surprisingly strong for consideration - people planning their wardrobes. And our email marketing is killing it - we've really dialed in our flows."
+Rep: "What's hard?"
+Sophie: "Creative fatigue is brutal in fashion - an ad that works for two weeks is doing great. Most die in days. So we're constantly producing new content, which is expensive and time-consuming. Also, seasonality and trends - fashion moves fast and we need to react. And honestly, iOS changes hit us hard. Our ROAS dropped like 30% overnight when iOS 14 rolled out."
+Deep Dive: Rep: "Let's talk about creative fatigue. How are you managing that?"
+Sophie: "We're basically running a content studio at this point. We shoot new content every two weeks - models, flat lays, UGC-style videos, lifestyle shots. Then we're constantly testing. I probably launch 50+ new ad creatives per week across all platforms. It sounds like a lot, but in fashion, if your creative gets stale, performance craters. We've built a whole system around rapid creative production."
+Rep: "What does that system look like?"
+Sophie: "We have an in-house creative team - photographer, videographer, designer. We work with a roster of content creators for UGC. We shoot in batches - like, 'here's our spring collection, let's create 200 assets we can mix and match.' Then I'm deploying those across campaigns, testing, and scaling winners. But even with all that infrastructure, we can barely keep up with creative demand."
+Rep: "How do you decide what to test?"
+Sophie: "Mix of data and intuition. Data tells us what's worked historically - certain angles, certain formats. But fashion is trend-driven, so we're also following what's resonating culturally. Like, Y2K aesthetics are huge right now, so we're testing content with that vibe. It's part art, part science."
+Rep: "What's your approach to measurement?"
+Sophie: "We look at a few things. ROAS is obvious - did we make more than we spent? But we also track new customer acquisition cost separately because repeat customers are way more valuable. We use Northbeam for attribution - helps us understand cross-channel impact. And we track brand metrics like search volume and social following because DTC is about building brand, not just performance."
+Rep: "How has iOS 14 changed things for you?"
+Sophie: "Huge impact. Our Facebook and Instagram performance got way less predictable. Retargeting audiences shrunk. Conversion tracking is messier. We've compensated by going broader with targeting - less granular audiences, more creative-driven. We've also shifted more budget to TikTok and Pinterest because they're less reliant on pixel tracking. And we're investing in first-party data - growing our email list, SMS list, improving our on-site experience."
+Rep: "What platforms and tools are you using?"
+Sophie: "Meta, TikTok, Pinterest, Google Shopping for paid. Klaviyo for email. Northbeam for attribution. Shopify is our store. We use Canva and Adobe for creative. And honestly, a bunch of influencer management tools for our partnerships. Fashion involves a lot of different tools."
+Rep: "Where do you feel you're wasting time?"
+Sophie: "Manually uploading creatives to different platforms. Each platform has different specs - Meta wants 4:5, TikTok wants 9:16, Pinterest wants 2:3. So we're exporting different versions and manually uploading them. That's hours per week. Also, campaign creation is tedious - I'm building similar campaigns in three different ad managers. There should be a way to build once and deploy everywhere."
+Strategy + Measurement: Rep: "How do you think about balancing brand building versus direct response?"
+Sophie: "It's a constant tension. Our CFO wants profitable ROAS every month. But I know we need to invest in brand because that's how DTC brands become sustainable long-term. So we allocate maybe 70% to performance campaigns with clear ROI, and 30% to brand awareness - influencer collabs, upper-funnel content, brand campaigns. The 30% is harder to measure but essential."
+Rep: "What would better measurement look like?"
+Sophie: "I'd love to see the long-term impact of brand campaigns. Like, if we run a TikTok brand awareness campaign, how does that affect our organic search volume over the next three months? Or how does influencer content impact our brand consideration? Those connections are currently invisible, but I know they're there."
+Vision & Desired Future: Rep: "If you could wave a magic wand, what changes?"
+Sophie: "Creative workflow automation for sure. I should be able to upload one video, have AI automatically reformat it for every platform's specs, write variations of copy, and deploy everywhere. That would save us 10-15 hours per week. Also, predictive creative testing - AI that tells me which creative concepts will work before I spend money testing them."
+Rep: "What else would help?"
+Sophie: "Better attribution that accounts for brand impact. I want to see: this campaign drove sales, but it also increased brand search by X% and grew our Instagram following by Y%. That holistic view would help me make better budget decisions."
+Wrap-Up: Rep: "This is super helpful. Creative production at scale, cross-platform deployment efficiency, and holistic brand measurement are your key challenges?"
+Sophie: "Exactly. Fashion is fast and creative-driven, so anything that helps us move faster is gold."
+Rep: "Would you want to see what we're working on?"
+Sophie: "100%. I'm always looking for tools that give us an edge."
+Post-Call Notes:
+* Company: DTC sustainable fashion brand, $20M revenue
+* Top 3 Pains: (1) Creative fatigue - need 50+ new assets per week, (2) Manual creative reformatting and platform deployment, (3) Holistic measurement including brand impact
+* Tools Used: Meta, TikTok, Pinterest, Google Shopping, Klaviyo, Northbeam, Shopify, Canva/Adobe
+* Workarounds: In-house creative studio, batch content production, UGC creator roster
+* Key Quotes: "Creative gets stale in days", "If creative gets stale, performance craters", "Part art, part science"
+* Emotional Energy: Energetic, creative-focused, excited about optimization
+* Follow-up: Yes, very interested
+

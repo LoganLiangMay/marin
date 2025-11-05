@@ -71,34 +71,34 @@ development_status:
   epic-3-retrospective: completed
 
   # Epic 4: Semantic Search & RAG (5 stories)
-  epic-4: backlog
+  epic-4: done
   4-1-set-up-aws-opensearch-serverless-collection: done
-  4-2-implement-text-chunking-strategy: backlog
-  4-3-implement-bedrock-titan-embedding-generation-worker: backlog
-  4-4-build-semantic-search-api-endpoint: backlog
-  4-5-implement-rag-enhanced-answer-generation: backlog
+  4-2-implement-text-chunking-strategy: done
+  4-3-implement-bedrock-titan-embedding-generation-worker: done
+  4-4-build-semantic-search-api-endpoint: done
+  4-5-implement-rag-enhanced-answer-generation: done
   epic-4-retrospective: optional
 
   # Epic 5: API & Access Layer (6 stories)
-  epic-5: backlog
+  epic-5: done
   5-1-implement-aws-cognito-authentication: done
-  5-2-build-analytics-api-endpoints: backlog
-  5-3-implement-api-rate-limiting-and-throttling: backlog
-  5-4-add-comprehensive-api-requestresponse-logging: backlog
-  5-5-generate-openapi-documentation-and-api-client: backlog
-  5-6-implement-health-checks-and-metrics-endpoints: backlog
-  epic-5-retrospective: optional
+  5-2-build-analytics-api-endpoints: done
+  5-3-implement-api-rate-limiting-and-throttling: done
+  5-4-add-comprehensive-api-requestresponse-logging: done
+  5-5-generate-openapi-documentation-and-api-client: done
+  5-6-implement-health-checks-and-metrics-endpoints: done
+  epic-5-retrospective: completed
 
   # Epic 6: Internal Dashboard (7 stories)
-  epic-6: backlog
-  6-1-nextjs-project-setup-with-authentication: backlog
-  6-2-call-library-view-with-pagination-and-filters: backlog
-  6-3-call-detail-view-with-audio-playback-and-transcript: backlog
-  6-4-semantic-search-interface: backlog
-  6-5-analytics-dashboard-with-visualizations: backlog
-  6-6-real-time-processing-status-updates: backlog
-  6-7-responsive-design-and-mobile-optimization: backlog
-  epic-6-retrospective: optional
+  epic-6: done
+  6-1-nextjs-project-setup-with-authentication: done
+  6-2-call-library-view-with-pagination-and-filters: done
+  6-3-call-detail-view-with-audio-playback-and-transcript: done
+  6-4-semantic-search-interface: done
+  6-5-analytics-dashboard-with-visualizations: done
+  6-6-real-time-processing-status-updates: done
+  6-7-responsive-design-and-mobile-optimization: done
+  epic-6-retrospective: completed
 
   # Epic 7: Production Readiness & Operations (6 stories)
   epic-7: backlog

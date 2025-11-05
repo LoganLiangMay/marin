@@ -1,0 +1,45 @@
+Conversation 15: Restaurant Group Marketing Manager
+Profile:
+* Role: Marketing Manager at restaurant group (12 locations)
+* Experience: 3 years in restaurant marketing
+* Manages: $35K monthly ad spend
+* Platforms: Meta, Instagram, Google Local, Yelp
+Opening: Rep: "Hey Carlos, thanks for chatting today. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Carlos: "Yeah, cool. Restaurant marketing is kind of its own world, but let's do it."
+Warm-Up: Rep: "For sure. Give me the overview - what do you do?"
+Carlos: "I run marketing for a restaurant group - 12 locations across three cities, mix of casual dining concepts. My job is driving foot traffic and online orders. It's very local and very immediate - people decide where to eat the same day, sometimes the same hour. So we're constantly promoting specials, events, new menu items. It's fast-paced."
+Rep: "What's your day like?"
+Carlos: "Check reservations and online order volume from yesterday. Update our daily specials across all platforms. Respond to reviews and DMs - people reach out constantly with questions. Coordinate with our GMs on local promotions. Plan content - food photography, Instagram stories, whatever. And honestly, put out fires. Negative review? I'm responding. Kitchen delayed a catering order? I'm managing the customer."
+Rep: "What's working?"
+Carlos: "Instagram is huge for us - food is visual and people love sharing. Meta ads drive online orders. Google Maps is critical - when people search 'Italian restaurant near me,' we need to show up. And honestly, word of mouth and reviews are our best marketing. If our food and service are good, the marketing part is easier."
+Rep: "What sucks?"
+Carlos: "Restaurant margins are thin, so every marketing dollar matters. Competition is intense - there are five restaurants within a block of each location. And we're very dependent on external factors - weather, holidays, local events. If it rains, people don't go out. If there's a big game, everyone goes to sports bars. We can't control that."
+Deep Dive: Rep: "How are you managing marketing for 12 locations?"
+Carlos: "It's a mix of corporate-level campaigns and location-specific stuff. Corporate handles brand advertising and major promotions. But each location has its own vibe and customer base. The downtown location attracts happy hour crowds. The suburban location is all families. So I'm customizing messaging for each. It's a lot to juggle."
+Rep: "What does location-specific marketing look like?"
+Carlos: "Let's say one location is slow on Tuesday nights. I'll run Facebook ads targeting people within two miles, offering a Tuesday special. Or if a location is near a concert venue, I'll push ads on event nights. It's hyper-local and reactive. I'm basically running 12 mini-campaigns constantly."
+Rep: "How do you measure success?"
+Carlos: "Pretty simple - did people show up? Did online orders increase? We have POS data showing daily sales by location. We also track reservation volume and online order counts. If sales are up and I ran ads, I assume the ads helped. It's not sophisticated attribution, but restaurants are straightforward."
+Rep: "What platforms are you using?"
+Carlos: "Meta for ads and organic content. Instagram is huge. Google Business Profile for local search and reviews. Yelp because people use it even though we hate paying them. We also use Toast for POS and online ordering, so that's where our sales data lives."
+Rep: "What takes the most time?"
+Carlos: "Content creation and review management. We need fresh food photos constantly - people don't want to see the same burger pic over and over. So I'm coordinating with our chef, shooting photos, editing, posting. And reviews are non-stop - Google, Yelp, Facebook, TripAdvisor. If someone leaves a bad review and we don't respond, it looks terrible. So I'm monitoring all day."
+Rep: "How much of your time is reactive versus strategic?"
+Carlos: "Honestly, like 70% reactive. I wish I had time for big strategic planning, but I'm too busy dealing with daily operations. Someone posts a complaint on Instagram? I'm responding. A location needs help with a slow night? I'm launching ads. I'm always in firefighting mode."
+Vision & Desired Future: Rep: "What would make your life easier?"
+Carlos: "Automated content scheduling and review management. If I could batch create content once per week and have it automatically post at optimal times, that would save hours. And if there was a tool that aggregated all our reviews from different platforms and helped me respond faster, that would be clutch."
+Rep: "Anything else?"
+Carlos: "Better visibility into what's actually driving sales. Right now, if sales go up, I don't really know if it was my ads, organic traffic, a positive review, or just the weather. If I could see clearer cause and effect, I'd make better decisions."
+Wrap-Up: Rep: "Got it. Sounds like multi-location management, content and review automation, and better attribution are your main challenges?"
+Carlos: "Yeah. And honestly, just anything that frees up time. I'm stretched really thin."
+Rep: "Would you want to see what we're building?"
+Carlos: "Sure, if it's not crazy expensive. Restaurants don't have huge marketing budgets."
+Post-Call Notes:
+* Company: Restaurant group, 12 locations, casual dining
+* Top 3 Pains: (1) Multi-location campaign management (12 locations, each different), (2) Content creation and review management time sink, (3) Simple attribution - what's driving foot traffic and orders
+* Tools Used: Meta, Instagram, Google Business Profile, Yelp, Toast (POS)
+* Workarounds: Manual content creation and posting, reactive approach to marketing
+* Key Quotes: "70% reactive", "Can't control weather or local events", "Restaurants are straightforward"
+* Emotional Energy: Constantly firefighting, needs time-saving solutions
+* Follow-up: Yes, if affordable
+

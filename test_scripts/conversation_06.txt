@@ -1,0 +1,65 @@
+Conversation 6: Local Services Marketing Manager
+Profile:
+* Role: Marketing Manager at regional HVAC/plumbing company
+* Experience: 3 years in local services marketing
+* Manages: $40K monthly ad spend
+* Platforms: Google Local Services Ads, Google Search, Facebook, Yelp
+Opening: Rep: "Hey Tom, thanks so much for taking the time today. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Tom: "Yeah, sounds good. Local services is probably different from tech companies or e-commerce, but happy to share what we're dealing with."
+Warm-Up: Rep: "Awesome. To start, could you tell me a bit about your business and what your role looks like day-to-day?"
+Tom: "We're an HVAC and plumbing company serving a 50-mile radius. We've got about 30 technicians in the field. I handle all our marketing - paid ads, website, review management, email, some social media. Day-to-day is pretty reactive. I'm checking leads that came in overnight, making sure they got routed to our call center, monitoring our ad spend, responding to reviews, and dealing with whatever fires pop up."
+Rep: "What does a typical week look like for you right now?"
+Tom: "Mondays I review weekend lead volume and quality with our operations manager - did the leads show up for appointments? Tuesdays and Wednesdays I'm optimizing campaigns, adjusting bids based on what services are booking out. Thursdays I'm working on content - updating website, responding to reviews, posting on social. Fridays are reporting to our GM on lead volume and costs. I'm also on call for urgent stuff - like if a big storm hits, we need to ramp up emergency service ads immediately."
+Rep: "What's been going really well lately?"
+Tom: "Google Local Services Ads are crushing it - we're getting way more calls from those than regular search ads. Our reviews are strong, which helps conversion. We've also gotten good at seasonal adjustment - we know exactly when to push AC repair vs heating repair vs plumbing based on time of year and weather. And our call tracking is finally working properly so we can see which ads actually drive calls that turn into jobs."
+Rep: "And on the flip side, what's been harder than expected?"
+Tom: "Lead quality is always a challenge - we get lots of tire kickers or people who aren't in our service area. Google's location targeting isn't as precise as we need. Budgeting is tough because demand is so seasonal - we might spend $20K one month and $60K the next depending on weather. And coordinating between marketing and operations is hard - sometimes we get a ton of leads but our technicians are already booked solid."
+Deep Dive: Rep: "What are your biggest challenges when running ad campaigns right now?"
+Tom: "Three main things. One, lead quality over quantity - we need leads that actually turn into booked jobs, not just phone calls. Two, managing budget during demand spikes - when there's a heat wave, we want to spend more, but we have daily budget caps and it's hard to react fast. Three, proving ROI to our owner. He sees the ad spend but doesn't always see the connection to booked revenue because there's a lag between lead and job completion."
+Rep: "Walk me through a recent campaign that was tough or frustrating  what happened?"
+Tom: "A few weeks ago we had a major cold snap. We knew emergency heating calls would spike, so I wanted to increase our budget and push heating repair ads hard. But by the time I adjusted budgets in Google, updated ad copy, and got everything running, it was already day two of the cold snap. Then our phone lines got overwhelmed - too many leads, not enough call capacity. Some calls went to voicemail, and we lost jobs. The whole thing showed how hard it is to react quickly when you're wearing multiple hats."
+Rep: "When something goes wrong, where does it usually happen?"
+Tom: "Usually it's operational bottlenecks, not ad performance. Like, ads drive leads, but then our call center drops the ball on follow-up. Or we book the job but the technician is late and the customer cancels. Or we advertise services we can't actually handle because our team is booked. The marketing piece is actually pretty straightforward - it's the coordination with operations that's hard."
+Rep: "How do you onboard new campaigns? What's that process like from start to finish?"
+Tom: "Pretty simple for us. I usually start with keyword research for a new service. Then I build out Google Search campaigns with location targeting and call extensions. Maybe create some Facebook ads with before/after photos. Set up call tracking numbers. Test it for a week or two with a small budget. If it's working, I scale it up. The whole process takes maybe 3-5 days. We're not sophisticated - I'm basically copying what worked for similar services and tweaking."
+Rep: "Do you mostly configure and let things run, or do you have to stay hands-on daily?"
+Tom: "Hands-on, especially during busy season. I'm checking lead volume every morning. If we're getting too many leads and operations can't handle it, I need to reduce bids or pause campaigns. If it's slow, I need to increase bids. I'm also constantly adjusting based on weather - if rain is coming, I push our emergency plumbing ads because we know we'll get basement flooding calls."
+Rep: "What tools or platforms are you using today?"
+Tom: "Google Ads - both regular search and Local Services Ads. Facebook for brand awareness and retargeting. Yelp ads sometimes, but they're expensive. CallRail for call tracking. Our CRM is ServiceTitan, which tracks jobs from lead to invoice. And I use Google Sheets for reporting because our owner likes simple spreadsheets."
+Rep: "What do you love about them? What's frustrating?"
+Tom: "Love: Google Local Services Ads are pay-per-lead, which is great - we only pay when someone actually calls. ServiceTitan is solid for tracking jobs. Frustrating: Nothing talks to each other. I'm manually pulling lead data from CallRail, matching it to job data from ServiceTitan, and reconciling with ad spend from Google. Takes me hours each week. Also, Google's location targeting is imprecise - we serve a 50-mile radius, but we get calls from people 70 miles away who aren't worth driving to."
+Rep: "Where do you feel automation breaks down or still needs humans?"
+Tom: "Definitely lead qualification and routing. An AI can't tell if a call is a legit emergency or someone price shopping five companies. Our call center has to qualify leads, and that's very human. Also, seasonal and weather-based adjustments require local knowledge - I know that when temps drop below freezing, we should push furnace repair. Google's automated bidding doesn't understand that nuance."
+Rep: "How much time do you spend each week on manual reporting or admin work?"
+Tom: "Probably 8-10 hours per week. Pulling lead reports, creating performance summaries for our GM, reconciling ad spend with revenue, chasing down operations to see which leads turned into jobs. It's tedious but necessary because our owner wants to see ROI on every dollar we spend on ads."
+Rep: "If you could get those hours back, what would you do with that time?"
+Tom: "I'd focus more on reviews and reputation management - that's huge in local services but I never have enough time for it. I'd also do more content marketing - blog posts, videos, SEO work. We get good organic traffic, but I could grow it if I had more time. And honestly, I'd test some new channels - maybe YouTube ads or local sponsorships."
+Strategy + Measurement: Rep: "How are you thinking about attribution for local services?"
+Tom: "Pretty simple - we track phone calls with CallRail, so we can see which ads drove which calls. Then we match those calls to jobs in ServiceTitan. It's not perfect - sometimes people call multiple times, or they call from a different number than they book with. But it gives us a decent sense of which campaigns are driving actual revenue, not just leads."
+Rep: "How do you handle seasonal fluctuations in demand?"
+Tom: "It's tricky. Summer is huge for AC, winter is huge for heating, spring has plumbing from freezing pipes. We adjust budget monthly based on historical trends. But weather is unpredictable - an early heat wave means we need to ramp AC ads fast. I wish there was a way to automatically scale budget based on external signals like weather forecasts, but right now it's manual."
+Rep: "What's your biggest headache when it comes to proving ROI?"
+Tom: "The lag between lead and revenue. Someone calls today, we book a job, the technician goes out in three days, then we invoice, then they pay in 30 days. So the revenue from today's ad spend doesn't show up for a month or more. My boss sees the ad spend immediately but doesn't see the payoff for weeks. I'm constantly defending the budget."
+Rep: "How important are reviews and reputation for your business?"
+Tom: "Absolutely critical. We're at 4.8 stars on Google with 500+ reviews, and that's our biggest competitive advantage. People search for HVAC near them, they see us at the top with great reviews, they call. If our reviews dropped, our conversion rate would tank. I spend as much time managing our reputation as I do on ads."
+Vision & Desired Future: Rep: "If you could wave a magic wand and fix one thing about your workflow, what would it be?"
+Tom: "Closed-loop reporting that's automated. I want to see in one dashboard: here's how much we spent on ads, here's how many leads we got, here's how many turned into booked jobs, here's how much revenue those jobs generated. Right now, I'm manually stitching that together from three different systems. If that was automatic, I'd save hours every week."
+Rep: "What would an ideal system look like for you?"
+Tom: "Something that connects Google Ads to our call tracking to our CRM. Ideally with weather integration - like, system sees a heat wave is coming, automatically suggests increasing AC repair bids. And smart lead routing - high-value leads go to our best techs, tire kickers get filtered out. Basically, something that handles the manual coordination work I'm doing between marketing and operations."
+Rep: "What's one thing that would make you look like a hero internally?"
+Tom: "If I could reduce our cost per booked job while increasing volume. Our owner cares about one thing - how much do we spend to get a completed job? If I could show that we're getting more efficient - better lead quality, better conversion rates, lower waste - that's a win. Or if I could predict slow periods and help operations schedule better."
+Rep: "Where do you think the biggest opportunities for automation could be?"
+Tom: "Dynamic budget allocation based on demand signals - weather, seasonality, current booking levels. And automated lead qualification - use AI to screen calls, identify high-intent leads, route them properly. We waste a lot of time on bad leads. If that could be automated, it would be huge."
+Wrap-Up: Rep: "That's super helpful  thank you for walking me through all that. Just to recap, I heard that closed-loop ROI reporting, managing seasonal demand fluctuations, and lead quality filtering are your top three pains. Did I get that right?"
+Tom: "Yeah, exactly. And honestly, just connecting all our systems so data flows automatically instead of me being the middleman."
+Rep: "We're compiling insights from these conversations to shape some early prototypes. Would you be open to us showing you what we're working on when it's ready?"
+Tom: "Sure thing. Anything that saves me time or improves our ROI is worth looking at."
+Post-Call Notes:
+* Company: Regional HVAC/plumbing, 30 technicians, $40K monthly spend
+* Top 3 Pains: (1) Closed-loop reporting from ad spend to completed jobs, (2) Reactive budget management for seasonal/weather fluctuations, (3) Lead quality and qualification
+* Tools Used: Google Ads, Local Services Ads, Facebook, CallRail, ServiceTitan, Google Sheets
+* Workarounds: Manual data stitching between call tracking and CRM, manual budget adjustments for weather
+* Key Quotes: "Marketing is straightforward, coordination with operations is hard", "Revenue lag makes defending budget difficult", "Can't tell if a call is legit or price shopping"
+* Emotional Energy: Pragmatic, focused on operational efficiency and ROI
+* Follow-up: Yes
+

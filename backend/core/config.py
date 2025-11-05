@@ -44,6 +44,17 @@ class Settings(BaseSettings):
 
     # External APIs
     openai_api_key: str = Field(..., description="OpenAI API key for Whisper and GPT-4")
+    anthropic_api_key: Optional[str] = Field(default=None, description="Anthropic API key for Claude models (optional)")
+
+    # OpenSearch Configuration (Epic 4)
+    opensearch_endpoint: Optional[str] = Field(default=None, description="OpenSearch Serverless collection endpoint")
+    opensearch_index_name: str = Field(default="call-transcripts", description="OpenSearch vector index name")
+
+    # Text Chunking Configuration (Story 4.2)
+    chunk_size: int = Field(default=512, description="Target chunk size in characters (optimized for Titan embeddings)")
+    overlap_percentage: int = Field(default=10, description="Percentage of overlap between consecutive chunks")
+    min_chunk_size: int = Field(default=100, description="Minimum chunk size in characters")
+    max_chunk_size: int = Field(default=1000, description="Maximum chunk size in characters")
 
     # API Configuration
     api_v1_prefix: str = "/api/v1"
@@ -56,6 +67,17 @@ class Settings(BaseSettings):
     host: str = "0.0.0.0"
     port: int = 8000
     workers: int = 4
+
+    # Authentication Configuration (Story 5.1)
+    cognito_region: str = Field(default="us-east-1", description="AWS Cognito region")
+    cognito_user_pool_id: Optional[str] = Field(default=None, description="Cognito User Pool ID")
+    cognito_app_client_id: Optional[str] = Field(default=None, description="Cognito App Client ID")
+    cognito_jwks_uri: Optional[str] = Field(default=None, description="Cognito JWKS URI for JWT verification")
+    cognito_issuer: Optional[str] = Field(default=None, description="Cognito JWT issuer URL")
+
+    # Authentication flags
+    enable_auth: bool = Field(default=False, description="Enable authentication (set to True in production)")
+    auth_algorithms: list[str] = Field(default=["RS256"], description="JWT algorithms to support")
 
     @property
     def redis_url(self) -> str:

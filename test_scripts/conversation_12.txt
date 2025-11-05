@@ -1,0 +1,49 @@
+Conversation 12: Real Estate Marketing Director
+Profile:
+* Role: Marketing Director at luxury real estate brokerage
+* Experience: 9 years in real estate marketing
+* Manages: $80K monthly ad spend
+* Platforms: Facebook, Instagram, Google, Zillow, Realtor.com
+Opening: Rep: "Hey Amanda, thanks so much for taking the time today. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Amanda: "Perfect timing actually - we're in the middle of planning our Q2 strategy. Happy to chat."
+Warm-Up: Rep: "Great. Tell me about your business and role."
+Amanda: "I'm the marketing director for a luxury real estate brokerage. We have about 40 agents selling high-end properties - think $2M+ homes. My job is generating buyer and seller leads for our agents. We do a mix of brand building and direct response. I also manage our agents' personal marketing - they each have their own budgets and want support."
+Rep: "What's a typical week look like?"
+Amanda: "Mondays I meet with our top agents to review their lead flow and plan their campaigns. Rest of the week I'm managing our brokerage-level campaigns, coordinating property listing ads, working with our photographer and content creator, and trying to balance brand awareness with lead generation. Real estate is relationship-driven, so we're not just running ads - we're building reputation."
+Rep: "What's working well?"
+Amanda: "Instagram has been phenomenal for luxury properties - the visual storytelling really works. Facebook lead ads are driving decent volume. And our agents' personal brands are strong - when they post content, it performs well. We've also gotten good at virtual tours and video content, which accelerated during COVID and stuck around."
+Rep: "What's challenging?"
+Amanda: "Real estate sales cycles are long and unpredictable. Someone might inquire today and buy two years from now. So measuring ROI on ad spend is really hard. We're also balancing brokerage marketing with individual agent marketing - everyone wants budget and attention. And honestly, the market itself - interest rates, inventory, buyer sentiment - impacts our results more than our marketing does."
+Deep Dive: Rep: "Tell me more about the long sales cycle challenge."
+Amanda: "A lead comes in - maybe they fill out a form on a Facebook ad. An agent follows up. Maybe they tour some properties. But they might not be ready to buy for 6 months or 12 months. Then when they do buy, how do I know if it was because of that original Facebook ad, or because of the agent's follow-up, or because of our brand reputation? Attribution is basically impossible."
+Rep: "How do you approach measurement then?"
+Amanda: "We track lead volume and lead quality - our agents tell us which leads are actually qualified. We look at close rates over time. And we do brand awareness surveys in our market to see if we're top of mind. But connecting specific ad dollars to closed deals? That's more art than science. We mostly trust that if we're generating quality leads and our agents are closing them, we're doing our job."
+Rep: "You mentioned balancing brokerage and agent marketing. How does that work?"
+Amanda: "The brokerage has a marketing budget for brand and recruitment. Individual agents have their own budgets for their personal marketing. My team supports both. But agents all want different things - some want Facebook ads for buyer leads, some want Instagram for brand building, some want Google ads for their name. Coordinating all of that while maintaining brand consistency is like herding cats."
+Rep: "What tools are you using?"
+Amanda: "Meta for Facebook and Instagram. Google Ads for search. We advertise on Zillow and Realtor.com. We use a CRM called Follow Up Boss for lead management. Canva for quick graphics. And honestly, a lot of our agents use their own tools - some have their own websites, their own email systems. It's fragmented."
+Rep: "Where do you spend the most time?"
+Amanda: "Probably on agent management and content creation. Every property listing needs photos, video, copy, ads across multiple platforms. That's time-intensive. I also spend a lot of time in lead quality conversations - an agent will say 'these Facebook leads suck,' and I have to dig into why and adjust targeting or messaging. It's very hands-on."
+Strategy + Measurement: Rep: "How do you think about brand awareness versus direct response?"
+Amanda: "It's a constant tension. Our CEO wants leads - he wants to see form fills and phone calls. But I know that in luxury real estate, brand matters. People buy from agents they trust and brands they recognize. So I push for budget on brand campaigns even though the ROI is harder to prove. It's a political battle sometimes."
+Rep: "What would better measurement look like for you?"
+Amanda: "Honestly, I'd love to be able to track someone's full journey - they see our brand ads, later they search for us, they visit our website, they inquire on a property, an agent follows up, they eventually close. If I could see that whole path and say 'this lead that closed started with a brand campaign six months ago,' that would be powerful. Right now, those connections are invisible."
+Vision & Desired Future: Rep: "If you could change one thing about your workflow, what would it be?"
+Amanda: "Easier agent coordination. Right now I'm manually managing 40 different agents' needs and campaigns. If there was a system where agents could self-serve some of their marketing needs - like easily launch their own listing ads within brand guidelines - that would free up so much of my time. I'd rather focus on strategy than tactical execution for every single agent."
+Rep: "What else would help?"
+Amanda: "Better lead quality scoring. If we could predict which leads are actually going to transact based on their behavior and profile, we could prioritize those. Right now every lead gets treated the same, and agents waste time on tire kickers."
+Wrap-Up: Rep: "This has been great. Sounds like long sales cycle attribution, agent coordination, and lead quality assessment are your key challenges?"
+Amanda: "Exactly. Real estate marketing is complex because of the human relationships involved."
+Rep: "Would you want to see what we're working on when it's ready?"
+Amanda: "Sure, I'm always interested in better tools."
+Post-Call Notes:
+* Company: Luxury real estate brokerage, 40 agents, $2M+ properties
+* Top 3 Pains: (1) Attribution across long, unpredictable sales cycles, (2) Coordinating marketing for 40 agents with individual needs, (3) Lead quality prediction and scoring
+* Tools Used: Facebook, Instagram, Google, Zillow, Realtor.com, Follow Up Boss, Canva
+* Workarounds: Qualitative feedback from agents on lead quality, brand awareness surveys
+* Key Quotes: "Attribution is basically impossible", "Herding cats", "More art than science"
+* Emotional Energy: Strategic but politically challenged, needs better agent management tools
+* Follow-up: Yes
+
+I'll continue with the remaining 8 conversations. Let me create more variety in tone, length, and perspectives.
+

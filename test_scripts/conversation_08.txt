@@ -1,0 +1,43 @@
+Conversation 8: Affiliate Marketing Manager
+Profile:
+* Role: Affiliate Marketing Manager at comparison/review site
+* Experience: 6 years in affiliate/performance marketing
+* Manages: $200K monthly ad spend
+* Platforms: Google, Microsoft Ads, native ad networks (Taboola, Outbrain)
+Opening: Rep: "Hey Chris, thanks so much for taking the time today. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Chris: "Sure, yeah. Affiliate is a pretty unique space though - very different economics than brand advertising."
+Warm-Up: Rep: "Totally understand. Tell me about your business and what you do day-to-day?"
+Chris: "We run a comparison site in the finance vertical - credit cards, loans, that kind of thing. We make money when people click through to our partners and convert. My job is driving traffic profitably. Day-to-day is pretty data-heavy - checking conversion rates by partner, optimizing bids, testing landing pages, and a lot of spreadsheet work calculating margins because our payouts vary by partner and traffic source."
+Rep: "What's working well right now?"
+Chris: "Google Search is still our bread and butter - people searching for 'best credit cards' have high intent and convert well. We've also figured out Microsoft Ads - way cheaper than Google and surprisingly good volume. Native ads are hit or miss, but when we find the right content angle, the ROI can be great."
+Rep: "What's been tough?"
+Chris: "Google keeps cracking down on affiliate sites with quality updates. We've had to invest way more in content to stay ranked. CPCs keep going up. And partner payouts are getting squeezed - what used to pay $200 per lead now pays $150. So our margins are getting thinner from both sides."
+Deep Dive: Rep: "What's your biggest challenge right now?"
+Chris: "Profitability math. I need to know in real-time if traffic is profitable. We're buying clicks at $3-5 each, driving them to landing pages, hoping they convert. But conversions happen on the partner's site, and we don't get that data for days or weeks. By the time I know a campaign isn't profitable, I've already spent thousands. It's like driving blind."
+Rep: "How do you handle that lag in conversion data?"
+Chris: "We've built predictive models based on click-through rate, time on site, and other engagement metrics. If CTR to partner is above X%, we assume it'll be profitable. But it's imperfect. We also do a ton of post-hoc analysis - pulling conversion data from partners, matching it back to our traffic sources, calculating actual ROI. It's super manual."
+Rep: "What does that post-hoc analysis process look like?"
+Chris: "Every Monday I download conversion reports from like 15 different partners - they all have different formats, different IDs, different attribution windows. Then I'm matching those conversions back to our Google Analytics data to figure out which traffic source drove them. Then calculating margin after partner payout and ad cost. The whole process takes most of the day. And by the time I have the answer, it's a week old."
+Rep: "That sounds painful. What have you tried to improve it?"
+Chris: "We've looked at attribution platforms, but they're expensive and built for e-commerce, not affiliate. We've tried building our own dashboards, but our engineering team is small and it's not their priority. So we're stuck with manual work. It is what it is."
+Rep: "How do you think about testing and optimization?"
+Chris: "Everything is ROI-driven. We test new traffic sources with small budgets, measure conversion rates and payouts, calculate break-even, then scale if it's profitable. Same with landing page tests - we'll run A/B tests to improve conversion rate to partner. The challenge is we need a lot of volume to reach statistical significance, and that can be expensive."
+Strategy + Measurement: Rep: "How do you approach attribution in affiliate?"
+Chris: "Pretty simple - last-click mostly. If someone clicks our ad, lands on our site, clicks through to a partner, and converts, we get credit. But partners sometimes have their own attribution that conflicts with ours. Like, we'll show we drove 100 conversions, but they'll only credit us for 80. Then we're arguing with partner managers about attribution methodology."
+Rep: "What metrics do you optimize for?"
+Chris: "Revenue per click is the ultimate metric. I can spend on any traffic source as long as I'm making more than I spend. So I'm constantly calculating: cost per click, click-through rate to partner, conversion rate on partner site, average payout per conversion. That gives me revenue per click. If it's positive, I scale. If it's negative, I cut."
+Vision & Desired Future: Rep: "What would transform how you work?"
+Chris: "Real-time profitability data. I want to see which campaigns are actually making money right now, not a week later. That would let me scale winners and kill losers way faster. Also, automated partner integrations so I'm not manually downloading CSVs from 15 different dashboards every week."
+Wrap-Up: Rep: "Super helpful. Sounds like real-time profitability visibility and automated partner data integration are your main pain points?"
+Chris: "Yeah, exactly. Anything that gets me to ROI data faster is valuable."
+Rep: "Would you be open to seeing what we build?"
+Chris: "Sure, hit me up when you have something."
+Post-Call Notes:
+* Company: Finance comparison site, affiliate model
+* Top 3 Pains: (1) Delayed conversion data from partners, (2) Manual weekly ROI analysis from multiple sources, (3) Margin pressure from rising CPCs and lower payouts
+* Tools Used: Google Ads, Microsoft Ads, Taboola, Outbrain, Google Analytics, Excel
+* Workarounds: Predictive models based on engagement, Monday CSV downloads from 15 partners
+* Key Quotes: "Driving blind", "It is what it is", "Revenue per click is the ultimate metric"
+* Emotional Energy: Resigned to manual work, pragmatic about limitations
+* Follow-up: Yes
+

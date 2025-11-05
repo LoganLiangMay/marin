@@ -1,0 +1,49 @@
+Conversation 16: Fintech Growth Marketer
+Profile:
+* Role: Growth Marketing Lead at fintech startup (payments/crypto)
+* Experience: 6 years in growth marketing
+* Manages: $250K monthly ad spend
+* Platforms: Meta, Google, Twitter, Reddit, TikTok
+Opening: Rep: "Hey Alex - wait, I'm Alex too. Okay, this is going to be confusing. Anyway, thanks for making time. I'm with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams to understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. Not a sales pitch - just learning. Sound good?"
+Alex M: "Haha, yeah we're going to have to use last names or something. I'm Alex Martinez, you can call me Martinez. Let's do it - I've got 30 min."
+Warm-Up: Rep: "Perfect. Give me the rundown on what you're working on."
+Martinez: "I'm head of growth at a fintech company - we do cross-border payments with crypto rails. Think Venmo but international and blockchain-based. My job is user acquisition, activation, and retention. We're Series B, growing fast, but the market is competitive and ad platforms don't love crypto companies. So it's challenging."
+Rep: "What's your typical approach?"
+Martinez: "We run a mix of paid and organic. Paid is mostly Meta, Google, some Twitter and Reddit. Organic is content marketing, referrals, partnerships. We're heavy on testing - probably running 20-30 active experiments at any given time. Growth marketing is all about finding scalable channels and iterating fast."
+Rep: "What's crushing it right now?"
+Martinez: "Referrals are our best channel - existing users inviting friends has the lowest CAC and best retention. Meta is profitable but getting expensive. Reddit is interesting - the crypto community is active there and we can get pretty targeted. And content marketing is paying off - we've built SEO momentum and get good organic traffic."
+Rep: "What's not working?"
+Martinez: "Google is a nightmare for crypto - our ads get rejected constantly for vague policy reasons. Apple Search Ads won't let us run at all. Traditional display networks are hit or miss. And honestly, retention is hard - people sign up, try it once, then churn. We're constantly fighting that churn."
+Deep Dive: Rep: "Tell me more about Google ad rejections. What's happening there?"
+Martinez: "Google has strict policies around crypto and financial services. Our ads get flagged even though we're fully compliant and licensed. We'll launch a campaign, it runs for a day, then gets suspended. We appeal, wait a week, get reinstated, then it happens again. It's exhausting. We probably spend 10 hours per week just dealing with Google ad policy issues."
+Rep: "How are you managing that?"
+Martinez: "We've hired a consultant who specializes in crypto ad policy. We've also diversified away from Google - can't rely on a platform that might shut us down at any moment. But it's frustrating because Google Search has great intent and we'd love to spend more there."
+Rep: "What's your measurement stack look like?"
+Martinez: "Pretty sophisticated. We use Segment for data collection, Amplitude for product analytics, Adjust for mobile attribution. Looker for BI. Metabase for some custom stuff. We've built a pretty robust data pipeline. Growth marketing is data-intensive - we're constantly analyzing cohorts, running statistical tests, building models."
+Rep: "How do you think about payback period and LTV?"
+Martinez: "We target six-month payback - meaning we want to recoup acquisition costs within six months from transaction fees. LTV is trickier because we're still early and don't have years of data. So we use predictive models based on early engagement - if a user completes three transactions in their first month, they're likely to be high LTV. We optimize for those early actions, not just signups."
+Rep: "What's your testing philosophy?"
+Martinez: "Test everything, iterate fast. We run A/B tests on landing pages, ad creative, onboarding flows, pricing, referral incentives - everything. Our product and marketing teams are very experiment-driven. The challenge is coordinating all these tests and making sure we're not polluting results. Like, if marketing is testing new creative while product is testing a new onboarding flow, it's hard to isolate what's driving changes."
+Rep: "Where do you spend the most manual effort?"
+Martinez: "Creative production and deployment. We're producing a ton of ad variants - different messaging, different visuals, different formats for each platform. Then manually deploying them, tracking performance, scaling winners. It's operationally heavy. We also spend a lot of time on data analysis - pulling data from multiple sources, stitching it together, building dashboards."
+Strategy + Measurement: Rep: "How are you approaching incrementality measurement?"
+Martinez: "We run regular geo holdout tests - we'll pause advertising in certain regions and measure the impact on signups. We've learned that maybe 30-40% of our attributed signups would've happened organically anyway. So we're more conservative about scaling spend. We also use tools like GeoLift and Robyn for MMM, though we're still early on that."
+Rep: "What's your take on platform attribution?"
+Martinez: "It's directional at best. Meta says they drove X conversions, Google says Y, reality is somewhere in between. We use our own in-house attribution that's based on user journey tracking. But even that has gaps - cross-device tracking is hard, and people delete cookies. So we triangulate - platform data, internal analytics, incrementality tests. No single source of truth."
+Vision & Desired Future: Rep: "What would change the game for you?"
+Martinez: "Honestly, just less platform policy bullshit. If Google and Apple would let us advertise fairly, we could scale way faster. But beyond that, better creative automation. I want AI to generate and test hundreds of creative variants, find winners, and automatically scale them. We're limited by production capacity."
+Rep: "What else?"
+Martinez: "More accurate early LTV prediction. If I could know on Day 1 whether a user will be high-value, I'd optimize so much better. Right now I'm waiting weeks to get LTV data, and by then it's too late to adjust acquisition strategy."
+Wrap-Up: Rep: "Awesome, super helpful. Platform policy issues, creative production at scale, and early LTV prediction are your main pain points?"
+Martinez: "Yeah. And honestly, just the general challenge of crypto marketing - we're fighting uphill against platform biases."
+Rep: "Would you want to see what we're building?"
+Martinez: "For sure. Growth marketers are always looking for better tools."
+Post-Call Notes:
+* Company: Fintech/crypto startup, cross-border payments, Series B
+* Top 3 Pains: (1) Google ad policy rejections - 10 hrs/week dealing with it, (2) Creative production and deployment at scale (20-30 experiments running), (3) Early LTV prediction accuracy
+* Tools Used: Meta, Google, Twitter, Reddit, Segment, Amplitude, Adjust, Looker, Metabase
+* Workarounds: Hired crypto ad policy consultant, geo holdout tests for incrementality, triangulated attribution
+* Key Quotes: "Diversified away from Google - can't rely on them", "Test everything", "Platform data is directional at best"
+* Emotional Energy: Analytical and experiment-driven, frustrated by platform limitations
+* Follow-up: Yes
+

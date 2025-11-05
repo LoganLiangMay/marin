@@ -1,0 +1,63 @@
+{
+  "settings": {
+    "index": {
+      "knn": true,
+      "knn.algo_param.ef_search": 512
+    }
+  },
+  "mappings": {
+    "properties": {
+      "embedding": {
+        "type": "knn_vector",
+        "dimension": 1536,
+        "method": {
+          "engine": "nmslib",
+          "space_type": "cosinesimil",
+          "name": "hnsw",
+          "parameters": {
+            "ef_construction": 512,
+            "m": 16
+          }
+        }
+      },
+      "call_id": {
+        "type": "keyword"
+      },
+      "chunk_id": {
+        "type": "keyword"
+      },
+      "chunk_index": {
+        "type": "integer"
+      },
+      "text": {
+        "type": "text",
+        "analyzer": "standard"
+      },
+      "timestamp": {
+        "type": "date"
+      },
+      "metadata": {
+        "properties": {
+          "company_name": {
+            "type": "keyword"
+          },
+          "contact_email": {
+            "type": "keyword"
+          },
+          "call_type": {
+            "type": "keyword"
+          },
+          "speaker": {
+            "type": "keyword"
+          },
+          "duration_seconds": {
+            "type": "float"
+          },
+          "word_count": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

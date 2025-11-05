@@ -1,0 +1,49 @@
+Conversation 14: Non-Profit Fundraising Marketing Manager
+Profile:
+* Role: Digital Marketing Manager at environmental non-profit
+* Experience: 4 years in non-profit marketing
+* Manages: $50K monthly ad spend
+* Platforms: Meta, Google Grants, YouTube
+Opening: Rep: "Hey Elena, thanks so much for taking the time today. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Elena: "Yes, absolutely. I'm always interested in hearing about new tools, especially if they're affordable for non-profits."
+Warm-Up: Rep: "Great. Tell me about your organization and what you do."
+Elena: "We're an environmental conservation non-profit focused on ocean protection. I handle our digital fundraising and awareness campaigns. My main KPI is donor acquisition and retention - we need recurring monthly donors to sustain our programs. I work with a small team - it's me, a content creator, and we have a consultant who helps with email. We're lean."
+Rep: "What does your day look like?"
+Elena: "Mornings I check donation numbers from overnight - did our campaigns drive donations? Then I'm managing our Meta and YouTube campaigns, coordinating with our programs team on storytelling content, writing emails to our donor list, and analyzing what's resonating. Non-profit marketing is very mission-driven - we're trying to inspire people to care and contribute."
+Rep: "What's working well?"
+Elena: "Meta has been our best channel for donor acquisition. We run video ads showing the impact of our work - sea turtles being released, coral reef restoration - and it's emotionally compelling. Google Grants gives us $10K/month in free Google Ads, which is huge for our budget. And our email program has strong retention - people who donate once tend to stay engaged."
+Rep: "What's challenging?"
+Elena: "Budget is always tight - we're trying to maximize every dollar. Donor fatigue is real - people get asked for money constantly, so breaking through is hard. And honestly, proving ROI to our board is difficult. They understand brand awareness and mission impact, but they also want to see efficient cost per donor. It's a balance."
+Deep Dive: Rep: "Tell me about your fundraising campaigns. How do they work?"
+Elena: "We run a mix of always-on donor acquisition and campaign-based fundraising tied to events or urgent needs. For example, if there's a disaster affecting marine life, we'll launch an emergency campaign - 'help us respond.' Those perform really well because of the urgency. Then we have evergreen campaigns like 'become a monthly donor' that run continuously. The monthly donor campaigns are lower intensity but more valuable long-term."
+Rep: "How do you think about donor lifetime value?"
+Elena: "Monthly recurring donors are gold. If someone gives $25/month and stays for two years, that's $600. Way more valuable than a one-time $50 donation. So we're always trying to convert one-time donors to recurring. We use email nurture and retargeting to encourage that conversion."
+Rep: "What's your creative approach?"
+Elena: "Heavy on storytelling and emotional connection. We're not selling a product - we're selling a feeling and a mission. Our best ads show the tangible impact of donations - 'your $50 protects 100 square feet of coral reef.' We also feature beneficiaries - the animals we're protecting, the communities we're supporting. That authenticity matters."
+Rep: "How much time goes into reporting for your board?"
+Elena: "Too much, honestly. Every board meeting I'm presenting on donor acquisition cost, retention rates, campaign performance, overall fundraising trajectory. The board is financially-minded - they're donors themselves - so they scrutinize the numbers. I spend probably 10-12 hours per quarter just on board reporting. It's necessary but time-consuming."
+Rep: "What's your tech stack?"
+Elena: "Meta Business Manager, Google Ads (via Google Grants), YouTube. We use EveryAction as our CRM and donor management system - that's where all our donor data lives. Email is sent through EveryAction too. And we have Google Analytics on our website. Pretty simple setup."
+Rep: "Where do you wish you had more capability?"
+Elena: "A/B testing at scale. Right now we test maybe two creative variants per campaign because production is limited. If we could test 10 or 20 variants, we'd learn so much faster. Also, better donor data analysis - understanding which acquisition sources drive the best lifetime value, which messaging resonates with different donor segments. We have the data but not the time to analyze it deeply."
+Strategy + Measurement: Rep: "How are you thinking about donor attribution?"
+Elena: "Pretty straightforward - last touch mostly. If someone donates after clicking a Facebook ad, Facebook gets credit. But I know it's more complex - they probably saw our content multiple times, maybe got an email, saw organic posts. Multi-touch attribution would be more accurate, but we don't have the tools for that."
+Rep: "How do you balance donor acquisition with retention?"
+Elena: "It's about 70-30 - 70% of budget on acquisition, 30% on retention and reactivation. Acquisition is expensive - our cost per donor is $40-60. But retention is cheaper and more valuable. We've gotten better at nurturing new donors so they become recurring supporters."
+Vision & Desired Future: Rep: "If you could improve one thing about your workflow, what would it be?"
+Elena: "More sophisticated donor analytics. I want to know which acquisition channels drive donors who give the most over time. Which messaging converts one-time donors to monthly? Which donor segments are most likely to lapse? If I had those insights, I could optimize way better. Right now I'm mostly relying on gut instinct and basic metrics."
+Rep: "What else would help?"
+Elena: "Affordable tools designed for non-profits. A lot of marketing tech is priced for big companies. We can't afford $10K/month software. If there were tools built specifically for non-profit budgets and needs, that would be amazing."
+Wrap-Up: Rep: "This is really helpful. Sounds like donor LTV analysis, creative testing at scale, and affordable tools are your key needs?"
+Elena: "Exactly. Non-profits are resource-constrained, so efficiency and affordability are critical."
+Rep: "Would you be interested in seeing what we're building, especially if we had non-profit pricing?"
+Elena: "Absolutely. I'm always looking for ways to stretch our budget further."
+Post-Call Notes:
+* Company: Environmental non-profit, ocean conservation focus
+* Top 3 Pains: (1) Donor LTV analysis - which sources drive best long-term value, (2) Creative testing at scale with limited production resources, (3) Affordable tools for non-profit budgets
+* Tools Used: Meta, Google Grants, YouTube, EveryAction (CRM), GA
+* Workarounds: Basic last-touch attribution, limited A/B testing (2 variants max)
+* Key Quotes: "Proving ROI to board is difficult", "We can't afford $10K/month software", "Storytelling and emotional connection"
+* Emotional Energy: Mission-driven, resource-conscious, eager for efficiency
+* Follow-up: Yes, especially if non-profit pricing available
+

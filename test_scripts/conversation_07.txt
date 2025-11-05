@@ -1,0 +1,51 @@
+Conversation 7: Agency Founder/Owner
+Profile:
+* Role: Founder & CEO of boutique performance marketing agency
+* Experience: 10 years, started agency 5 years ago
+* Manages: 25 clients, $3M annual ad spend across portfolio, team of 8
+* Platforms: Meta, Google, TikTok, LinkedIn
+Opening: Rep: "Hey Maria, thanks so much for taking the time today. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Maria: "Yeah, I've got about 30 minutes. Fair warning - I've heard a lot of pitches over the years, so I'm probably more skeptical than your typical marketer. But happy to share what we're dealing with."
+Warm-Up: Rep: "Awesome. To start, could you tell me a bit about your business and what your role looks like day-to-day?"
+Maria: "I run a boutique agency - we're eight people, super lean. We work with mid-market DTC brands, mostly in the $5M-$50M revenue range. My role has shifted as we've grown. I'm less hands-on with campaigns now, more focused on client relationships, new business, and making sure my team has what they need. But I still jump into the weeds when there's a crisis or a big client needs attention."
+Rep: "What's been going really well lately?"
+Maria: "We've gotten really good at creative production - that's become our main differentiator. Most agencies just run ads, but we produce all our clients' creative in-house now. That's been huge for retention and results. We've also finally systematized our onboarding process, so we can get new clients live in under two weeks instead of a month. And honestly, business is good - we've had to turn away clients because we're at capacity."
+Rep: "And on the flip side, what's been harder than expected?"
+Maria: "Hiring and retention is brutal. Everyone wants remote work, top agencies poach our best people, and training new media buyers takes forever. We've also hit some scaling challenges - at 25 clients, we're starting to feel operational strain. And client expectations keep going up while platform performance is getting harder. Everyone wants TikTok-level results on Facebook budgets. It's exhausting."
+Deep Dive: Rep: "What are your biggest challenges running an agency right now?"
+Maria: "Look, I'll be direct. Three things. One, margin pressure. Clients want more for less, platforms are more expensive, and we can't raise prices fast enough to keep up. Two, operational efficiency. We're spending way too much time on reporting and manual tasks instead of strategy. Three, talent. Finding, training, and keeping good people is the hardest part of this business."
+Rep: "You mentioned reporting takes too much time. Can you elaborate?"
+Maria: "Every client wants custom reports. Some want weekly, some want daily. Different formats, different metrics. My team probably spends 25-30% of their time just pulling data and making decks. We've tried to standardize, but clients push back - 'this is how we like to see the data.' So we're stuck doing custom work for everyone. It's death by a thousand cuts on our margins."
+Rep: "Walk me through a recent situation that highlighted these pain points."
+Maria: "Last month, one of our senior media buyers gave two weeks notice - got an offer from a bigger agency with 30% more money. We scrambled to redistribute her clients to other team members, but everyone was already maxed out. So I had to jump back into execution mode, running campaigns for three clients while trying to hire her replacement. We got behind on reporting, a client complained, and the whole thing was a mess for a month. That's agency life - you're always one person away from chaos."
+Rep: "When you're evaluating new tools, what's your process?"
+Maria: "Honestly? I'm really picky. We've tried tons of tools over the years and most either don't work as advertised, don't integrate with our stack, or have terrible support. Now I'm very cautious. I need to see proof it'll save us real time or make us real money. I don't care about shiny features - I care about ROI. And it needs to be easy enough that my team will actually use it, not just me."
+Rep: "What tools are you currently using across the agency?"
+Maria: "Ad platforms obviously - Meta, Google, TikTok, Pinterest, LinkedIn depending on client. We use Supermetrics to pull data into Google Sheets and Looker Studio. Slack for internal comms. ClickUp for project management. We've tried probably five different reporting tools but none stuck - always something broken or missing. So we're back to Google Sheets and manual work, which sucks but at least it's reliable."
+Rep: "Where do you feel platforms are letting you down?"
+Maria: "Creative fatigue is a huge problem that platforms aren't solving. We'll have an ad working great, then performance falls off a cliff. The platforms just keep spending - they don't proactively alert us or automatically refresh creative. We have to manually monitor everything. Also, their automation is too aggressive - Advantage+ campaigns will blow through budgets or shift spend to garbage placements. We've had to build our own monitoring systems to catch issues before they cost clients money."
+Rep: "How much of your team's time goes to tasks you wish were automated?"
+Maria: "If I'm being honest, probably 40% of our billable hours are stuff that should be automated. Pulling reports, QA-ing campaigns, checking for broken tracking, budget pacing, moving data between systems. That's basically three full-time people on my team just doing manual operational work. If we could automate even half of that, it would transform our margins and give us capacity to take on more clients."
+Strategy + Measurement: Rep: "How are you handling attribution for your clients?"
+Maria: "It's our biggest ongoing challenge. We use Triple Whale for some clients, Northbeam for others, and some clients want us to use their internal attribution. The problem is all three give different numbers, and clients don't understand why. We spend so much time in meetings explaining attribution methodology instead of talking strategy. And honestly, post-iOS 14, all attribution is somewhat directional anyway. We're making educated guesses more than we'd like to admit."
+Rep: "What do your clients care most about?"
+Maria: "Depends on the client. Some are obsessed with ROAS - they want to see 3x or 4x and don't care about anything else. Some care more about new customer acquisition cost. The more sophisticated ones understand blended metrics and incrementality. But across the board, everyone wants growth. They hired us to drive revenue, and if we're not growing their business, nothing else matters."
+Vision & Desired Future: Rep: "If you could redesign your agency operations from scratch, what would you change?"
+Maria: "I'd build everything around minimizing manual work. Unified dashboard where we see all clients' performance. Automated reporting that clients can access anytime. Smart alerts that catch issues before they become expensive. And honestly, better client education tools - something that helps clients understand what good performance actually looks like so we're not constantly defending our results."
+Rep: "What would make you willing to pay for a new tool?"
+Maria: "Show me it'll save my team 10+ hours per week, or show me it'll improve client results by 20%+, and I'll pay almost any reasonable price. Time and performance are the only things I care about. I don't care about features or integrations or fancy dashboards. I care about ROI. If you can prove your tool makes us more profitable, I'm in."
+Rep: "Where do you see the biggest opportunities for agencies like yours?"
+Maria: "Honestly, in creative production and strategy. As platforms get more automated, the technical media buying work becomes less valuable. What clients need is great creative and smart strategic thinking. If tools can handle the operational grunt work, we can focus entirely on creative and strategy, which is where we actually add value. That's the future I want - my team thinks, creates, and strategizes. The tools handle execution."
+Wrap-Up: Rep: "That's super helpful  thank you for being so candid. Just to recap, I heard operational efficiency and reducing manual work, talent challenges, and margin pressure are your top concerns. Sound right?"
+Maria: "Yeah. And look, if you're building something, make sure it actually works and solves a real problem. There's so much marketing tech that sounds good but doesn't deliver. Focus on something specific that saves real time or makes real money. Don't try to boil the ocean."
+Rep: "We're compiling insights from these conversations to shape some early prototypes. Would you be open to us showing you what we're working on when it's ready?"
+Maria: "Sure, but I'm going to be a tough critic. Show me proof it works, not just promises."
+Post-Call Notes:
+* Company: Boutique agency, 8 people, 25 clients, $3M annual spend
+* Top 3 Pains: (1) 40% of team time on manual operational work, (2) Talent acquisition and retention, (3) Margin pressure from reporting overhead
+* Tools Used: Meta, Google, TikTok, Supermetrics, Looker Studio, ClickUp, Triple Whale/Northbeam
+* Workarounds: Manual Google Sheets reporting, custom reports for each client, owner jumping into execution during crises
+* Key Quotes: "Always one person away from chaos", "Show me proof not promises", "Time and performance are the only things I care about"
+* Emotional Energy: Skeptical but pragmatic, burnt out on shiny tools that don't deliver
+* Follow-up: Yes, but needs strong proof of value
+

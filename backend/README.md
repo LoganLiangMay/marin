@@ -212,13 +212,90 @@ Structured JSON logging is configured by default:
 - Role-based access control
 - API rate limiting
 
-## Next Steps
+## Celery Workers
 
-- **Story 2.2**: Implement audio upload endpoint
-- **Story 2.3**: Configure SQS queues
-- **Story 2.4**: Set up Celery workers
-- **Story 2.5**: Implement Whisper transcription
-- **Story 2.6**: Build call status tracking
+### Overview
+
+Celery workers process async tasks in dedicated queues:
+- **transcription**: OpenAI Whisper audio transcription (Story 2.5)
+- **analysis**: GPT-4o AI analysis of transcripts (Story 3.1-3.2)
+- **embedding**: Bedrock Titan embedding generation (Epic 4)
+
+### Running Workers Locally
+
+```bash
+# Install dependencies (including celery[sqs])
+pip install -r requirements.txt
+
+# Run worker for all queues
+celery -A celery_app worker --loglevel=info -Q transcription,analysis,embedding
+
+# Run worker for specific queue
+celery -A celery_app worker --loglevel=info -Q analysis
+```
+
+### Docker Deployment
+
+```bash
+# Build worker image
+docker build -t audio-pipeline-worker -f Dockerfile.worker .
+
+# Run worker container
+docker run \
+  --env-file .env \
+  audio-pipeline-worker
+```
+
+### Task Pipeline
+
+The processing pipeline automatically chains tasks:
+
+1. **Upload** → API stores audio in S3, publishes to SQS
+2. **Transcription** → Worker transcribes with Whisper → MongoDB
+3. **Analysis** → Worker analyzes with GPT-4o → MongoDB
+4. **Embedding** → Worker generates embeddings → OpenSearch (Epic 4)
+
+### Monitoring Workers
+
+```bash
+# Check worker status
+celery -A celery_app inspect active
+
+# Check registered tasks
+celery -A celery_app inspect registered
+
+# Monitor task stats
+celery -A celery_app inspect stats
+```
+
+### Worker Configuration
+
+| Environment Variable | Description | Default |
+|---------------------|-------------|---------|
+| `CELERY_CONCURRENCY` | Worker processes | 2 |
+| `CELERY_MAX_TASKS_PER_CHILD` | Tasks before restart | 1000 |
+| `CELERY_TASK_TIME_LIMIT` | Hard timeout (seconds) | 3600 |
+
+## Task Reference
+
+### Transcription Tasks
+
+**`tasks.transcription.transcribe_audio`**
+- Downloads audio from S3
+- Transcribes using OpenAI Whisper API
+- Saves transcript to MongoDB and S3
+- Triggers analysis task
+- Cost: ~$0.006 per minute of audio
+
+### Analysis Tasks
+
+**`tasks.analysis.analyze_call`**
+- Retrieves transcript from MongoDB
+- Performs consolidated GPT-4o analysis
+- Extracts entities, sentiment, pain points, objections
+- Validates analysis quality
+- Saves results to MongoDB
+- Cost: ~$0.15 per call (target)
 
 ## Troubleshooting
 

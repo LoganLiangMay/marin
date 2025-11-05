@@ -1,0 +1,67 @@
+Conversation 3: Solo Performance Marketer for Small E-commerce Brand
+Profile:
+* Role: Head of Growth (only marketer) at startup beauty brand
+* Experience: 4 years
+* Manages: $30K monthly ad spend
+* Platforms: Meta, Google, TikTok
+Opening: Rep: "Hey Jen, thanks so much for taking the time today. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Jen: "Yeah, for sure. Fair warning though - I'm a one-person show, so my setup is probably pretty scrappy compared to what you usually see."
+Warm-Up: Rep: "Awesome. To start, could you tell me a bit about your business and what your role looks like day-to-day?"
+Jen: "We're a small beauty brand, about $2M in annual revenue, growing fast. I'm literally the only person doing marketing full-time. I run all our paid ads, email, social organic, work with influencers, and help with our website. It's a lot. Day-to-day is basically firefighting - checking ads in the morning, responding to customer comments, coordinating with our creative contractor, updating email flows, and trying to squeeze in time for actual strategy."
+Rep: "What does a typical week look like for you right now?"
+Rep: "Chaotic, honestly. Every morning I check if ads are still running and nothing broke overnight. Then I'm jumping between Meta, Google, and TikTok checking performance. I'm also responding to DMs, updating product pages, writing email campaigns. Weekends I'm usually planning content and creative for the next week. There's no typical week - it's all reactive."
+Rep: "What's been going really well lately?"
+Jen: "Our TikTok organic is crushing it - we went viral twice last month. Meta ads are profitable, finally - took us a year to figure out the right creative approach. Our email flows are running on autopilot and printing money. And our founder is really good on camera, so we're leaning into founder-led content."
+Rep: "And on the flip side, what's been harder than expected?"
+Jen: "Everything takes longer than I think. Creative production is a constant bottleneck - I can't test fast enough. iOS privacy changes killed our retargeting. Costs keep going up on Meta. And I'm just stretched so thin - I know I'm leaving money on the table because I don't have time to optimize properly. Like, I should be testing Google Shopping more, but I barely have time to keep Meta and TikTok running."
+Deep Dive: Rep: "What are your biggest challenges when running ad campaigns right now?"
+Jen: "Time and resources, full stop. I'm the entire marketing team. I don't have someone to create ads, someone to run campaigns, someone to analyze data. It's all me. So I'm constantly triaging - what absolutely needs to get done today versus what can wait. I know I should be testing more, running experiments, but I'm just trying to keep the machine running."
+Rep: "Walk me through a recent campaign that was tough or frustrating  what happened?"
+Jen: "Two weeks ago, we launched a new product. I spent a weekend building out ads for Meta and Google - different copy for each platform, different creative formats, setting up new campaigns. Monday morning, Meta rejected half our ads for some vague policy violation. I spent hours going back and forth with support. Meanwhile, Google campaigns weren't spending because I messed up the budget pacing. By the time I got everything running smoothly, it was Wednesday, and we'd basically lost our launch momentum. It was supposed to be this big coordinated launch, and it was just... messy."
+Rep: "When something goes wrong, where does it usually happen?"
+Jen: "A lot of times it's just me forgetting something or not having time to QA properly. Like, I'll launch a campaign on Meta but forget to update the landing page. Or I'll set up Google ads but the tracking pixel isn't firing correctly and I don't realize for three days. It's operational stuff that a bigger team would catch, but I'm a team of one so things slip through."
+Rep: "How do you onboard new campaigns? What's that process like from start to finish?"
+Jen: "Super scrappy. I usually start with creative - work with our contractor to get photos and videos. That takes maybe a week. Then I write copy in a Google Doc. Then I'm manually building campaigns in Meta, then Google, maybe TikTok if I have budget. I'm copying and pasting a lot because the platforms are different but the messaging is similar. Takes me probably a full day to build everything out. Then I test and launch. No fancy planning - just get it done."
+Rep: "Do you mostly configure and let things run, or do you have to stay hands-on daily?"
+Jen: "I wish I could set and forget, but that's not reality. I'm in the ad platforms every day because something always needs attention. Budget ran out early. An ad creative stopped working. CPMs spiked. I'm constantly putting out fires. The platforms have automation, but I don't trust them enough to just walk away."
+Rep: "What tools or platforms are you using today?"
+Jen: "Meta Ads Manager, Google Ads, TikTok Ads Manager. Shopify for our store. Klaviyo for email. Later for social scheduling. Google Analytics because I'm supposed to, but I barely look at it. And a million Google Sheets to track everything because I don't have a real analytics tool."
+Rep: "What do you love about them? What's frustrating?"
+Jen: "Love: Meta's creative tools are actually pretty good. Klaviyo is solid for email. Shopify just works. Frustrating: I'm logged into five different platforms every day doing essentially the same thing - checking performance, adjusting budgets, launching creative. It's so inefficient. And reporting is a nightmare - I have to pull data from each platform and manually compile it. Takes hours."
+Rep: "Where do you feel automation breaks down or still needs humans?"
+Jen: "Creative and strategy. Platforms can optimize bids, but they can't write compelling ad copy or produce engaging video. They also don't understand my business - like, Meta doesn't know we're launching a new product line next month and I should be seeding that messaging now. Automation handles the mechanics, but I still have to do all the thinking."
+Rep: "How much time do you spend each week on manual reporting or creative management?"
+Jen: "Probably 5-6 hours on reporting - pulling data, making sense of it, creating something our founder and investors can understand. Creative management - briefing our contractor, reviewing content, uploading to platforms, organizing assets - that's another 8-10 hours per week easily. So almost half my week is just operational stuff that doesn't feel strategic."
+Rep: "If you could get those hours back, what would you do with that time?"
+Jen: "Honestly? Test more aggressively. I have so many ideas but no time to execute. I'd also work on our retention marketing more - we're too focused on acquisition. And I'd love to actually learn from our data instead of just reporting it. Like, what creative themes really work? What audiences are our best customers? I'm too busy executing to analyze."
+Strategy + Measurement: Rep: "How are you thinking about incrementality, attribution, and MMM right now?"
+Jen: "I'm not, really. That's enterprise-level stuff that I don't have time or budget for. I look at blended ROAS across all channels and if it's above our target, we're good. I know that's not sophisticated, but it's what I can manage. Occasionally I'll pause a channel to see what happens to overall revenue, but that's about as fancy as I get with incrementality."
+Rep: "Since cookies dropped, what's changed in your retargeting performance?"
+Jen: "Huge hit. We used to have really specific retargeting sequences - people who viewed products, people who added to cart, people who started checkout. Now those audiences are tiny and the targeting is mushy. We're getting way less precise. I've compensated by going harder on email for retargeting and using Meta's broader targeting, but it's definitely not as effective."
+Rep: "Are you experimenting with any first-party data approaches yet?"
+Jen: "I set up the Meta Conversions API, which was a pain but helps. We're starting to build our SMS list. But honestly, I don't have time to get fancy with it. Like, I know we should be doing more with customer data, but I'm already maxed out."
+Rep: "What's your biggest headache when it comes to data or reporting?"
+Jen: "Just the manual work of pulling it all together. Our founder wants weekly updates on ads performance, email performance, revenue. I'm literally copying numbers from six different places into a Google Sheet. It's tedious and I definitely make mistakes sometimes. And I never have time to actually dig into the data - I'm just reporting numbers, not insights."
+Rep: "How easy is it for stakeholders to interpret the data you provide?"
+Jen: "I try to keep it simple - revenue, ROAS, CAC. But our founder sometimes asks questions I can't answer easily, like 'which ad creative is driving the most revenue?' or 'what's our repeat purchase rate by acquisition channel?' Those require way more work to figure out."
+Vision & Desired Future: Rep: "If you could wave a magic wand and fix one thing about your workflow, what would it be?"
+Jen: "One dashboard for everything. I'm so tired of logging into five different platforms. I want to see all my ads, all my performance, all my budgets in one place. And honestly, something that would automate the repetitive stuff - like, I'm copying and pasting between platforms constantly. That should be automated."
+Rep: "What would an ideal system look like for you?"
+Jen: "Simple and fast. I don't need fancy features - I need something that saves me time. Unified campaign creation so I'm not building the same campaign three times. Automated reporting so I'm not pulling data manually. And maybe smart alerts that tell me when something needs my attention, so I'm not checking everything constantly. I need tools built for someone who's doing ten jobs, not one."
+Rep: "What's one thing that would make you look like a hero?"
+Jen: "If I could double our testing velocity. Right now, we test maybe 2-3 new creative concepts per month because production and deployment is so slow. If I could test 10-15, we'd find winners faster and grow faster. Our founder knows we should be testing more, so if I could show that we're experimenting rapidly, that would be huge."
+Rep: "Where do you think the biggest opportunities for automation or AI could be?"
+Jen: "Creative production and deployment. Like, I should be able to give AI a brief and it generates variants for me to review. Or upload one video and have it automatically reformatted for different platform specs. And definitely automated campaign setup - I shouldn't have to manually build the same campaign in three places. AI should handle all the tedious stuff so I can focus on strategy."
+Wrap-Up: Rep: "That's super helpful  thank you for walking me through all that. Just to recap, I heard that time management as a solo marketer, unified platform access, and automating repetitive tasks are your top three pains. Did I get that right?"
+Jen: "Yeah, exactly. I just need more leverage. I'm doing way too much manually."
+Rep: "We're compiling insights from these conversations to shape some early prototypes. Would you be open to us showing you what we're working on when it's ready?"
+Jen: "Definitely. If it saves me even a few hours per week, that's worth it."
+Post-Call Notes:
+* Company: Small beauty brand, $2M revenue, solo marketer
+* Top 3 Pains: (1) Time management - wearing too many hats, (2) Unified dashboard/platform access, (3) Manual campaign deployment across multiple platforms
+* Tools Used: Meta, Google, TikTok, Shopify, Klaviyo, Later, Google Sheets
+* Workarounds: Manual copy-paste between platforms, Google Sheets for everything, weekend work to stay caught up
+* Key Quotes: "I'm the entire marketing team", "Something always needs attention", "Almost half my week is operational stuff"
+* Emotional Energy: Overwhelmed but scrappy, excited about anything that creates leverage
+* Follow-up: Yes, very interested in time-saving tools
+

@@ -20,7 +20,12 @@ from backend.models.call import (
     CallMetadata,
     AudioInfo,
     CallListResponse,
-    CallResponse
+    CallResponse,
+    Transcript,
+    ProcessingTimestamps,
+    ProcessingMetadata,
+    TranscriptionMetadata,
+    ErrorInfo
 )
 
 logger = logging.getLogger(__name__)
@@ -217,15 +222,31 @@ async def list_calls(
     # Convert to response models
     call_responses = []
     for call in calls:
-        call_responses.append(CallResponse(
-            call_id=call["call_id"],
-            status=CallStatus(call["status"]),
-            metadata=CallMetadata(**call["metadata"]),
-            audio=AudioInfo(**call["audio"]) if "audio" in call else None,
-            transcript=None,  # Will be populated in future stories
-            created_at=call.get("created_at", call.get("uploaded_at")),
-            updated_at=call.get("updated_at", call.get("uploaded_at"))
-        ))
+        # Build basic response
+        response_data = {
+            "call_id": call["call_id"],
+            "status": CallStatus(call["status"]),
+            "metadata": CallMetadata(**call["metadata"]),
+            "created_at": call.get("created_at", call.get("uploaded_at")),
+            "updated_at": call.get("updated_at", call.get("uploaded_at"))
+        }
+
+        # Add audio if present
+        if "audio" in call:
+            response_data["audio"] = AudioInfo(**call["audio"])
+
+        # Add transcript if present
+        if "transcript" in call:
+            transcript_data = call["transcript"]
+            response_data["transcript"] = Transcript(
+                full_text=transcript_data.get("full_text", ""),
+                segments=transcript_data.get("segments", []),
+                word_count=transcript_data.get("word_count"),
+                duration_seconds=transcript_data.get("duration_seconds"),
+                language=transcript_data.get("language", "en")
+            )
+
+        call_responses.append(CallResponse(**response_data))
 
     return CallListResponse(
         calls=call_responses,
@@ -233,3 +254,115 @@ async def list_calls(
         page=skip // limit + 1,
         page_size=limit
     )
+
+
+@router.get(
+    "/{call_id}",
+    response_model=CallResponse,
+    tags=["Calls"],
+    summary="Get call details",
+    description="Retrieve detailed information about a specific call including status, transcript, and analysis"
+)
+async def get_call(
+    call_id: str,
+    db: AsyncIOMotorDatabase = Depends(get_db)
+):
+    """
+    Get call details by ID.
+
+    This endpoint returns complete information about a call including:
+    - Current processing status
+    - Audio file information
+    - Transcript (if available)
+    - Analysis results (if available - Epic 3)
+    - Processing metadata (timestamps, costs, processing times)
+    - Error information (if status is failed)
+
+    **Status progression:**
+    uploaded → transcribing → transcribed → analyzing → analyzed → completed
+
+    **Response time:** <500ms
+    """
+    try:
+        db_service = get_db_service(db)
+
+        # Get call from database
+        call_doc = await db_service.get_call(call_id)
+
+        if not call_doc:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"Call not found: {call_id}"
+            )
+
+        # Build response with all available data
+        response_data = {
+            "call_id": call_doc["call_id"],
+            "status": CallStatus(call_doc["status"]),
+            "metadata": CallMetadata(**call_doc["metadata"]),
+            "created_at": call_doc.get("created_at", call_doc.get("uploaded_at")),
+            "updated_at": call_doc.get("updated_at", call_doc.get("uploaded_at"))
+        }
+
+        # Add audio info if present
+        if "audio" in call_doc:
+            response_data["audio"] = AudioInfo(**call_doc["audio"])
+
+        # Add transcript if present
+        if "transcript" in call_doc:
+            transcript_data = call_doc["transcript"]
+            response_data["transcript"] = Transcript(
+                full_text=transcript_data.get("full_text", ""),
+                segments=transcript_data.get("segments", []),
+                word_count=transcript_data.get("word_count"),
+                duration_seconds=transcript_data.get("duration_seconds"),
+                language=transcript_data.get("language", "en")
+            )
+
+        # Add processing timestamps if present
+        if "processing" in call_doc:
+            processing_data = call_doc["processing"]
+            response_data["processing"] = ProcessingTimestamps(
+                uploaded_at=processing_data.get("uploaded_at"),
+                transcribed_at=processing_data.get("transcribed_at"),
+                analyzed_at=processing_data.get("analyzed_at")
+            )
+
+        # Add processing metadata if present
+        if "processing_metadata" in call_doc:
+            metadata = call_doc["processing_metadata"]
+            processing_metadata = ProcessingMetadata()
+
+            if "transcription" in metadata:
+                trans_meta = metadata["transcription"]
+                processing_metadata.transcription = TranscriptionMetadata(
+                    model=trans_meta["model"],
+                    provider=trans_meta["provider"],
+                    processing_time_seconds=trans_meta["processing_time_seconds"],
+                    cost_usd=trans_meta["cost_usd"],
+                    audio_duration_minutes=trans_meta["audio_duration_minutes"]
+                )
+
+            response_data["processing_metadata"] = processing_metadata
+
+        # Add error info if present
+        if "error" in call_doc:
+            error_data = call_doc["error"]
+            response_data["error"] = ErrorInfo(
+                message=error_data.get("message", "Unknown error"),
+                timestamp=error_data.get("timestamp", datetime.utcnow()),
+                retry_count=error_data.get("retry_count")
+            )
+
+        logger.info(f"Retrieved call details: {call_id}, status: {call_doc['status']}")
+        return CallResponse(**response_data)
+
+    except HTTPException:
+        # Re-raise HTTP exceptions (like 404) as-is
+        raise
+    except Exception as e:
+        logger.error(f"Error building call response for {call_id}: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error retrieving call details: {str(e)}"
+        )

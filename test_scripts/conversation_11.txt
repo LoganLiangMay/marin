@@ -1,0 +1,37 @@
+Conversation 11: Healthcare Practice Marketing Coordinator
+Profile:
+* Role: Marketing Coordinator at dental practice group (8 locations)
+* Experience: 2 years in healthcare marketing
+* Manages: $25K monthly ad spend
+* Platforms: Google Local Services, Google Search, Facebook
+Opening: Rep: "Hey Lisa, thanks for taking the time. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Lisa: "Sure, though I should mention I'm still pretty new to this role and to marketing in general."
+Warm-Up: Rep: "No problem at all. Tell me about your job and what you're responsible for."
+Lisa: "I handle marketing for eight dental offices across the region. My job is filling appointment slots - new patients mainly, but also existing patients coming back for cleanings or procedures. I run Google and Facebook ads, manage our social media, coordinate with our front desk staff on booking, and track which marketing efforts are bringing in patients."
+Rep: "What does a typical day look like?"
+Lisa: "Mornings I check our appointment booking system to see how many new patients scheduled yesterday. Then I check our ads to make sure they're running and spending properly. I respond to Facebook messages and reviews - patients message us all the time. I coordinate with our dentists on promotions or new services to advertise. It's a lot of multitasking."
+Rep: "What's working well?"
+Lisa: "Google Local Services has been great - we pay per call and the quality is good. People searching for 'dentist near me' are ready to book. Facebook has been hit or miss, but it works for awareness. And our reviews are strong, which helps a lot when people are researching us."
+Rep: "What's been difficult?"
+Lisa: "Honestly, I feel a bit in over my head sometimes. I didn't come from a marketing background - I was a dental assistant before this. So I'm learning as I go. Tracking what's working is confusing. And our doctors keep asking me questions I don't know how to answer, like 'what's our cost per patient' or 'which location is performing best.' I'm figuring it out, but it's stressful."
+Deep Dive: Rep: "Let's talk about tracking. What's confusing about it?"
+Lisa: "Well, someone might see our Facebook ad, then later Google us, then call. Which marketing channel do I credit? We use call tracking numbers, so I can see which phone number they called, but sometimes people call the main number they found on our website instead of the tracking number. And then I don't know where they came from."
+Rep: "How are you managing campaigns across eight locations?"
+Lisa: "It's a lot. Each location has its own Google Ads campaign and Facebook ads targeting their local area. I'm basically managing eight different ad accounts. When I want to make a change - like updating our promotion - I have to go into each campaign and update it manually. It takes forever."
+Rep: "What would make your job easier?"
+Lisa: "Honestly, I just need things to be simpler. I'm not an expert, so I need tools that are straightforward. And I need better reporting - something I can show the doctors that makes sense. Right now I'm pulling numbers from Google, Facebook, and our appointment system, and trying to explain it all in a PowerPoint. It's a mess."
+Vision & Desired Future: Rep: "If you could wave a magic wand, what would help you most?"
+Lisa: "A simple dashboard that shows: here's how many people called from ads, here's how many booked appointments, here's how much we spent, here's our cost per new patient. All in one place, for all eight locations. Something I can look at daily without getting overwhelmed. And maybe training resources or support - I'm learning this stuff on the fly and could use more help."
+Wrap-Up: Rep: "This is really helpful. Sounds like simplified reporting, easier multi-location management, and better tracking are your main needs?"
+Lisa: "Yeah, exactly. I just want to feel more confident that I'm doing this right."
+Rep: "Would you be interested in seeing tools that could help?"
+Lisa: "For sure. I'm open to anything that makes this easier."
+Post-Call Notes:
+* Company: Dental practice group, 8 locations, relatively new marketer
+* Top 3 Pains: (1) Tracking and attribution across touchpoints, (2) Managing 8 location campaigns manually, (3) Simple, clear reporting for non-marketer
+* Tools Used: Google LSA, Google Search, Facebook, call tracking, appointment system
+* Workarounds: Manual updates across 8 campaigns, basic PowerPoint reports
+* Key Quotes: "I feel in over my head", "Learning as I go", "Which channel do I credit?"
+* Emotional Energy: Overwhelmed, eager to learn, needs simplicity
+* Follow-up: Yes
+

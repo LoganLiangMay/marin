@@ -1,0 +1,45 @@
+Conversation 19: Junior Agency Media Buyer
+Profile:
+* Role: Media Buyer at mid-size performance marketing agency
+* Experience: 2 years in digital marketing
+* Manages: 8 client accounts, ~$400K monthly spend across portfolio
+* Platforms: Meta, Google, TikTok
+Opening: Rep: "Hey Jamie, thanks for taking time to chat. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams to understand how they're running campaigns  what's working, what's painful, where automation could help. This isn't a sales call - just learning. That work for you?"
+Jamie: "Yeah, sounds good. Though heads up - I'm pretty junior, so my perspective might be different from like a director or VP."
+Warm-Up: Rep: "That's totally fine - we want different perspectives. Tell me about your role."
+Jamie: "I'm a media buyer at an agency. I manage eight client accounts - mix of e-commerce and lead gen. My day is basically campaign optimization, pulling reports, client calls, and a lot of QA. I'm in the platforms all day - Meta, Google, TikTok - making adjustments, launching new campaigns, checking that everything's running properly."
+Rep: "What's a typical day like?"
+Jamie: "Start my morning checking if anything broke overnight - campaigns paused, budgets maxed out, creative rejected. Then I'm going through each client, checking performance against goals, making optimizations. Afternoons are usually reports and internal meetings. Honestly, I'm in like six client calls per week, which is a lot. And I'm always stressed about making mistakes - one wrong bid change can waste thousands of dollars."
+Rep: "What do you like about the job?"
+Jamie: "I'm learning a ton. Every client is different - different products, different audiences, different goals. So I'm getting exposure to a lot. And when campaigns work well, it's really satisfying. Like, I just scaled a client from $5K to $20K per month profitably, and they're stoked. That feels good."
+Rep: "What sucks?"
+Jamie: "The manual work is brutal. I spend probably 60% of my time doing repetitive tasks - pulling CSVs, copying data into spreadsheets, building reports. It's mind-numbing. Also, the pressure is high - clients expect results and if performance dips, they're emailing. And honestly, I feel like I'm always behind. There's always more I could be testing, more I could be optimizing."
+Deep Dive: Rep: "Tell me about the manual work. What are you doing repeatedly?"
+Jamie: "Every Monday I pull performance data from Meta, Google, TikTok for each client. That's 24 exports. Then I'm copying the data into our reporting template - we have a Google Sheet for each client. Then I'm calculating week-over-week changes, adding notes on what changed and why. Then I'm turning that into a client-facing deck. For eight clients, that's my entire Monday. Sometimes Tuesday too if clients are demanding."
+Rep: "That sounds exhausting. What have you tried to streamline it?"
+Jamie: "We use Supermetrics to auto-pull some data, but it's limited. We've tried templating our reports, but every client wants it slightly different. So we're still customizing manually. I've asked my manager if we can get better tools, but the agency is cheap. They'd rather hire junior people like me to do manual work than pay for expensive software."
+Rep: "Walk me through a recent stressful situation."
+Jamie: "Last month, I was launching a big campaign for a client - $10K budget. I set up the campaigns in Meta, everything looked good, hit launch. Next morning I check and we'd spent $6K overnight. I forgot to set a daily budget cap - just a total budget. The campaign burned through 60% of the monthly budget in one night. I panicked, paused everything, had to tell my manager. Client was pissed. It was a mistake that could've been caught with better QA, but I was moving too fast."
+Rep: "How did that situation resolve?"
+Jamie: "Manager helped me smooth it over with the client. We shifted budget from later in the month to cover it. But it was a wake-up call that I need to slow down and double-check everything. The problem is I'm managing so many accounts that it's hard to give each one the attention it needs. I'm constantly context-switching."
+Rep: "What tools do you wish you had?"
+Jamie: "Something that automates reporting entirely. Like, I should be able to click a button and reports generate automatically for all clients. Also, better alerting - if something's going wrong, I want to know immediately, not when I happen to check. And honestly, templates for common campaign types. I'm rebuilding similar campaigns over and over. There should be presets."
+Rep: "How much do you learn from senior people at the agency?"
+Jamie: "Not as much as I'd like. My manager is stretched thin and doesn't have time to mentor. So I'm learning from Google, YouTube, Reddit. Sometimes I make mistakes because I didn't know best practices. I wish there was more structure around training and development."
+Vision & Desired Future: Rep: "If you could redesign your workflow, what changes?"
+Jamie: "Eliminate all the manual reporting. Automate campaign QA - like, flag potential issues before I hit launch. And honestly, give me better tools so I can focus on strategy instead of data entry. I didn't get into marketing to copy-paste CSVs. I want to actually think about what will drive results for clients."
+Rep: "Where do you see yourself in a few years?"
+Jamie: "Hopefully senior media buyer or manager. But I'm worried I'm not developing the right skills. I'm becoming really good at manual work and firefighting, but not as good at strategic thinking. If I could spend more time testing and less time reporting, I'd grow faster in my career."
+Wrap-Up: Rep: "Super helpful to hear the junior perspective. Sounds like automated reporting, better QA/alerting, and campaign templates are your main needs?"
+Jamie: "Yeah. And honestly, just feeling less overwhelmed. I want to do good work, but I'm drowning in busy work."
+Rep: "Would you be interested in seeing what we build?"
+Jamie: "For sure. Though my manager makes tool decisions, not me. But I can advocate for it."
+Post-Call Notes:
+* Company: Mid-size agency, junior media buyer, 8 clients, $400K monthly spend
+* Top 3 Pains: (1) Manual reporting - 60% of time on repetitive tasks, (2) Campaign QA and mistake prevention, (3) Context-switching across 8 clients with limited attention for each
+* Tools Used: Meta, Google, TikTok, Supermetrics, Google Sheets
+* Workarounds: Manual data exports every Monday, custom reports for each client
+* Key Quotes: "I'm drowning in busy work", "Always stressed about making mistakes", "Learning from Google and YouTube"
+* Emotional Energy: Overwhelmed, eager to learn, frustrated by manual work
+* Follow-up: Yes, but decision-maker is manager
+

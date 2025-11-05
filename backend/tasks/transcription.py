@@ -243,13 +243,26 @@ def transcribe_audio(self, call_id: str, s3_key: str):
         )
 
         # Step 7: Trigger next task (analysis)
-        # Note: Analysis task will be implemented in Epic 3
-        # try:
-        #     from tasks.analysis import analyze_call
-        #     analyze_call.delay(call_id)
-        #     logger.info("Triggered analysis task", extra={'call_id': call_id})
-        # except ImportError:
-        #     logger.info("Analysis task not available yet", extra={'call_id': call_id})
+        # Story 3.2: Chain to AI analysis task after successful transcription
+        try:
+            from tasks.analysis import analyze_call
+            analyze_call.delay(call_id)
+            logger.info(
+                "Triggered AI analysis task",
+                extra={'call_id': call_id, 'next_task': 'analyze_call'}
+            )
+        except ImportError as e:
+            logger.warning(
+                "Analysis task not available",
+                extra={'call_id': call_id, 'error': str(e)}
+            )
+        except Exception as e:
+            # Don't fail transcription if analysis trigger fails
+            logger.error(
+                "Failed to trigger analysis task",
+                extra={'call_id': call_id, 'error': str(e)},
+                exc_info=True
+            )
 
         total_time = time.time() - start_time
 

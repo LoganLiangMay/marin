@@ -1,0 +1,67 @@
+Conversation 2: In-House SaaS Performance Marketer
+Profile:
+* Role: Senior Performance Marketing Manager at B2B SaaS company ($50M ARR)
+* Experience: 6 years, all in B2B
+* Manages: $200K monthly ad spend, team of 2
+* Platforms: Google, LinkedIn, Facebook
+Opening: Rep: "Hey Marcus, thanks so much for taking the time today. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Marcus: "Yeah, sure. Though I'll warn you, B2B paid is a different beast than e-commerce."
+Warm-Up: Rep: "Awesome. To start, could you tell me a bit about your business and what your role looks like day-to-day?"
+Marcus: "We're a project management software company, mid-market focus. I run all our paid acquisition - Google, LinkedIn, some Facebook. I have two people on my team - one focused on search, one on social. My day is split between campaign optimization, working with our content team on ad creative, analyzing conversion data in Salesforce, and a lot of stakeholder management. Everyone has opinions about the ads."
+Rep: "What does a typical week look like for you right now?"
+Marcus: "Monday mornings are pipeline review with sales - they want to know lead quality from paid. Rest of Monday is campaign optimization based on that feedback. Tuesday-Wednesday is new campaign development and creative testing. Thursday is cross-functional meetings - product marketing, content, sales ops. Friday is reporting and planning. I'm also constantly in Salesforce checking how our leads are progressing through the funnel."
+Rep: "What's been going really well lately?"
+Marcus: "LinkedIn has been solid for us - we've figured out our targeting and messaging. Our ICP is pretty specific and LinkedIn lets us get precise. Google search intent campaigns are strong - we know our keywords, we rank well organically, and paid supplements that nicely. Our conversion rate from demo request to closed-won has improved a lot."
+Rep: "And on the flip side, what's been harder than expected?"
+Marcus: "Long sales cycles make optimization hard. We're making decisions on incomplete data because deals take 3-6 months to close. LinkedIn costs have gone up probably 50% in the last two years. Our CEO keeps asking why our CAC is going up, but it's the market. And honestly, connecting ad spend to revenue is really complex when you have a long, multi-touch sales cycle."
+Deep Dive: Rep: "What are your biggest challenges when running ad campaigns right now?"
+Marcus: "Three things keep me up at night. One, proving ROI on a long sales cycle. Two, lead quality - sales complains our leads aren't qualified enough, but if we get too restrictive, volume drops. Three, the gap between marketing metrics and sales metrics. Marketing says a lead is qualified, sales says it's not. We're constantly arguing about definitions."
+Rep: "Walk me through a recent campaign that was tough or frustrating  what happened?"
+Marcus: "Last quarter, we launched a big campaign around our new AI features. We targeted mid-market companies in specific verticals - great creative, good offer. Spent about $40K over six weeks. Got decent volume - maybe 200 leads. Marketing team was happy. Then sales comes back and says only 15 of those leads were actually qualified - wrong company size, wrong role, wrong use case. So our cost per qualified lead was way higher than we thought. Now we're trying to figure out if it was a targeting issue, a messaging issue, or a form issue. But the feedback loop is so slow - we won't know how many of those 15 actually close for months."
+Rep: "When something goes wrong, where does it usually happen?"
+Marcus: "Usually in the handoff points. Ad to landing page - sometimes our page load times are slow and we lose people. Form submission to CRM - we've had issues with leads not syncing properly. Lead assignment to sales - sometimes qualified leads sit in a queue for days. Then sales attribution - we have three different teams claiming credit for the same deal. It's a mess."
+Rep: "How do you onboard new campaigns? What's that process like from start to finish?"
+Marcus: "It's pretty involved. First, we work with product marketing on positioning and messaging - that's 1-2 weeks. Then we develop creative assets with our design team - another 2-3 weeks. Then I build out the campaigns in each platform - Google, LinkedIn, maybe Facebook. Set up tracking, coordinate with our web team on landing pages, make sure Salesforce integration is working. Test everything. Then launch and monitor closely for the first week. All in, probably 4-6 weeks from concept to launch for a major campaign."
+Rep: "Do you mostly configure and let things run, or do you have to stay hands-on daily?"
+Marcus: "More hands-on than I'd like, but less than e-commerce probably. I check campaigns daily, but I'm not making constant tweaks like an e-commerce team would. Bigger issue is responding to sales feedback - they'll tell me a campaign is generating bad leads, so I have to adjust targeting or pause things. Or the CEO will see a competitor doing something and want us to react. So it's less about optimization mechanics and more about stakeholder management."
+Rep: "What tools or platforms are you using today?"
+Marcus: "Google Ads, LinkedIn Campaign Manager, Facebook Ads Manager. Salesforce is our CRM. HubSpot for marketing automation and some landing pages. Google Analytics 4. Looker for our BI dashboards. We have Outreach for sales engagement. And like everyone, a bunch of Google Sheets for custom reporting."
+Rep: "What do you love about them? What's frustrating?"
+Marcus: "Love: Salesforce is powerful when it's set up right. LinkedIn's targeting is unmatched for B2B. Google's search intent is still king. Frustrating: nothing connects well. We have six different tools and they don't talk to each other. Salesforce is complex - takes months to get things configured right. HubSpot and Salesforce fight about data. Reporting requires pulling data from multiple places and manually reconciling it."
+Rep: "Where do you feel automation breaks down or still needs humans?"
+Marcus: "Understanding business context and sales feedback. Google's smart bidding doesn't know that Sales just told me leads from the healthcare vertical convert better. LinkedIn doesn't know that our Q4 budget just got cut. Platforms can't interpret qualitative feedback from sales calls. And automated bidding sometimes makes decisions that are technically optimal but strategically wrong - like shifting budget away from brand terms because the CPA is higher, even though those convert better downstream."
+Rep: "How much time do you spend each week on manual reporting or analysis?"
+Marcus: "Probably 10-15 hours per week on reporting. I pull ad platform data, match it to Salesforce leads, build custom reports for different stakeholders. Sales wants to see lead volume and quality. Finance wants to see CAC by channel. Our CEO wants to see pipeline influenced by paid. They all want different cuts of the same data. Plus I spend another 5-10 hours per week analyzing the data trying to find insights - what's working, what's not, where should we shift budget."
+Rep: "If you could get those hours back, what would you do with that time?"
+Marcus: "Test more. We only run 2-3 new campaigns per quarter because setup is so time-intensive. If I had more time, I'd experiment with new channels, test different messaging, try new targeting strategies. We're probably leaving growth on the table because we don't have capacity to test everything we should."
+Strategy + Measurement: Rep: "How are you thinking about incrementality, attribution, and MMM right now?"
+Marcus: "Attribution is a constant debate. We use Salesforce's multi-touch attribution model, but sales doesn't trust it. They think paid gets too much credit. We've talked about doing a real incrementality test - like geo holdout or something - but we're not big enough to have the statistical power. MMM feels like overkill for us right now. Honestly, we mostly use proxy metrics - if pipeline from paid is growing and CAC is stable or improving, we're probably doing okay."
+Rep: "Since cookies dropped, what's changed in your retargeting performance?"
+Marcus: "B2B retargeting was never as precise as B2C anyway. We're definitely seeing smaller audience sizes for retargeting, especially on Google. But we've compensated by focusing more on LinkedIn, which uses first-party data from people's profiles. We're also pushing harder on email nurture for people who don't convert immediately. Overall impact is there but not as catastrophic as e-commerce."
+Rep: "Are you experimenting with any first-party data approaches yet?"
+Marcus: "Yeah, we're uploading customer lists to LinkedIn and Google for customer match audiences. Works pretty well for expansion campaigns targeting existing customers. We're also doing more with our CRM data - like, targeting leads that went cold. But honestly, the operational lift of keeping those lists updated is more than I expected. We don't have a great automated process for it."
+Rep: "What's your biggest headache when it comes to stakeholder reporting?"
+Marcus: "Everyone wants different things. Sales wants lead volume and quality scores. Finance wants CAC and payback period. Our CEO wants to see ROI but doesn't understand that we won't know true ROI for 6-12 months because of sales cycle length. So I'm building three different reports with three different stories, and they don't always align. It's politically exhausting."
+Rep: "How easy is it for stakeholders to interpret the data you provide?"
+Marcus: "Not easy enough. I over-explain because I'm afraid they'll misinterpret. Like, I can't just show leads - I have to show MQLs, SQLs, opportunities, closed-won. But then they get lost in the funnel stages. I've tried simplifying, but then I get questions that require the detail. Can't win."
+Vision & Desired Future: Rep: "If you could wave a magic wand and fix one thing about your workflow, what would it be?"
+Marcus: "A closed loop between ad platforms and Salesforce that actually works. I want to see in real-time which campaigns are driving qualified pipeline, not just leads. I want to automatically shift budget to campaigns that drive deals, not just clicks. Right now, there's like a 3-6 month lag between ad click and knowing if it was worth it."
+Rep: "What would an ideal system look like for you?"
+Marcus: "One source of truth for performance. I log in, I see ad spend, lead volume, lead quality scores from sales, opportunities created, pipeline value, and ideally closed-won revenue. All in one place, automatically updated. And smart recommendations - 'hey, healthcare campaigns are closing at 2x rate, shift budget there.' That would change my life."
+Rep: "What's one thing that would make you look like a hero internally?"
+Marcus: "If I could definitively show which campaigns are driving revenue, not just leads. Right now, we have this black box between 'lead came from paid' and 'deal closed.' Sales takes credit, marketing takes credit, everyone's guessing. If I could illuminate that black box, I'd be a hero to both marketing and finance."
+Rep: "Where do you think the biggest opportunities for automation or AI could be?"
+Marcus: "Predictive lead scoring that actually works. Right now, we score leads based on job title and company size, but AI could look at way more signals - engagement, fit, intent. And intelligent budget allocation across campaigns based on downstream conversion, not just cost per lead. Also, creative testing - AI should be able to generate ad variants and test messaging at scale."
+Wrap-Up: Rep: "That's super helpful  thank you for walking me through all that. Just to recap, I heard that closing the loop between ad platforms and Salesforce, streamlining stakeholder reporting, and better understanding of lead quality are your top pains. Did I get that right?"
+Marcus: "Yeah, exactly. And just generally operating with incomplete data because of long sales cycles."
+Rep: "We're compiling insights from these conversations to shape some early prototypes. Would you be open to us showing you what we're working on when it's ready?"
+Marcus: "Sure, always interested. Especially if it helps with Salesforce integration."
+Post-Call Notes:
+* Company: B2B SaaS, $50M ARR, 3-6 month sales cycle
+* Top 3 Pains: (1) Closed-loop attribution from ad to revenue, (2) Multiple stakeholder reporting requirements, (3) Lead quality assessment with slow feedback loops
+* Tools Used: Google, LinkedIn, Facebook, Salesforce, HubSpot, GA4, Looker
+* Workarounds: Manual Salesforce data pulls, multiple custom reports for different stakeholders
+* Key Quotes: "Marketing says qualified, sales says it's not", "3-6 month lag between click and knowing if it was worth it", "Black box between lead and deal"
+* Emotional Energy: Frustration with stakeholder alignment, excitement about potential closed-loop systems
+* Follow-up: Yes, especially interested in Salesforce integration
+

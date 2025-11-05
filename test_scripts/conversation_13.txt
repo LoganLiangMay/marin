@@ -1,0 +1,41 @@
+Conversation 13: Political Campaign Digital Director
+Profile:
+* Role: Digital Director for congressional campaign
+* Experience: 5 years in political marketing
+* Manages: $400K total campaign budget (6-month race), $60K/month in final stretch
+* Platforms: Meta, Google, YouTube, email/SMS
+Opening: Rep: "Hey Jordan, thanks for making time - I know you're in the middle of a campaign. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Jordan: "Yeah, I've got 20 minutes. Let's make it quick - I'm literally launching ads in an hour for a debate response."
+Warm-Up: Rep: "Totally understand. Give me the quick version - what's your role?"
+Jordan: "I run all digital for a congressional race. Fundraising, persuasion, GOTV. We have six months to raise money, move voters, and win. It's high-pressure, fast-paced, and everything we do is public - if our ad sucks, Twitter will let us know in about 30 seconds."
+Rep: "What's working?"
+Jordan: "Small-dollar fundraising on Meta is crushing it. We're raising $10 for every $1 we spend. Our rapid response is good - when news breaks, we can have ads live within hours. And our email program is strong - we have a consultant who's a genius at subject lines."
+Rep: "What's tough?"
+Jordan: "We're always out-spent by dark money groups. Also, creative fatigue is brutal - we need fresh content constantly but our candidate's time is limited. And honestly, the stakes are really high. If I mess up our ad spend in the final week, we could lose. No pressure, right?"
+Deep Dive: Rep: "Tell me about your rapid response process."
+Jordan: "Okay, so let's say our opponent says something stupid at a debate. Within 30 minutes, my team clips the video, writes copy, designs graphics, and we're launching ads on Meta and Twitter. Speed matters in politics - first mover advantage is real. But it's chaotic. I'm approving creative while our candidate is literally still on stage."
+Rep: "That sounds intense. What makes it hard?"
+Jordan: "Legal and compliance review. Every ad needs legal approval because of FEC rules - disclaimers, disclosures, all that. But legal review takes time, and in rapid response situations, we don't have time. So we've built templates that are pre-approved, but they're limiting. Also, Meta's ad review can be unpredictable - sometimes our ads get rejected for vague policy reasons and we have to appeal."
+Rep: "How are you balancing fundraising versus persuasion versus GOTV?"
+Jordan: "It shifts over the campaign. Right now we're heavy on fundraising because we need money. Closer to Election Day, we'll shift to persuasion and GOTV. But it's also audience-dependent - our base gets fundraising asks, swing voters get persuasion, and our volunteer list gets GOTV. We're running like 15 different campaigns simultaneously targeting different groups."
+Rep: "What's your data and targeting approach?"
+Jordan: "We have a voter file with scores - persuadability scores, turnout scores, issue priority scores. We upload those to Meta and Google as custom audiences. But the match rates are terrible - maybe 40-50%. So we're reaching a bunch of people who aren't even voters. We also use TV data and other third-party data. But honestly, political targeting post-iOS 14 is way harder than it used to be."
+Rep: "How are you measuring success?"
+Jordan: "Depends on the objective. Fundraising is easy - did we raise more than we spent? Persuasion is harder - we use polling and survey data to see if our ads are moving numbers. GOTV is measured by turnout. But connecting specific ads to votes is impossible. We can see directional trends, but there's so much noise - earned media, our opponent's ads, national political environment."
+Vision & Desired Future: Rep: "What would change the game for you?"
+Jordan: "Real-time polling integrated with ad platforms. I want to see which messages are actually moving voters, not just which ads have good engagement rates. Also, faster creative production - we should be able to generate and test 50 ad variants per week, not 10. And honestly, better compliance automation - legal review is a bottleneck."
+Rep: "Anything else?"
+Jordan: "Look, political campaigns are six-month sprints with zero room for error. Any tool that saves us time or helps us make smarter decisions faster is valuable. But it needs to work out of the box - we don't have time for lengthy onboarding or customization."
+Wrap-Up: Rep: "Super helpful. Sounds like rapid response speed, creative production at scale, and compliance workflow are key pain points?"
+Jordan: "Yeah. And just generally the chaos of running 15 campaigns at once with limited resources."
+Rep: "Would you be interested in seeing what we're building?"
+Jordan: "Maybe, but I'll be honest - after this campaign I might never do this again. It's exhausting. But sure, reach out after Election Day."
+Post-Call Notes:
+* Company: Congressional campaign, 6-month race, $400K budget
+* Top 3 Pains: (1) Rapid response speed bottlenecked by compliance review, (2) Creative production volume - need 50+ variants/week, (3) Targeting accuracy - 40-50% match rates on voter file
+* Tools Used: Meta, Google, YouTube, Voter file/CRM, third-party data providers
+* Workarounds: Pre-approved creative templates for rapid response, simultaneous campaign management
+* Key Quotes: "If I mess up the final week, we could lose", "No time for lengthy onboarding", "Chaos of running 15 campaigns at once"
+* Emotional Energy: Intense, high-pressure, time-sensitive, slightly burnt out
+* Follow-up: Maybe after election
+

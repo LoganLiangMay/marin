@@ -1,0 +1,49 @@
+Conversation 10: Education/Online Course Marketer
+Profile:
+* Role: Marketing Director at online education platform
+* Experience: 8 years in ed-tech marketing
+* Manages: $150K monthly ad spend
+* Platforms: Facebook, Google, LinkedIn, YouTube
+Opening: Rep: "Hey David, thanks for making time. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+David: "Works for me. Online education has some unique challenges compared to other industries, but happy to share."
+Warm-Up: Rep: "Great. Can you give me an overview of your business and what you do?"
+David: "We're an online platform offering professional certification courses - think project management, data science, business analysis. Courses range from $500 to $3,000. I run all our paid acquisition. We have a long consideration cycle - people research for weeks before buying. My typical day is split between optimizing campaigns, working with our content team on webinars and lead magnets, and analyzing which lead sources actually convert to paid enrollments."
+Rep: "What's going well?"
+David: "LinkedIn has been solid for professional courses - we can target by job title and industry. Our webinar funnel is converting really well - we drive people to free webinars, then pitch the course. YouTube is growing for us too. And we've finally gotten good at email nurture - people who don't buy immediately get a 60-day nurture sequence that converts 8-10%."
+Rep: "What's challenging?"
+David: "The long sales cycle makes optimization really hard. Someone clicks an ad today, attends a webinar next week, gets nurtured for a month, then buys. By the time they convert, I've forgotten which campaign they came from. Attribution is a nightmare. Also, education is a discretionary purchase - when the economy is uncertain, our conversions drop. We can't control that."
+Deep Dive: Rep: "Tell me more about the attribution challenges with a long sales cycle."
+David: "Sure. Let's say someone clicks a Facebook ad on January 1st, downloads a lead magnet, gets added to our email list, attends a webinar on January 15th, then buys the course on February 10th. Which channel gets credit? Facebook says it's them because they drove the initial click. Our email team says it's them because the emails nurtured the lead. The webinar team says it's them because that's where the pitch happened. Everyone's fighting over credit, and I don't have a good answer."
+Rep: "How are you handling that today?"
+David: "Multi-touch attribution in theory, but it's not perfect. We use HubSpot to track the customer journey and give fractional credit to each touchpoint. But there are gaps - if someone sees a Facebook ad on their phone, then later comes back on desktop via Google search, we lose the connection. So our attribution is directional at best. We also look at cohort analysis - we track groups of leads by source and see which sources ultimately drive revenue."
+Rep: "Walk me through your funnel - how do people go from ad to purchase?"
+David: "We run ads driving to lead magnets - free checklists, templates, webinar registrations. The ad says 'Download our free guide to becoming a project manager.' They give us their email. Then we nurture them with educational content - 'here's how to pass the PMP exam,' 'here's what project managers earn.' We invite them to webinars where we demonstrate the value of our courses. During or after the webinar, we pitch the course with a time-limited discount. Some buy immediately, others take weeks to decide."
+Rep: "What's the biggest bottleneck in that funnel?"
+David: "Webinar attendance. We can drive leads cheaply - like $20-30 per lead. But only 30-40% actually show up to the webinar. And of those who show up, maybe 2-3% buy. So the real cost per customer is more like $3,000-4,000. If we could improve show-up rates or close rates, our unit economics would improve dramatically."
+Rep: "How much manual work goes into managing this funnel?"
+David: "A lot. I'm manually tagging leads by source in HubSpot. Creating audience segments for different nurture paths. Building campaign workflows. Tracking who attended webinars and manually following up with them. Pulling reports to see which lead sources are converting downstream. It's operationally intensive."
+Rep: "What platforms and tools are you using?"
+David: "Facebook and Google for top of funnel. LinkedIn for targeting specific professional audiences. YouTube for content and ads. HubSpot is our CRM and marketing automation platform - that's where all our nurture lives. Zoom for webinars. Google Analytics for website tracking. And a bunch of spreadsheets to connect everything."
+Rep: "How much time are you spending on reporting and analysis?"
+David: "Probably 15-20 hours per week. I'm pulling ad platform data, matching it to HubSpot leads, tracking which leads attended webinars, seeing which ones ultimately enrolled. Then creating reports for our exec team showing ROI by channel. It's tedious, and frankly the data is never as clean as I want it to be."
+Strategy + Measurement: Rep: "How are you measuring success?"
+David: "Ultimately, cost per enrollment and LTV:CAC ratio. But those are lagging indicators - I might not know for 60-90 days if a campaign was successful. So I also track leading indicators - cost per lead, lead-to-MQL conversion rate, webinar attendance rate, webinar-to-purchase rate. I'm constantly trying to predict which early metrics indicate downstream success."
+Rep: "What's your approach to testing?"
+David: "We test everything - ad creative, landing pages, lead magnets, email subject lines, webinar content. But testing takes time because of the long cycle. If I test two Facebook campaigns today, I won't know which one drove more enrollments for two months. So we try to focus on tests that give us early signals - like which ad has better CTR or which landing page has better conversion to lead."
+Vision & Desired Future: Rep: "What would change the game for you?"
+David: "Better attribution that actually captures the full journey. Right now I'm stitching together data from multiple sources and making educated guesses. If I had a system that tracked someone from first touchpoint to final purchase and showed me the full path, I could make way better decisions about budget allocation. Also, automated lead scoring - if AI could predict which leads are likely to convert based on behavior, we could focus our energy there."
+Rep: "Anything else?"
+David: "Honestly, just less manual work. The amount of time I spend tagging leads, creating segments, pulling reports - that should be automated. I should be focused on strategy, not data entry."
+Wrap-Up: Rep: "Super helpful. So attribution across a long sales cycle, automating lead management, and reducing manual reporting are your main pain points?"
+David: "Yeah, that sums it up. Anything that helps us understand what's actually driving enrollments would be huge."
+Rep: "Would you be interested in seeing what we build?"
+David: "Definitely. I'm always looking for better solutions."
+Post-Call Notes:
+* Company: Online education platform, $500-$3K courses, long sales cycle
+* Top 3 Pains: (1) Attribution across multi-touch, 60-90 day customer journey, (2) Manual lead tagging and segmentation in HubSpot, (3) Predicting which early signals indicate downstream success
+* Tools Used: Facebook, Google, LinkedIn, YouTube, HubSpot, Zoom, GA, Excel
+* Workarounds: Manual lead tagging, cohort analysis, fractional multi-touch attribution
+* Key Quotes: "By the time they convert, I've forgotten which campaign they came from", "Attribution is directional at best", "Real cost per customer is $3-4K"
+* Emotional Energy: Analytical, process-oriented, frustrated by data gaps
+* Follow-up: Yes
+

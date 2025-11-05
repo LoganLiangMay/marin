@@ -1,0 +1,49 @@
+Conversation 9: App Subscription Growth Lead
+Profile:
+* Role: Head of Growth at meditation app
+* Experience: 7 years in consumer apps
+* Manages: $300K monthly ad spend
+* Platforms: Meta, Google UAC, TikTok, Apple Search Ads, Snapchat
+Opening: Rep: "Hey Priya, thanks so much for taking the time today. I'm Alex with the Marin team at Gauntlet. We're doing a round of short conversations with marketing teams and agencies to really understand how they're running campaigns right now  what's working, what's painful, and where automation could make life easier. This isn't a sales call  it's more of a discovery session so we can learn from your experience. Does that sound good?"
+Priya: "Yes! I'm always happy to talk shop. Growth marketing is such a fast-moving space."
+Warm-Up: Rep: "Love it. Tell me about your role and what you're working on?"
+Priya: "I lead growth for a meditation and mental wellness app. We have a freemium model - free content with a premium subscription. My main job is acquiring users who'll convert to paid subscribers and stick around. We're competing with Calm and Headspace, so it's a pretty competitive space. I've got a team of three - one focused on creative, two on media buying and analysis."
+Rep: "What's your day-to-day like?"
+Priya: "Mornings I review overnight performance - we run global campaigns so there's always data to check. Then I'm in our analytics tools looking at cohort performance - which acquisition sources drive subscribers who retain? We have weekly creative sprints where we test new concepts. And I spend a lot of time with our product team because conversion to paid happens in-app, so UA and product need to be aligned."
+Rep: "What's been going really well?"
+Priya: "TikTok has been amazing for us - the content style fits our brand perfectly. We've also nailed our onboarding flow - we're converting 15% of free users to paid within the first week, which is really strong. And our retention is trending up, which gives us more room to spend on acquisition. Our CEO is happy because we're growing."
+Rep: "Any challenges?"
+Priya: "Yeah, definitely. Competition is intense - CPMs have doubled in the last 18 months. We're also in a saturated category - everyone and their mom has launched a wellness app. Finding differentiation in our ads is tough. And honestly, predicting LTV is hard because retention curves are so variable. Some cohorts look great at Day 7 then fall off at Day 90."
+Deep Dive: Rep: "Tell me more about the LTV prediction challenge."
+Priya: "Sure. When I'm buying installs today, I need to know if those users will be worth it over their lifetime. But lifetime takes months or years to observe. So we use predictive models - we look at Day 7 engagement, Day 30 retention, trial-to-paid conversion rates, and try to predict 12-month LTV. But our models are only like 70% accurate. So we're constantly making bet decisions on imperfect data."
+Rep: "How does that impact your optimization approach?"
+Priya: "It makes us conservative. We probably under-spend because we're not confident in our predictions. Like, we have campaigns that look great on Day 7 metrics, but I'm hesitant to scale because I don't trust the LTV forecast. If I had more confidence in the numbers, I'd spend more aggressively. But I can't afford to burn a bunch of money on users who churn in month two."
+Rep: "What's your creative testing process?"
+Priya: "We produce probably 30-40 new ad variants per month - mix of UGC-style testimonials, feature demos, and lifestyle content. We launch them across Meta and TikTok with small budgets, see which ones drive good CPI and engagement, then scale winners. The challenge is creative fatigues fast - a winning ad might be dead in three weeks. So we're on this treadmill of constantly producing new content."
+Rep: "How are you measuring success beyond just installs?"
+Priya: "We track the full funnel - installs, trial starts, trial-to-paid conversion, retention at 30/60/90 days, and ultimately LTV:CAC ratio. Our north star is profitable subscriber acquisition. We're not optimizing for vanity metrics like downloads - we care about subscribers who pay and stick around."
+Rep: "What tools are you using to track all of that?"
+Priya: "Adjust for attribution, Amplitude for product analytics, Looker for BI. Ad platforms for campaign management. We've built a bunch of custom dashboards in Looker that connect all the data sources. It's not perfect - there's always data discrepancies between systems - but it's functional."
+Rep: "Where do you spend the most manual effort?"
+Priya: "Honestly, creative production and deployment. We're shooting videos, editing them, exporting in different formats for each platform, uploading to ad managers, creating campaigns, tracking performance. It's so manual. I wish there was a way to upload one concept and have it automatically reformatted and deployed across platforms. We also spend a ton of time analyzing cohorts - pulling user data, segmenting by acquisition source, calculating LTV. That's super manual too."
+Strategy + Measurement: Rep: "How are you thinking about incrementality?"
+Priya: "We've run a few geo holdout tests to measure incrementality. The results were... humbling. Turns out maybe 60-70% of our attributed installs would have happened organically anyway. So our true incremental CPI is way higher than we thought. Now we're trying to figure out how to optimize for incremental installs, not just attributed installs, but the data is messy."
+Rep: "That's a tough realization. How did it change your approach?"
+Priya: "Made us more skeptical of platform attribution. Now we focus more on experiments and holdout tests. We also shifted some budget to brand awareness campaigns that might not have great direct attribution but drive overall growth. And we're investing more in organic channels - SEO, ASO, content - because those are truly incremental."
+Vision & Desired Future: Rep: "If you could snap your fingers and change one thing, what would it be?"
+Priya: "Accurate LTV prediction on Day 1. If I could know with 90%+ confidence whether a user will be valuable long-term based on their first day of behavior, I could optimize so much better. Right now I'm flying blind for weeks or months before I know if my spending was smart."
+Rep: "What else would make your life easier?"
+Priya: "Creative workflow automation for sure. The production to deployment pipeline is so inefficient. And better cross-platform campaign management - I shouldn't have to manually build the same campaign three times. Also, I'd love AI-powered creative testing that tells me why certain ads work, not just which ones work."
+Wrap-Up: Rep: "This has been great. Sounds like LTV prediction, creative workflow automation, and incrementality measurement are your key challenges?"
+Priya: "Exactly. Those are the things keeping me up at night."
+Rep: "Would you want to see what we're building when it's ready?"
+Priya: "Absolutely! I'm always excited about tools that could help us grow faster."
+Post-Call Notes:
+* Company: Meditation app, freemium model, competing with Calm/Headspace
+* Top 3 Pains: (1) Early LTV prediction accuracy (currently 70%), (2) Creative production/deployment workflow, (3) Incrementality measurement
+* Tools Used: Meta, Google UAC, TikTok, Apple Search Ads, Adjust, Amplitude, Looker
+* Workarounds: Conservative spending due to LTV uncertainty, custom Looker dashboards
+* Key Quotes: "Making bet decisions on imperfect data", "60-70% would have happened organically anyway", "Creative fatigues fast"
+* Emotional Energy: Energetic and growth-minded, frustrated by data limitations
+* Follow-up: Yes, very interested
+
