@@ -1,0 +1,258 @@
+╔═════════════════════════════════════════════════════════════════════════════╗
+║          CAMPAIGN GENERATION FLOW: WHERE OLD DATA GETS REUSED                ║
+╚═════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ SCENARIO: User Creates Two Campaigns Back-to-Back                            │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+CAMPAIGN #1: NIKE SHOES (First Campaign)
+═══════════════════════════════════════════════════════════════════════════════
+
+[1] User navigates to /generate
+    └─► page.tsx mounts
+        └─► useEffect runs (Line 40-51)
+            └─► localStorage.getItem('adGenerationDraft') 
+                └─► NULL (first time) ✓
+                    └─► Form shows with default values
+
+[2] User fills form: "Nike Shoes" | "Running campaign"
+    └─► form.watch() fires on each keystroke (Line 55)
+        └─► localStorage.setItem('adGenerationDraft', newData)
+            └─► localStorage['adGenerationDraft'] = {
+                  productName: 'Nike Shoes',
+                  productDescription: 'Running campaign...',
+                  ...
+                }
+
+[3] User clicks "Generate Video" 
+    └─► form.onSubmit() (Line 68)
+        └─► localStorage.setItem('lastGenerationData', JSON.stringify(data))
+            └─► localStorage['lastGenerationData'] = {
+                  productName: 'Nike Shoes',
+                  productDescription: 'Running campaign...',
+                  ...
+                }
+        └─► localStorage.removeItem('adGenerationDraft')
+            └─► Draft cleared
+        └─► window.location.href = '/generate/results/'
+            └─► Navigate to results page
+
+[4] results/page.tsx mounts
+    └─► useEffect retrieves (Line 36)
+        └─► localStorage.getItem('lastGenerationData')
+            └─► Gets Nike Shoes campaign data ✓
+        └─► Generates videos with Nike Shoes prompts
+            └─► Calls ReplicateVideoService.generateVideo() 3 times
+                └─► Creates 3 videos with ID: pred_abc123, pred_abc124, pred_abc125
+
+[5] Results page shows
+    ├─► "Generated Nike Campaign Videos (3)" ✓ Correct
+    ├─► 3 video cards with Nike Shoes prompts ✓ Correct
+    └─► "Generate New Campaign" button visible
+
+📊 localStorage STATE AFTER CAMPAIGN #1:
+    ├─ adGenerationDraft: (cleared)
+    └─ lastGenerationData: {productName: 'Nike Shoes', ...}  ← WILL BE REUSED!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+USER CLICKS "GENERATE NEW CAMPAIGN" BUTTON
+═══════════════════════════════════════════════════════════════════════════════
+
+[6] User clicks button: onClick={() => router.push('/generate')}
+    └─► Navigate to /generate
+
+[7] page.tsx mounts AGAIN
+    └─► useEffect runs (Line 40-51)
+        ├─► localStorage.getItem('adGenerationDraft')
+        │   └─► Returns: null (cleared in step 3) ✓
+        │
+        └─► BUT WAIT... What about the form state?
+            └─► react-hook-form default values (Line 18-37):
+                ├─ productName: ''
+                ├─ productDescription: ''
+                ├─ brandTone: 'professional'
+                └─ ... (all defaults)
+                └─► Form shows BLANK ✓ Looks Good!
+
+[8] User fills NEW form: "Apple Watch" | "Tech gadget campaign"
+    └─► form.watch() fires (Line 55)
+        └─► localStorage.setItem('adGenerationDraft', newData)
+            └─► localStorage['adGenerationDraft'] = {
+                  productName: 'Apple Watch',
+                  productDescription: 'Tech gadget...',
+                  ...
+                }
+
+            ⚠️  NOTE: localStorage['lastGenerationData'] STILL contains Nike Shoes!
+                This is the OLD data from Campaign #1
+
+[9] User clicks "Generate Video"
+    └─► form.onSubmit() (Line 68)
+        └─► localStorage.setItem('lastGenerationData', JSON.stringify(data))
+            └─► localStorage['lastGenerationData'] = {
+                  productName: 'Apple Watch',      ← NEW
+                  productDescription: 'Tech gadget...',  ← NEW
+                  ...
+                }
+            ⚠️  OVERWRITES Campaign #1 data!
+        └─► localStorage.removeItem('adGenerationDraft')
+        └─► Redirect to /generate/results/
+
+[10] results/page.tsx mounts with Apple Watch data
+     └─► Generates and shows Apple Watch videos
+     └─► Campaign #1 (Nike Shoes) data is NOW LOST ❌
+
+
+═══════════════════════════════════════════════════════════════════════════════
+THE CORE PROBLEM: SINGLE KEY STORAGE
+═══════════════════════════════════════════════════════════════════════════════
+
+Timeline:
+┌─────────────┬──────────────────────────┬──────────────────────────┐
+│ Time        │ lastGenerationData       │ Problem                  │
+├─────────────┼──────────────────────────┼──────────────────────────┤
+│ Campaign #1 │ Nike Shoes campaign      │ -                        │
+│ submitted   │                          │                          │
+├─────────────┼──────────────────────────┼──────────────────────────┤
+│ Campaign #2 │ Apple Watch campaign     │ Nike data LOST! ❌       │
+│ submitted   │ (overwrites Nike)        │                          │
+├─────────────┼──────────────────────────┼──────────────────────────┤
+│ Click       │ Apple Watch campaign     │ Can't go back to Nike    │
+│ "Generate   │ (still Apple Watch)      │                          │
+│  New"       │                          │                          │
+└─────────────┴──────────────────────────┴──────────────────────────┘
+
+WHAT SHOULD HAPPEN:
+┌─────────────┬──────────────────────────────────────────────────┐
+│ Time        │ localStorage['campaigns']                        │
+├─────────────┼──────────────────────────────────────────────────┤
+│ Campaign #1 │ {                                                │
+│ submitted   │   'uuid-1234': {Nike Shoes campaign},            │
+│             │   activeId: 'uuid-1234'                          │
+│             │ }                                                │
+├─────────────┼──────────────────────────────────────────────────┤
+│ Campaign #2 │ {                                                │
+│ submitted   │   'uuid-1234': {Nike Shoes campaign},            │
+│             │   'uuid-5678': {Apple Watch campaign}, ← NEW!    │
+│             │   activeId: 'uuid-5678'  ← Updated!             │
+│             │ }                                                │
+├─────────────┼──────────────────────────────────────────────────┤
+│ Click       │ Both campaigns preserved! Both accessible!       │
+│ "Generate   │ Can view history, re-run, edit, etc.            │
+│  New"       │                                                  │
+└─────────────┴──────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════
+ADDITIONAL ISSUE: HARDCODED NIKE THROUGHOUT
+═══════════════════════════════════════════════════════════════════════════════
+
+Even if Campaign #1 data was preserved, the results page hardcodes Nike:
+
+File: /app/generate/results/page.tsx
+
+Line 294:
+┌─────────────────────────────────────────────┐
+│ <h2>Generated Nike Campaign Videos ({count})</h2>  ← HARDCODED!
+└─────────────────────────────────────────────┘
+Should be:
+┌────────────────────────────────────────────────────────────┐
+│ <h2>Generated {productName} Campaign Videos ({count})</h2>
+└────────────────────────────────────────────────────────────┘
+
+Line 402-407:
+┌────────────────────────────────────────────────────────────┐
+│ "🎯 Nike Campaign Ready"                                   │
+│ "Your energetic Nike running campaign videos..."           │
+│                                                            │
+│ Should be:                                                 │
+│ "🎯 {productName} Campaign Ready"                          │
+│ "Your {brandTone} {productName} campaign..."              │
+└────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════
+WHAT GETS LOST / REUSED
+═══════════════════════════════════════════════════════════════════════════════
+
+CAMPAIGN #1 DATA LOST:
+✗ Campaign #1 product name
+✗ Campaign #1 product description  
+✗ Campaign #1 keywords
+✗ Campaign #1 brand tone
+✗ Campaign #1 video settings (duration, resolution, etc.)
+✗ Campaign #1 generated video IDs (pred_abc123, pred_abc124, etc.)
+✗ Campaign #1 creation timestamp
+✗ Campaign #1 generation cost
+✗ All Campaign #1 metadata
+
+What STAYS in localStorage:
+- lastGenerationData key gets overwritten (not lost, just replaced)
+- No backup/archive mechanism exists
+- No way to retrieve Campaign #1 after Campaign #2 is created
+
+CAMPAIGN #2 REUSES:
+✓ localStorage key: 'lastGenerationData' (same for every campaign!)
+✓ Form UI structure
+✓ Prompt generation logic
+✓ Results page UI (but hardcoded Nike!)
+✓ Video generation flow
+✗ But NO session ID ✗ NO unique campaign identifier ✗ NO history
+
+
+═══════════════════════════════════════════════════════════════════════════════
+FILES AND LINES WITH ISSUES
+═══════════════════════════════════════════════════════════════════════════════
+
+/app/generate/page.tsx:
+  Line 40-51   ← useEffect loads previous draft (draft auto-load)
+  Line 56      ← Saves draft on every keystroke (continuous save)
+  Line 75      ← Uses SINGLE KEY 'lastGenerationData' for ALL campaigns
+  Line 78      ← Only clears draft, not the lastGenerationData
+
+/app/generate/results/page.tsx:
+  Line 36      ← Retrieves SINGLE KEY 'lastGenerationData'
+  Line 47-63   ← Hardcoded Nike prompts as defaults
+  Line 294     ← Hardcoded "Nike Campaign Videos" title
+  Line 402-407 ← Hardcoded "Nike Campaign Ready" summary
+  Line 412     ← "Generate New Campaign" button (navigates to /generate)
+
+/lib/services/replicateVideoService.ts:
+  Line 32      ← Singleton service (OK, but no campaign context)
+  No campaign ID association with videos
+
+
+═══════════════════════════════════════════════════════════════════════════════
+SUMMARY: CASCADING FAILURES
+═══════════════════════════════════════════════════════════════════════════════
+
+1. User creates Campaign #1
+   └─► localStorage['lastGenerationData'] = Campaign #1
+
+2. User clicks "Generate New Campaign"
+   └─► Form still has default values (OK)
+
+3. User creates Campaign #2
+   └─► localStorage['lastGenerationData'] = Campaign #2  (OVERWRITES!)
+   └─► Campaign #1 is LOST
+
+4. If user navigates back (browser back button, refresh, etc.)
+   └─► Only Campaign #2 data available
+   └─► Campaign #1 unretrievable
+
+5. Results page shows hardcoded "Nike" 
+   └─► Even if data were preserved, UI doesn't reflect actual product
+   └─► Confusing for non-Nike campaigns
+
+ROOT CAUSE CHAIN:
+  Single localStorage key 
+    └─► No unique IDs per campaign
+        └─► No history tracking
+            └─► Data loss on new campaign
+                └─► Hardcoded UI doesn't help
+                    └─► User sees wrong branding
+
+═════════════════════════════════════════════════════════════════════════════════

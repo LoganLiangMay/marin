@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/auth/login/page": "/auth/login",
+  "/auth/reset-password/page": "/auth/reset-password",
+  "/auth/signup/page": "/auth/signup",
+  "/dashboard/page": "/dashboard",
+  "/generate/page": "/generate",
+  "/generate/results/page": "/generate/results",
+  "/icon.svg/route": "/icon.svg",
+  "/page": "/",
+  "/test-firebase/page": "/test-firebase"
+}

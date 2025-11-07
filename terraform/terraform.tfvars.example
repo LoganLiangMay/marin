@@ -14,4 +14,5 @@ project_name = "audio-pipeline"
 mongodb_atlas_public_key  = "your-mongodb-atlas-public-key"
 mongodb_atlas_private_key = "your-mongodb-atlas-private-key"
 
+
 # Additional module-specific variables will be added as modules are populated

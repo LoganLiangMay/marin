@@ -1,0 +1,128 @@
+# AI-Powered Dynamic Video Ad Generator - Product Requirements
+
+## Project Overview
+Build an AI-powered platform that generates professional dynamic video advertisements from simple text descriptions. Users input product details, and the system generates 1-3 complete video ads (5-10 seconds) with cinematic visuals, voiceover narration, and professional effects.
+
+## Core Technology Stack
+- Frontend: Next.js 14 + TypeScript + Tailwind CSS
+- Backend: Firebase (Auth, Firestore, Functions, Hosting)
+- Storage: AWS S3 (video files)
+- AI Services: OpenAI (GPT-4o, Sora-2, DALL-E 3, TTS)
+- Processing: FFmpeg (video assembly, effects, transitions)
+
+## MVP Features
+
+### 1. User Authentication System
+- Email/password authentication via Firebase Auth
+- Password reset functionality
+- Session persistence (30-day auto-logout)
+- Protected routes middleware
+- User profile management
+
+### 2. Ad Generation Form Interface
+- Product information input (name, description, keywords)
+- Brand settings (tone, primary color)
+- Generation settings (variations 1-3, duration 5-10s, orientation, resolution, frame rate)
+- Sora model selection (Sora-2 or Sora-2-Pro)
+- Optional asset uploads (product photo, logo)
+- Form validation and character limits
+- Real-time character counting
+
+### 3. Video Generation Pipeline
+- Script generation with GPT-4o (3 variations if requested)
+- Scene generation with Sora-2/Pro for each variation
+- Automatic DALL-E 3 + FFmpeg fallback if Sora fails
+- Voiceover generation with OpenAI TTS
+- Video assembly with FFmpeg (transitions, effects, overlays)
+- Upload to AWS S3
+- Thumbnail generation
+- Real-time progress tracking
+
+### 4. Dashboard and Video Management
+- View all generated ads with thumbnails
+- Real-time generation progress updates
+- Video player with controls
+- Download functionality for videos
+- Cost display per ad
+- Generation time tracking
+- Regeneration option for unsatisfactory results
+
+### 5. Error Handling and Reliability
+- Retry logic with exponential backoff
+- Automatic fallback to DALL-E when Sora fails
+- Comprehensive error logging
+- User-friendly error messages
+- Progress persistence across failures
+
+## Technical Requirements
+
+### Performance Targets
+- Average generation time: < 3 minutes per variation
+- Success rate: > 95%
+- Fallback rate: < 20%
+- Uptime: > 99.5%
+- Video output quality: 1080p minimum
+- Audio-video sync: Perfect (0 frame drift)
+
+### Infrastructure Setup
+- Firebase project configuration
+- AWS S3 bucket with proper permissions
+- OpenAI API access (GPT-4o, Sora-2, DALL-E 3, TTS)
+- FFmpeg installation in Firebase Functions
+- Environment variables management
+- Security rules for Firestore
+- CORS configuration for S3
+
+### Cost Structure
+- Sora-2 single ad: ~$1.48
+- Sora-2-Pro single ad: ~$2.78
+- Fallback (DALL-E) single ad: ~$0.42
+- Infrastructure base: ~$0/month
+- With 100 ad requests/month: ~$475
+
+## Development Phases
+
+### Phase 1: Foundation (Weeks 1-2)
+- Firebase project setup
+- Next.js initialization
+- Authentication implementation
+- Basic UI shell
+- Form creation
+- Firestore integration
+
+### Phase 2: AI Integration (Weeks 3-4)
+- OpenAI API integration
+- Script generation implementation
+- Sora video generation
+- TTS voiceover
+- DALL-E fallback
+- Firebase Functions setup
+
+### Phase 3: Video Assembly (Week 5)
+- FFmpeg integration
+- Scene assembly
+- Transitions and effects
+- Text overlays
+- Audio mixing
+- S3 upload
+
+### Phase 4: Dashboard & Polish (Week 6)
+- Video player implementation
+- Real-time progress UI
+- Download functionality
+- Error messages
+- Responsive design
+
+### Phase 5: Testing & Launch (Week 7)
+- Comprehensive testing
+- Load testing
+- Security audit
+- Documentation
+- Production deployment
+
+## Success Metrics
+- Generate visually impressive ads matching professional quality
+- Validate technical feasibility and cost structure
+- Create foundation for future SaaS product
+- Achieve < 3 minute generation time
+- Maintain > 95% success rate

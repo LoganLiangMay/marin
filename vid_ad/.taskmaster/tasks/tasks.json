@@ -1,0 +1,932 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Initialize Next.js Project with TypeScript and Tailwind CSS",
+        "description": "Set up Next.js 14 project with TypeScript configuration and Tailwind CSS for styling",
+        "details": "Initialize Next.js 14 project with TypeScript support using 'npx create-next-app@latest vid-ad-generator --typescript --tailwind --app --eslint'. Configure TypeScript strict mode, path aliases (@/* for imports), and Tailwind CSS with custom configuration for brand colors and animation utilities. Set up ESLint and Prettier for code consistency. Configure next.config.js for image optimization, environment variables, and Firebase hosting compatibility.",
+        "testStrategy": "Verify successful build with 'npm run build', ensure TypeScript compilation passes without errors, validate Tailwind CSS utilities work correctly, and test hot reload functionality in development mode",
+        "priority": "high",
+        "dependencies": [],
+        "status": "done",
+        "subtasks": [],
+        "complexity": 3,
+        "recommendedSubtasks": 4,
+        "expansionPrompt": "Break down into: 1) Create Next.js project with CLI flags, 2) Configure TypeScript strict mode and path aliases, 3) Set up Tailwind CSS with custom theme configuration, 4) Configure ESLint/Prettier and next.config.js for production",
+        "updatedAt": "2025-11-05T17:07:21.895Z"
+      },
+      {
+        "id": 2,
+        "title": "Configure Firebase Project and Initialize Services",
+        "description": "Set up Firebase project with Authentication, Firestore, Functions, and Hosting services",
+        "details": "Create Firebase project, enable Authentication (Email/Password provider), initialize Firestore with security rules, set up Cloud Functions environment with Node.js 20, configure Firebase Hosting for Next.js. Create firebase.json configuration with rewrites for Next.js SSR. Initialize Firebase Admin SDK for server-side operations. Set up Firebase emulators for local development. Configure environment variables for Firebase config in .env.local file.",
+        "testStrategy": "Test Firebase emulator connectivity, verify authentication flow works locally, test Firestore read/write operations, validate Functions deployment with a simple health check function",
+        "priority": "high",
+        "dependencies": [
+          "1"
+        ],
+        "status": "done",
+        "subtasks": [],
+        "complexity": 5,
+        "recommendedSubtasks": 6,
+        "expansionPrompt": "Break down into: 1) Create Firebase project and enable services in console, 2) Initialize Firebase SDK and Admin SDK configuration, 3) Set up Firestore with security rules, 4) Configure Cloud Functions environment, 5) Set up Firebase Hosting for Next.js SSR, 6) Configure emulators for local development",
+        "updatedAt": "2025-11-05T18:16:36.149Z"
+      },
+      {
+        "id": 3,
+        "title": "Implement Firebase Authentication System",
+        "description": "Create complete authentication flow with email/password, session management, and protected routes",
+        "details": "Implement authentication context using React Context API with Firebase Auth. Create signup, login, password reset pages using Next.js App Router. Implement middleware.ts for protected route handling with 30-day session persistence. Add user profile management in Firestore with user metadata (createdAt, lastLogin, email). Create useAuth custom hook for auth state management. Implement automatic logout after 30 days using Firebase Auth persistence settings.",
+        "testStrategy": "Test signup flow with validation errors, verify email/password login, test password reset email delivery, validate session persistence across browser restarts, ensure protected routes redirect properly",
+        "priority": "high",
+        "dependencies": [
+          "2"
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create Firebase Authentication Context Provider",
+            "description": "Set up React Context API provider with Firebase Auth integration for global authentication state management",
+            "dependencies": [],
+            "details": "Create AuthContext using React Context API with Firebase Auth SDK. Initialize Firebase Auth instance with proper configuration. Implement state management for user authentication status, loading states, and error handling. Create AuthProvider component to wrap the application and provide authentication state to all child components. Set up proper TypeScript interfaces for user data and authentication state.",
+            "status": "done",
+            "testStrategy": "Test context provider initialization, verify state updates on auth changes, test error state handling",
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Build Signup Page with Form Validation",
+            "description": "Create user registration page with email/password validation and Firebase Auth integration",
+            "dependencies": [
+              1
+            ],
+            "details": "Build signup form component using Next.js App Router with email and password fields. Implement client-side validation for email format, password strength (min 8 chars, special characters). Integrate with Firebase createUserWithEmailAndPassword method. Add proper error handling for existing users, weak passwords, and network issues. Include loading states and success feedback. Implement form reset after successful signup.",
+            "status": "done",
+            "testStrategy": "Test form validation with invalid inputs, verify successful account creation, test duplicate email handling",
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Implement Login and Password Reset Pages",
+            "description": "Create login page with email/password authentication and separate password reset functionality",
+            "dependencies": [
+              1
+            ],
+            "details": "Build login form with email/password fields using Firebase signInWithEmailAndPassword. Implement password reset page using Firebase sendPasswordResetEmail method. Add proper error handling for invalid credentials, unverified emails, and account not found scenarios. Include loading states and user feedback messages. Implement remember me functionality and redirect logic after successful login.",
+            "status": "done",
+            "testStrategy": "Test login with valid/invalid credentials, verify password reset email delivery, test error message display",
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Create Middleware for Protected Routes",
+            "description": "Implement Next.js middleware to handle route protection and authentication checks",
+            "dependencies": [
+              1
+            ],
+            "details": "Create middleware.ts file in Next.js project root for route protection. Implement authentication checking using Firebase Auth tokens. Define protected routes list and redirect logic for unauthenticated users. Handle token verification and refresh automatically. Implement proper redirect flow to login page with return URL parameter. Add middleware matching configuration for specific route patterns.",
+            "status": "done",
+            "testStrategy": "Test protected route access without authentication, verify redirect flow with return URLs, test token validation",
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Set up User Profile Management in Firestore",
+            "description": "Create user profile data structure and management functions in Firestore database",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "Design Firestore user document structure with fields: email, createdAt, lastLogin, displayName, and custom metadata. Implement user profile creation function triggered on signup. Create functions to update user profile data and track last login timestamps. Set up Firestore security rules for user data access. Implement profile update and deletion functions with proper error handling.",
+            "status": "done",
+            "testStrategy": "Test user profile creation on signup, verify data security rules, test profile update functionality",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Implement useAuth Custom Hook",
+            "description": "Create custom React hook for authentication state management and auth operations",
+            "dependencies": [
+              1,
+              5
+            ],
+            "details": "Build useAuth custom hook that provides authentication state, user data, and auth functions (login, logout, signup). Implement proper cleanup and subscription management for Firebase Auth state changes. Include loading states for auth operations and error handling. Provide user profile data from Firestore integration. Add helper functions for checking authentication status and user permissions.",
+            "status": "done",
+            "testStrategy": "Test hook state updates on auth changes, verify proper cleanup on unmount, test auth operation functions",
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Configure 30-day Session Persistence",
+            "description": "Implement Firebase Auth persistence settings for 30-day automatic logout functionality",
+            "dependencies": [
+              1,
+              6
+            ],
+            "details": "Configure Firebase Auth persistence using LOCAL persistence for 30-day sessions. Implement session expiration logic and automatic logout after 30 days of inactivity. Set up background tasks to check session validity and refresh tokens as needed. Add user notification system for upcoming session expiration. Implement graceful session cleanup and redirect to login page on expiration.",
+            "status": "done",
+            "testStrategy": "Test session persistence across browser restarts, verify 30-day expiration logic, test automatic logout functionality",
+            "parentId": "undefined"
+          }
+        ],
+        "complexity": 6,
+        "recommendedSubtasks": 7,
+        "expansionPrompt": "Break down into: 1) Create authentication context provider with Firebase Auth, 2) Build signup page with form validation, 3) Implement login and password reset pages, 4) Create middleware for protected routes, 5) Set up user profile management in Firestore, 6) Implement useAuth custom hook, 7) Configure 30-day session persistence"
+      },
+      {
+        "id": 4,
+        "title": "Set Up AWS S3 Storage Configuration",
+        "description": "Configure AWS S3 bucket for video storage with proper permissions and CORS",
+        "details": "Create S3 bucket with versioning enabled and lifecycle policies for cost optimization. Configure bucket policy for Firebase Functions access using IAM role. Set up CORS configuration for client-side uploads and video streaming. Implement presigned URLs for secure video downloads. Configure CloudFront CDN for video delivery optimization. Install AWS SDK v3 (@aws-sdk/client-s3, @aws-sdk/s3-request-presigner) in Firebase Functions.",
+        "testStrategy": "Test file upload to S3 from Firebase Function, verify CORS allows video playback in browser, test presigned URL generation and expiration, validate CloudFront caching",
+        "priority": "high",
+        "dependencies": [
+          "2"
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create and configure S3 bucket with versioning and lifecycle policies",
+            "description": "Create AWS S3 bucket with versioning enabled and implement lifecycle policies for cost optimization including transitions to IA and Glacier storage classes.",
+            "dependencies": [],
+            "details": "Create S3 bucket with unique name following naming conventions. Enable versioning for object protection. Configure lifecycle policies to transition objects to Standard-IA after 30 days and Glacier after 90 days. Set up bucket encryption with AWS managed keys. Configure bucket logging and monitoring. Document bucket configuration parameters and cost optimization settings.",
+            "status": "done",
+            "testStrategy": "Verify bucket creation and versioning status, test lifecycle policy application, validate encryption settings",
+            "updatedAt": "2025-11-05T19:45:04.965Z",
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Set up IAM roles and bucket policies for Firebase Functions access",
+            "description": "Create IAM roles and configure bucket policies to allow secure access from Firebase Functions using proper least-privilege principles.",
+            "dependencies": [
+              1
+            ],
+            "details": "Create IAM role with minimal required permissions for S3 operations (GetObject, PutObject, DeleteObject). Configure bucket policy to allow access from Firebase Functions execution role. Set up cross-account access if needed. Create service account credentials and configure them in Firebase Functions environment. Implement proper error handling for authentication failures.",
+            "status": "done",
+            "testStrategy": "Test Firebase Function access to S3 bucket, verify permission restrictions work correctly, validate error handling for unauthorized access",
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Configure CORS settings for client-side uploads and video streaming",
+            "description": "Set up CORS configuration to allow direct client uploads and video streaming from web browsers with proper security restrictions.",
+            "dependencies": [
+              1
+            ],
+            "details": "Configure CORS policy to allow PUT/POST requests from allowed origins. Set appropriate headers for video streaming (Accept-Ranges, Content-Type). Configure allowed methods and headers for presigned URL uploads. Set cache control headers for optimal video delivery. Implement origin validation to prevent unauthorized access from other domains.",
+            "status": "done",
+            "testStrategy": "Test video upload from browser using CORS, verify video streaming works in browser, validate CORS restrictions block unauthorized origins",
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Implement presigned URL generation for secure video downloads",
+            "description": "Create service to generate presigned URLs for secure, time-limited access to video files with proper expiration and validation.",
+            "dependencies": [
+              2
+            ],
+            "details": "Implement presigned URL generation using AWS SDK v3 s3-request-presigner. Set appropriate expiration times (15 minutes for uploads, 1 hour for downloads). Add custom conditions and restrictions to presigned URLs. Implement URL validation and error handling. Create helper functions for different URL types (upload, download, streaming). Log presigned URL generation for security auditing.",
+            "status": "done",
+            "testStrategy": "Test presigned URL generation and expiration, verify upload functionality using presigned URLs, validate security restrictions",
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Set up CloudFront CDN distribution for video delivery optimization",
+            "description": "Configure CloudFront distribution for S3 bucket to optimize video delivery with caching, compression, and global edge locations.",
+            "dependencies": [
+              1,
+              3
+            ],
+            "details": "Create CloudFront distribution with S3 bucket as origin. Configure caching behaviors for video files with appropriate TTL settings. Enable gzip compression for metadata files. Set up custom error pages and origin access control. Configure geographic restrictions if needed. Implement cache invalidation strategy for updated content. Set up CloudFront security headers and HTTPS redirection.",
+            "status": "done",
+            "testStrategy": "Test video delivery through CloudFront, verify caching behavior, validate compression settings, test global edge location performance",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Install and configure AWS SDK v3 in Firebase Functions",
+            "description": "Install AWS SDK v3 packages and configure them in Firebase Functions environment with proper credentials and error handling.",
+            "dependencies": [
+              2
+            ],
+            "details": "Install @aws-sdk/client-s3 and @aws-sdk/s3-request-presigner packages in Firebase Functions. Configure AWS SDK with region and credentials from environment variables. Implement S3 client initialization with retry configuration and timeout settings. Create helper functions for common S3 operations (upload, download, delete). Add comprehensive error handling and logging for AWS SDK operations. Set up connection pooling for optimal performance.",
+            "status": "done",
+            "testStrategy": "Test AWS SDK initialization in Firebase Functions, verify S3 operations work correctly, validate error handling and retry logic",
+            "parentId": "undefined"
+          }
+        ],
+        "complexity": 5,
+        "recommendedSubtasks": 6,
+        "expansionPrompt": "Break down into: 1) Create and configure S3 bucket with versioning/lifecycle, 2) Set up IAM roles and bucket policies, 3) Configure CORS for client uploads, 4) Implement presigned URL generation, 5) Set up CloudFront CDN distribution, 6) Install and configure AWS SDK in Firebase Functions",
+        "updatedAt": "2025-11-05T19:45:04.965Z"
+      },
+      {
+        "id": 5,
+        "title": "Design and Implement Ad Generation Form UI",
+        "description": "Create comprehensive form interface for video ad configuration with validation",
+        "details": "Build multi-step form using React Hook Form and Zod validation. Include fields: product name (100 chars), description (500 chars), keywords (comma-separated), brand tone selector, primary color picker, variations (1-3 slider), duration (5-10s range), orientation (portrait/landscape/square), resolution (1080p/720p), frame rate (24/30/60 fps), Sora model (Sora-2/Pro toggle). Implement real-time character counting, file upload for logo/product images with preview. Add form persistence in localStorage for draft saving.",
+        "testStrategy": "Test form validation rules, verify character limit enforcement, test file upload size limits (5MB), validate form state persistence, ensure accessibility with keyboard navigation",
+        "priority": "high",
+        "dependencies": [
+          "3"
+        ],
+        "status": "in-progress",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set up React Hook Form with Zod schema validation",
+            "description": "Initialize React Hook Form in the project and create comprehensive Zod validation schemas for all form fields including text inputs, selectors, file uploads, and range inputs",
+            "dependencies": [],
+            "details": "Install react-hook-form and zod packages. Create a formSchema.ts file defining Zod schemas for product name (max 100 chars), description (max 500 chars), keywords array, brand tone enum, primary color hex validation, variations number (1-3), duration (5-10), orientation enum, resolution enum, frame rate enum, and Sora model boolean. Implement custom error messages for each validation rule.",
+            "status": "done",
+            "testStrategy": "Unit test each Zod schema validation rule, test edge cases like boundary values, verify custom error messages display correctly",
+            "parentId": "undefined",
+            "updatedAt": "2025-11-05T19:55:04.875Z"
+          },
+          {
+            "id": 2,
+            "title": "Build multi-step form navigation component",
+            "description": "Create a stepper component with step indicators, progress bar, and navigation controls for moving between form sections",
+            "dependencies": [
+              1
+            ],
+            "details": "Implement a FormStepper component with visual step indicators showing current, completed, and upcoming steps. Add Previous/Next buttons with validation checks before allowing progression. Create step configuration (Basic Info, Brand Settings, Video Settings, Review). Implement animated transitions between steps using CSS or Framer Motion. Add breadcrumb navigation for quick step jumping.",
+            "status": "done",
+            "testStrategy": "Test navigation flow between steps, verify validation prevents advancing with errors, test step indicator state updates",
+            "parentId": "undefined",
+            "updatedAt": "2025-11-05T19:55:13.917Z"
+          },
+          {
+            "id": 3,
+            "title": "Implement text input fields with character counting",
+            "description": "Create custom text input components for product name and description fields with real-time character counting and validation feedback",
+            "dependencies": [
+              1
+            ],
+            "details": "Build FormTextField component accepting React Hook Form register props. Implement real-time character counter showing current/max characters. Add visual indicators when approaching limit (yellow at 80%, red at 95%). Create FormTextArea component for description with similar counting. Add debounced validation to avoid excessive re-renders. Style with Tailwind CSS for consistent design.",
+            "status": "done",
+            "testStrategy": "Test character counting accuracy, verify limit enforcement, test copy-paste scenarios exceeding limits",
+            "parentId": "undefined",
+            "updatedAt": "2025-11-05T19:55:32.306Z"
+          },
+          {
+            "id": 4,
+            "title": "Create selector components for tone/orientation/resolution",
+            "description": "Build dropdown and radio button components for brand tone, video orientation, resolution, and frame rate selection with proper styling and accessibility",
+            "dependencies": [
+              1
+            ],
+            "details": "Create FormSelect component for brand tone (professional, casual, energetic, luxurious options). Build FormRadioGroup for orientation (portrait 9:16, landscape 16:9, square 1:1) with visual previews. Implement resolution selector (1080p, 720p) with tooltip explanations. Add frame rate selector (24fps cinematic, 30fps standard, 60fps smooth). Include icons and descriptive labels for each option.",
+            "status": "done",
+            "testStrategy": "Test keyboard navigation for all selectors, verify selection state persistence, test screen reader compatibility",
+            "parentId": "undefined",
+            "updatedAt": "2025-11-05T19:55:32.310Z"
+          },
+          {
+            "id": 5,
+            "title": "Build color picker and range slider components",
+            "description": "Implement custom color picker for brand primary color and range sliders for variations count and video duration with visual feedback",
+            "dependencies": [
+              1
+            ],
+            "details": "Integrate react-color or similar library for color picker with hex/rgb input options. Add color preview chip and recently used colors section. Create FormRangeSlider component for variations (1-3) with tick marks and labels. Build duration slider (5-10 seconds) with real-time value display. Add Sora model toggle switch (Sora-2 vs Pro) with pricing information display.",
+            "status": "done",
+            "testStrategy": "Test color picker hex validation, verify slider value constraints, test touch/mobile interactions",
+            "parentId": "undefined",
+            "updatedAt": "2025-11-05T19:55:32.312Z"
+          },
+          {
+            "id": 6,
+            "title": "Implement file upload with preview functionality",
+            "description": "Create drag-and-drop file upload component for logo and product images with instant preview, validation, and progress indicators",
+            "dependencies": [
+              1
+            ],
+            "details": "Build FileUpload component with drag-and-drop zone using react-dropzone. Implement file type validation (jpg, png, svg for logos, max 5MB). Add image preview with remove option for uploaded files. Show upload progress bar during file processing. Create thumbnail generation for quick preview. Handle multiple file selection with gallery view. Add crop/resize functionality for uploaded images.",
+            "status": "done",
+            "testStrategy": "Test file size limits, verify unsupported format rejection, test preview generation, validate drag-and-drop on mobile",
+            "parentId": "undefined",
+            "updatedAt": "2025-11-05T19:55:32.314Z"
+          },
+          {
+            "id": 7,
+            "title": "Add localStorage persistence for drafts",
+            "description": "Implement automatic draft saving to localStorage with recovery options and expiration handling to prevent data loss",
+            "dependencies": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "details": "Create useDraftPersistence hook for automatic form state saving every 30 seconds. Implement draft detection on page load with recovery prompt. Add manual save draft button with timestamp display. Store form data with expiration (7 days) and cleanup old drafts. Handle localStorage quota exceeded errors gracefully. Create draft management UI showing saved drafts list with load/delete options.",
+            "status": "done",
+            "testStrategy": "Test auto-save functionality, verify draft recovery after browser refresh, test localStorage quota handling",
+            "parentId": "undefined",
+            "updatedAt": "2025-11-05T19:58:11.185Z"
+          },
+          {
+            "id": 8,
+            "title": "Ensure accessibility and keyboard navigation",
+            "description": "Implement comprehensive accessibility features including ARIA labels, keyboard shortcuts, focus management, and screen reader support throughout the form",
+            "dependencies": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "details": "Add proper ARIA labels and descriptions to all form inputs. Implement keyboard navigation with Tab/Shift+Tab for all interactive elements. Create custom focus styles with visible outlines. Add skip links for multi-step navigation. Implement form announcement for screen readers on step changes. Add keyboard shortcuts (Ctrl+S for save draft, Enter for next step). Ensure color contrast meets WCAG AA standards.",
+            "status": "pending",
+            "testStrategy": "Run axe-core accessibility tests, test with screen readers (NVDA/JAWS), verify keyboard-only navigation flow",
+            "parentId": "undefined"
+          }
+        ],
+        "complexity": 7,
+        "recommendedSubtasks": 8,
+        "expansionPrompt": "Break down into: 1) Set up React Hook Form with Zod schema validation, 2) Build multi-step form navigation component, 3) Implement text input fields with character counting, 4) Create selector components for tone/orientation/resolution, 5) Build color picker and range slider components, 6) Implement file upload with preview functionality, 7) Add localStorage persistence for drafts, 8) Ensure accessibility and keyboard navigation",
+        "updatedAt": "2025-11-05T19:58:11.185Z"
+      },
+      {
+        "id": 6,
+        "title": "Integrate OpenAI GPT-4o for Script Generation",
+        "description": "Implement AI script generation service using GPT-4o API for ad copy creation",
+        "details": "Create Firebase Function for GPT-4o integration using OpenAI SDK v4. Implement prompt engineering for ad script generation with structured output (scene descriptions, voiceover text, timing). Generate 1-3 script variations based on user selection. Include brand tone and product keywords in prompts. Implement token usage tracking and cost calculation. Add retry logic with exponential backoff for API failures. Store generated scripts in Firestore with versioning.",
+        "testStrategy": "Test script generation with various product types, verify multiple variations have distinct content, test error handling for API timeouts, validate cost calculations match OpenAI pricing",
+        "priority": "high",
+        "dependencies": [
+          "2",
+          "4"
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set up OpenAI SDK in Firebase Functions",
+            "description": "Install and configure OpenAI SDK v4 in Firebase Functions environment with proper authentication and environment variables",
+            "dependencies": [],
+            "details": "Install OpenAI SDK v4 using npm, configure environment variables for API key in Firebase Functions, set up proper authentication flow, create basic function structure for OpenAI integration, implement proper error handling for SDK initialization, configure timeout settings and connection pooling\n<info added on 2025-11-05T20:10:42.140Z>\nImplementation completed with comprehensive OpenAI SDK v4 integration featuring lazy-loaded client initialization (60s timeout, 3 max retries), proper environment variable configuration, robust error handling for authentication and rate limits. All three core OpenAI functions successfully implemented: generateScript (GPT-4o with JSON structured output), generateImage (DALL-E 3 with style/size/quality options), and generateVoiceover (TTS-1 with voice selection and speed control). Added token usage calculation, cost tracking, Firestore storage integration for all generated content, and Firebase Storage integration for voiceover audio files with signed URLs. TypeScript compilation successful with no errors in functions/src/openai.ts.\n</info added on 2025-11-05T20:10:42.140Z>",
+            "status": "done",
+            "testStrategy": "Test SDK initialization with valid/invalid API keys, verify environment variable loading, test connection timeout handling"
+          },
+          {
+            "id": 2,
+            "title": "Design prompt engineering system for ad scripts",
+            "description": "Create sophisticated prompt templates and engineering system for generating high-quality ad scripts with brand tone and product keywords",
+            "dependencies": [
+              1
+            ],
+            "details": "Design modular prompt templates for different ad types and product categories, implement dynamic prompt construction based on user inputs (brand tone, product keywords, target audience), create prompt validation system, implement brand tone mapping (professional, casual, playful, etc.), add product keyword integration logic, create prompt versioning system for A/B testing",
+            "status": "done",
+            "testStrategy": "Test prompt generation with various product types and brand tones, verify keyword integration effectiveness, validate prompt template modularity"
+          },
+          {
+            "id": 3,
+            "title": "Implement script variation generation logic",
+            "description": "Build system to generate 1-3 script variations based on user selection with distinct content and approaches",
+            "dependencies": [
+              2
+            ],
+            "details": "Implement variation generation algorithm that produces distinct scripts, create logic for controlling number of variations (1-3), implement variation differentiation strategies (tone, structure, focus), add variation comparison and ranking system, implement variation metadata tracking, create variation caching mechanism for performance",
+            "status": "done",
+            "testStrategy": "Test generation of multiple distinct variations, verify variations have meaningful differences, test variation count control, validate variation quality consistency"
+          },
+          {
+            "id": 4,
+            "title": "Add structured output parsing for scenes and timing",
+            "description": "Implement parsing system for GPT-4o responses to extract scene descriptions, voiceover text, and timing information",
+            "dependencies": [
+              3
+            ],
+            "details": "Design JSON schema for structured script output with scenes, voiceover, and timing, implement response parsing with validation, create fallback parsing for malformed responses, add scene duration calculation and validation, implement timing constraint enforcement (5-10 seconds total), create scene transition metadata extraction",
+            "status": "done",
+            "testStrategy": "Test parsing with various response formats, verify scene timing calculations, test error handling for malformed responses, validate timing constraint enforcement"
+          },
+          {
+            "id": 5,
+            "title": "Implement retry logic with exponential backoff",
+            "description": "Create robust retry mechanism with exponential backoff for handling OpenAI API failures and rate limits",
+            "dependencies": [
+              1
+            ],
+            "details": "Implement exponential backoff algorithm starting at 1 second with 2x multiplier, add maximum retry count of 3 attempts, implement rate limit detection and handling, add jitter to prevent thundering herd, create retry state tracking and logging, implement circuit breaker pattern for persistent failures, add retry metrics collection",
+            "status": "done",
+            "testStrategy": "Test retry behavior with simulated API failures, verify exponential backoff timing, test rate limit handling, validate circuit breaker triggers"
+          },
+          {
+            "id": 6,
+            "title": "Create cost tracking and token usage monitoring",
+            "description": "Implement comprehensive system for tracking OpenAI API costs and token usage with real-time monitoring",
+            "dependencies": [
+              4
+            ],
+            "details": "Implement token counting for input and output tokens, create cost calculation based on GPT-4o pricing ($0.005/1K input, $0.015/1K output), add usage tracking per user and per generation, implement cost alerts and budget controls, create usage analytics dashboard, add cost estimation before generation, implement usage history storage",
+            "status": "done",
+            "testStrategy": "Test token counting accuracy, verify cost calculations against OpenAI pricing, test usage tracking persistence, validate budget control triggers"
+          },
+          {
+            "id": 7,
+            "title": "Set up Firestore storage with versioning",
+            "description": "Create Firestore database structure for storing generated scripts with full versioning and metadata tracking",
+            "dependencies": [
+              6
+            ],
+            "details": "Design Firestore collection structure for scripts with versioning, implement script metadata storage (generation timestamp, parameters, costs), create version history tracking system, add script search and filtering capabilities, implement soft delete and recovery, create data migration utilities, add script analytics tracking",
+            "status": "done",
+            "testStrategy": "Test script storage and retrieval, verify version history accuracy, test search and filtering functionality, validate data consistency across versions"
+          }
+        ],
+        "complexity": 6,
+        "recommendedSubtasks": 7,
+        "expansionPrompt": "Break down into: 1) Set up OpenAI SDK in Firebase Functions, 2) Design prompt engineering system for ad scripts, 3) Implement script variation generation logic, 4) Add structured output parsing for scenes/timing, 5) Implement retry logic with exponential backoff, 6) Create cost tracking and token usage monitoring, 7) Set up Firestore storage with versioning"
+      },
+      {
+        "id": 7,
+        "title": "Implement Sora-2 Video Generation Integration",
+        "description": "Create video generation service using OpenAI Sora-2/Pro API for scene creation",
+        "details": "Implement Sora API integration in Firebase Function with proper authentication. Create scene generation prompts from GPT-4o scripts with cinematic descriptions. Handle both Sora-2 ($0.40/min) and Sora-2-Pro ($0.80/min) model selection. Implement generation status polling with timeout handling (3-minute max). Add automatic quality validation for generated videos. Store video metadata and generation parameters in Firestore. Track API usage and costs per generation.",
+        "testStrategy": "Test video generation with sample scripts, verify model selection works correctly, test timeout handling after 3 minutes, validate video format and resolution output",
+        "priority": "high",
+        "dependencies": [
+          "6"
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set up Sora API authentication and SDK initialization",
+            "description": "Configure OpenAI Sora-2 API credentials, initialize SDK client, and establish secure authentication flow within Firebase Functions environment",
+            "dependencies": [],
+            "details": "Install OpenAI SDK for Node.js, configure API keys in Firebase environment variables, create authenticated client instance with proper error handling for invalid credentials, implement API key rotation mechanism if needed, set up development and production environment configurations",
+            "status": "pending",
+            "testStrategy": "Test authentication with valid and invalid API keys, verify SDK initialization in Firebase Functions, test environment variable loading, validate connection to OpenAI Sora endpoints",
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Create scene prompt generation from GPT-4o scripts",
+            "description": "Develop prompt engineering system to transform GPT-4o generated scripts into cinematic video generation prompts optimized for Sora-2 API",
+            "dependencies": [
+              1
+            ],
+            "details": "Parse GPT-4o script structure to extract scene descriptions, enhance prompts with cinematic keywords (camera angles, lighting, mood), implement prompt templates for different ad types, add scene duration specifications, include brand-specific visual elements in prompts, create prompt validation to ensure Sora compatibility",
+            "status": "pending",
+            "testStrategy": "Test prompt generation with various script formats, validate prompt structure against Sora API requirements, test edge cases with complex scene descriptions",
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Implement model selection logic for Sora-2 vs Sora-2-Pro",
+            "description": "Build intelligent model selection system based on quality requirements, budget constraints, and video specifications with cost optimization",
+            "dependencies": [
+              1
+            ],
+            "details": "Create model selection criteria based on video duration, resolution requirements, and budget limits, implement cost calculator for both models ($0.40/min vs $0.80/min), add user preference settings for model selection, create fallback logic from Pro to standard if budget exceeded, implement model performance comparison metrics",
+            "status": "pending",
+            "testStrategy": "Test model selection with different budget scenarios, verify cost calculations accuracy, test fallback mechanism when Pro model fails, validate model switching logic",
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Build asynchronous status polling system with timeout handling",
+            "description": "Implement robust polling mechanism to track video generation progress with efficient timeout management and status updates",
+            "dependencies": [
+              1,
+              2,
+              3
+            ],
+            "details": "Create polling service with exponential backoff (start at 5s, max 30s intervals), implement 3-minute maximum timeout with graceful failure handling, add progress percentage tracking from API responses, create WebSocket or SSE for real-time status updates to frontend, implement job queue for managing multiple concurrent generations, add status persistence in case of function timeout",
+            "status": "pending",
+            "testStrategy": "Test polling intervals and backoff logic, simulate timeout scenarios at 3 minutes, test concurrent generation handling, verify status updates reach frontend correctly",
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Add automated video quality validation logic",
+            "description": "Implement comprehensive quality checks for generated videos to ensure they meet minimum standards before delivery",
+            "dependencies": [
+              4
+            ],
+            "details": "Validate video resolution matches requirements (1080p/4K), check video duration against requested length, verify frame rate consistency (24/30/60 fps), detect black frames or corruption, analyze color quality and contrast levels, check for AI generation artifacts, implement quality score calculation (0-100), create rejection criteria for low-quality outputs",
+            "status": "pending",
+            "testStrategy": "Test validation with various video qualities, verify artifact detection accuracy, test rejection of corrupted videos, validate quality scoring algorithm",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Implement Firestore metadata storage for generated videos",
+            "description": "Design and implement comprehensive metadata storage system in Firestore for tracking all video generation details and parameters",
+            "dependencies": [
+              4,
+              5
+            ],
+            "details": "Create Firestore collection structure for video metadata, store generation parameters (prompts, model used, settings), save quality validation results and scores, track generation timestamps and duration, store video URLs and storage paths, implement metadata versioning for regenerations, add search indexes for efficient querying, create data retention policies",
+            "status": "pending",
+            "testStrategy": "Test metadata write operations, verify data structure integrity, test query performance with indexes, validate data retention policies",
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Create comprehensive error handling and recovery system",
+            "description": "Build robust error handling for all potential failure points in the video generation pipeline with recovery mechanisms",
+            "dependencies": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "details": "Implement try-catch blocks for all API calls with specific error types, create custom error classes for different failure scenarios, add automatic retry logic for transient failures (max 3 attempts), implement circuit breaker for API rate limiting, create detailed error logging with context to Cloud Logging, build user-friendly error messages with recovery suggestions, add fallback to alternative generation methods if available",
+            "status": "pending",
+            "testStrategy": "Test error handling for API failures, rate limiting, timeout errors, verify retry logic execution, test circuit breaker activation, validate error logging completeness",
+            "parentId": "undefined"
+          },
+          {
+            "id": 8,
+            "title": "Build cost tracking and usage monitoring per generation",
+            "description": "Implement detailed cost tracking system to monitor API usage, calculate costs per generation, and provide budget management insights",
+            "dependencies": [
+              3,
+              6
+            ],
+            "details": "Track API calls count and video duration for accurate billing, calculate real-time costs based on model selection ($0.40 or $0.80 per minute), implement daily/monthly budget limits with automatic cutoffs, create cost breakdown by user/project/campaign, add cost prediction for queued generations, integrate with billing system for usage reports, create cost optimization recommendations, implement alerts for unusual spending patterns",
+            "status": "pending",
+            "testStrategy": "Test cost calculation accuracy for different video durations, verify budget limit enforcement, test alert triggering for overspending, validate cost report generation",
+            "parentId": "undefined"
+          }
+        ],
+        "complexity": 8,
+        "recommendedSubtasks": 8,
+        "expansionPrompt": "Break down into: 1) Integrate Sora API authentication and SDK setup, 2) Create scene prompt generation from scripts, 3) Implement model selection logic (Sora-2 vs Pro), 4) Build status polling system with timeout handling, 5) Add video quality validation logic, 6) Implement Firestore metadata storage, 7) Create comprehensive error handling, 8) Build cost tracking per generation"
+      },
+      {
+        "id": 8,
+        "title": "Build DALL-E 3 Fallback System",
+        "description": "Implement automatic fallback to DALL-E 3 image generation when Sora fails",
+        "details": "Create DALL-E 3 integration for static image generation as fallback. Generate 3-5 images per scene based on script descriptions. Implement Ken Burns effect and transitions using FFmpeg for video creation from images. Add automatic fallback trigger when Sora fails or times out. Maintain consistent visual style across generated images using style prompts. Track fallback usage rate for monitoring. Cost calculation for DALL-E usage ($0.08 per image at 1024x1024).",
+        "testStrategy": "Test fallback trigger on Sora failure simulation, verify image-to-video conversion quality, test Ken Burns effect smoothness, validate cost tracking for fallback mode",
+        "priority": "high",
+        "dependencies": [
+          "7"
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set up DALL-E 3 API integration with authentication",
+            "description": "Implement OpenAI DALL-E 3 API client with proper authentication, error handling, and rate limiting for image generation requests",
+            "dependencies": [],
+            "details": "Create a dedicated service module for DALL-E 3 API integration. Configure OpenAI client with API key from environment variables. Implement request/response interfaces for image generation. Add proper error handling for API failures, rate limits, and invalid requests. Set up retry logic with exponential backoff for transient failures. Configure image size to 1024x1024 for optimal quality/cost balance.",
+            "status": "pending",
+            "testStrategy": "Unit test API client initialization, mock API responses for error scenarios, test rate limiting behavior, verify retry logic with different failure types",
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Create Sora failure detection and fallback trigger logic",
+            "description": "Implement automatic detection of Sora failures and timeout scenarios to trigger DALL-E 3 fallback seamlessly",
+            "dependencies": [],
+            "details": "Monitor Sora API responses for failure status codes (4xx, 5xx errors). Implement timeout detection after 3-minute threshold. Create fallback decision engine that evaluates failure type and determines if fallback is appropriate. Add circuit breaker pattern to prevent repeated Sora calls after consistent failures. Log all fallback triggers with detailed context for debugging. Emit events for fallback activation to enable monitoring.",
+            "status": "pending",
+            "testStrategy": "Test with simulated Sora failures, verify timeout detection at 3-minute mark, test circuit breaker activation after repeated failures, validate event emission",
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Implement multi-image generation per scene with style consistency",
+            "description": "Generate 3-5 images per scene based on script descriptions while maintaining consistent visual style across all generated images",
+            "dependencies": [
+              1
+            ],
+            "details": "Parse scene descriptions from GPT-4o generated scripts to extract key visual elements. Generate base style prompt that includes brand colors, artistic style, and consistent lighting. Create 3-5 varied prompts per scene with different camera angles and compositions while maintaining style consistency. Implement batch generation with parallel API calls for efficiency. Store style parameters in Firestore for reuse across scenes. Add prompt engineering templates for common product categories.",
+            "status": "pending",
+            "testStrategy": "Test image generation with various scene descriptions, verify visual consistency across batch, test parallel generation performance, validate style persistence",
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Set up FFmpeg for Ken Burns effect implementation",
+            "description": "Configure FFmpeg in Firebase Functions and implement Ken Burns pan/zoom effect for static images",
+            "dependencies": [],
+            "details": "Install FFmpeg binaries in Firebase Functions using cloud-ffmpeg-installer or Lambda Layer approach. Create Ken Burns effect generator with configurable zoom levels (1.0x to 1.5x) and pan directions. Implement smooth easing functions for natural movement. Generate motion paths based on image composition analysis. Support multiple effect presets (zoom-in, zoom-out, pan-left, pan-right, diagonal). Calculate optimal effect duration based on scene length (typically 2-3 seconds per image).",
+            "status": "pending",
+            "testStrategy": "Test FFmpeg installation in Firebase environment, verify Ken Burns effect smoothness, test different motion presets, validate duration calculations",
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Build image-to-video conversion pipeline with transitions",
+            "description": "Create pipeline to convert DALL-E generated images into video segments with smooth transitions between scenes",
+            "dependencies": [
+              3,
+              4
+            ],
+            "details": "Implement image sequencing logic to order generated images for each scene. Apply Ken Burns effects to each image with varying parameters for visual interest. Add crossfade transitions between images (0.5-1 second duration). Generate video segments at 30fps with H.264 encoding for compatibility. Implement scene concatenation with proper timestamp alignment. Add fade-in/fade-out for scene boundaries. Support multiple output resolutions (1080p, 720p, square for social media).",
+            "status": "pending",
+            "testStrategy": "Test video generation from image sets, verify transition smoothness, test multiple resolution outputs, validate encoding quality and compatibility",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Implement visual consistency maintenance system",
+            "description": "Ensure consistent visual style, color palette, and artistic direction across all DALL-E generated images in a video",
+            "dependencies": [
+              1,
+              3
+            ],
+            "details": "Create style template system with predefined artistic styles (photorealistic, illustration, minimalist, etc.). Implement color palette extraction from brand assets and apply to all prompts. Add style locking mechanism to maintain consistency within a video generation session. Build prompt modifier system that adds consistent elements (lighting, perspective, mood) to all image prompts. Store successful style combinations for reuse. Implement style validation to reject images that deviate significantly from the established style.",
+            "status": "pending",
+            "testStrategy": "Test style consistency across multiple generations, verify color palette application, test style validation logic, measure visual similarity scores",
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Implement fallback usage tracking and analytics",
+            "description": "Track and monitor DALL-E fallback usage rates, success rates, and performance metrics for system health monitoring",
+            "dependencies": [
+              2,
+              5
+            ],
+            "details": "Create metrics collection for fallback activation frequency and reasons (timeout vs error). Track success rate of DALL-E generation attempts and image-to-video conversions. Monitor average generation time for fallback path vs primary Sora path. Implement cost tracking for DALL-E API usage at $0.08 per image. Create Firestore collection for fallback analytics with daily aggregation. Set up alerts for fallback rate exceeding 20% threshold. Generate weekly reports on fallback performance and costs.",
+            "status": "pending",
+            "testStrategy": "Test metric collection accuracy, verify alert triggering at threshold, test cost calculation correctness, validate report generation",
+            "parentId": "undefined"
+          },
+          {
+            "id": 8,
+            "title": "Add cost calculation and optimization for DALL-E usage",
+            "description": "Implement accurate cost tracking for DALL-E usage and optimization strategies to minimize fallback costs",
+            "dependencies": [
+              3,
+              7
+            ],
+            "details": "Calculate per-video cost based on number of images generated (3-5 per scene at $0.08 each). Implement cost estimation before generation to warn users of potential charges. Add cost optimization by reusing similar images across scenes where appropriate. Create cost comparison dashboard showing Sora vs DALL-E costs. Implement budget limits and alerts for cost overruns. Add caching mechanism for frequently used image styles to reduce regeneration. Track ROI by comparing fallback costs to successful ad generation revenue.",
+            "status": "pending",
+            "testStrategy": "Test cost calculation accuracy for various scenarios, verify budget limit enforcement, test image caching effectiveness, validate ROI calculations",
+            "parentId": "undefined"
+          }
+        ],
+        "complexity": 7,
+        "recommendedSubtasks": 8,
+        "expansionPrompt": "Break down into: 1) Integrate DALL-E 3 API for image generation, 2) Create fallback trigger logic from Sora failures, 3) Implement multi-image generation per scene, 4) Set up FFmpeg for Ken Burns effect, 5) Build image-to-video conversion pipeline, 6) Maintain visual consistency across images, 7) Implement fallback usage tracking, 8) Add cost calculation for DALL-E usage"
+      },
+      {
+        "id": 9,
+        "title": "Integrate OpenAI TTS for Voiceover Generation",
+        "description": "Implement text-to-speech voiceover generation using OpenAI TTS API",
+        "details": "Integrate OpenAI TTS API (tts-1-hd model) for high-quality voiceover. Support multiple voice options (alloy, echo, fable, onyx, nova, shimmer). Implement SSML-like timing control for script pacing. Generate voiceover with proper timing to match video duration (5-10 seconds). Add audio normalization and compression for consistent volume. Support multiple languages based on product description. Cost tracking at $0.03 per 1K characters.",
+        "testStrategy": "Test voice generation for all available voices, verify audio duration matches video length, test audio quality and clarity, validate multi-language support",
+        "priority": "medium",
+        "dependencies": [
+          "6"
+        ],
+        "status": "pending",
+        "subtasks": [],
+        "complexity": 5,
+        "recommendedSubtasks": 6,
+        "expansionPrompt": "Break down into: 1) Integrate OpenAI TTS API with voice selection, 2) Implement timing control for script pacing, 3) Add audio duration matching to video length, 4) Implement audio normalization and compression, 5) Add multi-language support detection, 6) Create cost tracking for TTS usage"
+      },
+      {
+        "id": 10,
+        "title": "Implement FFmpeg Video Assembly Pipeline",
+        "description": "Create video processing service for assembling scenes, effects, and audio",
+        "details": "Install FFmpeg in Firebase Functions using Lambda Layer or cloud-ffmpeg-installer. Implement video concatenation for multiple scenes with crossfade transitions. Add text overlay for product name and call-to-action with custom fonts. Implement color grading filters based on brand colors. Mix voiceover with background music (royalty-free tracks). Add intro/outro animations with brand logo. Generate multiple output formats (MP4, WebM) and resolutions. Create thumbnail extraction at specific timestamps.",
+        "testStrategy": "Test video assembly with multiple scenes, verify transitions are smooth, test text overlay positioning, validate audio-video sync accuracy, test output format compatibility",
+        "priority": "high",
+        "dependencies": [
+          "7",
+          "8",
+          "9"
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Install and Configure FFmpeg in Firebase Functions",
+            "description": "Set up FFmpeg binary in Firebase Functions environment using cloud-ffmpeg-installer or Lambda Layer approach for video processing capabilities",
+            "dependencies": [],
+            "details": "Research and implement the best approach for FFmpeg installation in Firebase Functions. Use cloud-ffmpeg-installer npm package or configure a Lambda Layer equivalent. Ensure the binary is accessible within the 2GB memory limit of Firebase Functions. Configure environment variables for FFmpeg path and validate installation with a simple test function.",
+            "status": "pending",
+            "testStrategy": "Create a test Firebase Function that executes ffmpeg -version command and returns the version info. Deploy to Firebase and verify successful execution without timeouts.",
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Implement Video Concatenation Service",
+            "description": "Create service to concatenate multiple video scenes with configurable transition effects between clips",
+            "dependencies": [
+              1
+            ],
+            "details": "Build a video concatenation module using FFmpeg's concat demuxer or filter complex. Support multiple input video formats and implement crossfade transitions between scenes. Handle different video resolutions and aspect ratios through automatic scaling. Create a queue system for processing multiple scenes sequentially.",
+            "status": "pending",
+            "testStrategy": "Test with 3-5 sample video clips of different resolutions. Verify smooth transitions without frame drops. Measure concatenation time and ensure it stays within Firebase Function timeout limits.",
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Create Text Overlay System",
+            "description": "Implement dynamic text overlay functionality for product names and call-to-action elements with customizable styling",
+            "dependencies": [
+              1
+            ],
+            "details": "Develop text overlay module using FFmpeg's drawtext filter. Support custom fonts uploaded to Cloud Storage, configurable text positioning (x, y coordinates or relative positions), animation effects (fade in/out, slide), and text styling (color, size, shadow, outline). Handle multi-line text and automatic text wrapping.",
+            "status": "pending",
+            "testStrategy": "Test overlay with various text lengths, positions, and fonts. Verify text readability on different background colors. Test animation timing and ensure text stays within safe zones.",
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Add Color Grading and Brand Filters",
+            "description": "Implement color correction and brand-specific visual filters to maintain consistent video aesthetics",
+            "dependencies": [
+              1
+            ],
+            "details": "Create color grading pipeline using FFmpeg's colorbalance, curves, and eq filters. Implement preset filters for brand consistency including brightness, contrast, saturation adjustments. Support LUT (Look-Up Table) application for professional color grading. Allow dynamic filter strength adjustment based on brand guidelines.",
+            "status": "pending",
+            "testStrategy": "Apply filters to sample videos with different lighting conditions. Compare output with brand color specifications. Verify filter performance doesn't significantly increase processing time.",
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Build Audio Mixing Service",
+            "description": "Create audio processing service to mix voiceover narration with background music tracks",
+            "dependencies": [
+              1
+            ],
+            "details": "Implement audio mixing using FFmpeg's amix filter for combining voiceover and background music. Add volume normalization to prevent audio clipping. Implement ducking effect to lower music volume during voiceover. Support fade in/out effects for smooth audio transitions. Handle different audio formats and sample rates.",
+            "status": "pending",
+            "testStrategy": "Test mixing with various audio combinations. Verify volume levels are balanced and no clipping occurs. Test ducking timing accuracy with voiceover segments.",
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Create Intro/Outro Animation System",
+            "description": "Develop system for adding branded intro and outro animations with logo integration",
+            "dependencies": [
+              2,
+              3
+            ],
+            "details": "Build animation templates using FFmpeg's overlay and fade filters. Support logo animation with configurable motion paths (slide, zoom, rotate). Create preset intro/outro templates with brand elements. Implement smooth transitions between intro/main content/outro. Support alpha channel for transparent logo overlays.",
+            "status": "pending",
+            "testStrategy": "Test intro/outro insertion with different video lengths. Verify logo animations are smooth and properly timed. Check transitions between segments for visual continuity.",
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Implement Multi-Format Video Export",
+            "description": "Create export pipeline supporting multiple video formats and resolutions for different platforms",
+            "dependencies": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "details": "Implement format conversion for MP4 (H.264) and WebM (VP9) outputs. Support multiple resolutions: 1080p, 720p, and mobile-optimized versions. Configure codec settings for optimal quality/size balance. Implement adaptive bitrate encoding for streaming compatibility. Add metadata injection for SEO and accessibility.",
+            "status": "pending",
+            "testStrategy": "Export test videos in all format/resolution combinations. Verify compatibility across browsers and devices. Measure file sizes and ensure acceptable quality/compression ratios.",
+            "parentId": "undefined"
+          },
+          {
+            "id": 8,
+            "title": "Add Thumbnail Extraction Service",
+            "description": "Implement thumbnail generation at specific timestamps or automatically selected keyframes",
+            "dependencies": [
+              1
+            ],
+            "details": "Create thumbnail extraction using FFmpeg's select filter for keyframe detection. Support manual timestamp specification for thumbnail capture. Implement smart frame selection avoiding transitions or blurry frames. Generate multiple thumbnail sizes for different display contexts. Add image optimization for web delivery.",
+            "status": "pending",
+            "testStrategy": "Extract thumbnails from various video types. Verify thumbnail quality and clarity. Test automatic keyframe selection accuracy. Validate thumbnail file sizes are optimized.",
+            "parentId": "undefined"
+          },
+          {
+            "id": 9,
+            "title": "Handle Memory Constraints and Optimization",
+            "description": "Optimize video processing to work within Firebase Functions memory limits and prevent timeouts",
+            "dependencies": [
+              2,
+              5,
+              7
+            ],
+            "details": "Implement stream processing to avoid loading entire videos into memory. Use temporary file management with automatic cleanup. Configure FFmpeg with memory-efficient settings (-threads, -preset). Implement chunked processing for large videos. Monitor memory usage and implement early warning system for potential OOM errors.",
+            "status": "pending",
+            "testStrategy": "Process large video files (>500MB) and monitor memory consumption. Test with maximum Firebase Functions memory allocation. Verify cleanup of temporary files after processing.",
+            "parentId": "undefined"
+          },
+          {
+            "id": 10,
+            "title": "Optimize Processing Performance",
+            "description": "Implement performance optimizations to minimize video processing time and costs",
+            "dependencies": [
+              9
+            ],
+            "details": "Implement parallel processing for independent operations using Node.js worker threads. Cache commonly used assets (logos, music) in memory. Use hardware acceleration where available (though limited in Firebase). Implement processing queue with priority levels. Add performance metrics tracking for optimization analysis. Create fallback to simpler processing for timeout prevention.",
+            "status": "pending",
+            "testStrategy": "Benchmark processing times for various video complexities. Compare performance with and without optimizations. Test fallback mechanisms trigger appropriately. Verify cost per video generation meets targets.",
+            "parentId": "undefined"
+          }
+        ],
+        "complexity": 9,
+        "recommendedSubtasks": 10,
+        "expansionPrompt": "Break down into: 1) Install FFmpeg in Firebase Functions environment, 2) Implement video concatenation with transitions, 3) Create text overlay system with positioning, 4) Add color grading and brand filters, 5) Build audio mixing for voiceover and music, 6) Create intro/outro animation system, 7) Implement multi-format video export, 8) Add thumbnail extraction, 9) Handle memory constraints in Functions, 10) Optimize processing performance"
+      },
+      {
+        "id": 11,
+        "title": "Build Real-time Progress Tracking System",
+        "description": "Create WebSocket-based progress updates for video generation pipeline",
+        "details": "Implement Firebase Realtime Database or Firestore listeners for progress tracking. Create progress stages: script generation (10%), scene generation (40%), voiceover (20%), assembly (20%), upload (10%). Add estimated time remaining calculation based on historical data. Implement progress bar UI component with stage indicators. Add ability to cancel ongoing generation. Store progress logs for debugging and analytics. Handle connection interruption with progress persistence.",
+        "testStrategy": "Test real-time updates across all generation stages, verify progress persistence on connection loss, test cancellation at various stages, validate time estimation accuracy",
+        "priority": "medium",
+        "dependencies": [
+          "10"
+        ],
+        "status": "pending",
+        "subtasks": [],
+        "complexity": 6,
+        "recommendedSubtasks": 7,
+        "expansionPrompt": "Break down into: 1) Set up Firestore/Realtime Database listeners, 2) Create progress stage definitions and calculations, 3) Build progress bar UI component, 4) Implement time estimation algorithm, 5) Add cancellation functionality, 6) Handle connection interruption recovery, 7) Create progress logging system"
+      },
+      {
+        "id": 12,
+        "title": "Create Video Management Dashboard",
+        "description": "Build dashboard interface for viewing and managing generated video ads",
+        "details": "Create dashboard page with video grid layout showing thumbnails. Implement video player component using video.js or native HTML5 with custom controls. Add download functionality with filename formatting. Display generation metadata (date, duration, cost, model used). Implement search and filter by product name or date. Add regeneration button for unsatisfactory results. Show generation statistics (success rate, average time, total cost). Implement pagination for large video collections.",
+        "testStrategy": "Test video playback across browsers, verify download functionality, test search and filter accuracy, validate pagination with 50+ videos, test responsive design",
+        "priority": "medium",
+        "dependencies": [
+          "11"
+        ],
+        "status": "pending",
+        "subtasks": [],
+        "complexity": 6,
+        "recommendedSubtasks": 8,
+        "expansionPrompt": "Break down into: 1) Build dashboard layout with responsive grid, 2) Implement video player component, 3) Add download functionality with formatting, 4) Create metadata display components, 5) Implement search and filter logic, 6) Add regeneration functionality, 7) Build statistics aggregation, 8) Implement efficient pagination"
+      },
+      {
+        "id": 13,
+        "title": "Implement Comprehensive Error Handling",
+        "description": "Create robust error handling system with retry logic and user feedback",
+        "details": "Implement exponential backoff retry strategy (3 attempts max) for all API calls. Create error boundary components for React error catching. Add detailed error logging to Cloud Logging with context. Implement user-friendly error messages with suggested actions. Create fallback UI states for component failures. Add network error detection and offline mode handling. Implement circuit breaker pattern for external service failures. Store error logs in Firestore for analysis.",
+        "testStrategy": "Test retry logic with simulated API failures, verify error messages are user-friendly, test circuit breaker triggers, validate error logging completeness, test offline mode functionality",
+        "priority": "medium",
+        "dependencies": [
+          "12"
+        ],
+        "status": "pending",
+        "subtasks": [],
+        "complexity": 7,
+        "recommendedSubtasks": 8,
+        "expansionPrompt": "Break down into: 1) Implement exponential backoff retry utility, 2) Create React error boundary components, 3) Set up Cloud Logging integration, 4) Design user-friendly error message system, 5) Build fallback UI components, 6) Implement network error detection, 7) Create circuit breaker pattern, 8) Set up error analytics in Firestore"
+      },
+      {
+        "id": 14,
+        "title": "Set Up Monitoring and Analytics",
+        "description": "Implement comprehensive monitoring for performance, costs, and success metrics",
+        "details": "Integrate Google Analytics 4 for user behavior tracking. Set up Firebase Performance Monitoring for app performance metrics. Implement custom metrics: generation success rate (target >95%), average generation time (target <3min), fallback rate (target <20%), cost per ad tracking. Create admin dashboard for viewing analytics. Set up alerts for high failure rates or cost spikes. Implement A/B testing framework for UI improvements. Add user feedback collection system.",
+        "testStrategy": "Verify event tracking in GA4 debug view, test performance metrics collection, validate custom metric calculations, test alert triggering thresholds, verify dashboard data accuracy",
+        "priority": "low",
+        "dependencies": [
+          "13"
+        ],
+        "status": "pending",
+        "subtasks": [],
+        "complexity": 6,
+        "recommendedSubtasks": 8,
+        "expansionPrompt": "Break down into: 1) Integrate Google Analytics 4 with events, 2) Set up Firebase Performance Monitoring, 3) Implement custom metrics tracking, 4) Build admin analytics dashboard, 5) Configure alerting thresholds, 6) Create A/B testing framework, 7) Implement user feedback system, 8) Set up cost monitoring dashboard"
+      },
+      {
+        "id": 15,
+        "title": "Optimize Performance and Conduct Security Audit",
+        "description": "Optimize application performance and ensure security best practices",
+        "details": "Implement code splitting and lazy loading for optimal bundle size. Add Redis caching for frequently accessed data in Firebase Functions. Optimize image loading with Next.js Image component. Implement rate limiting on API endpoints (10 requests/min per user). Add input sanitization for XSS prevention. Implement CAPTCHA for authentication forms. Set up Content Security Policy headers. Add API key rotation mechanism. Conduct dependency vulnerability scan. Implement request signing for S3 operations.",
+        "testStrategy": "Test page load times (<3s target), verify rate limiting works correctly, test XSS prevention with malicious inputs, validate CSP headers block unsafe content, test API key rotation without downtime",
+        "priority": "medium",
+        "dependencies": [
+          "14"
+        ],
+        "status": "pending",
+        "subtasks": [],
+        "complexity": 7,
+        "recommendedSubtasks": 10,
+        "expansionPrompt": "Break down into: 1) Implement code splitting and lazy loading, 2) Set up Redis caching in Functions, 3) Optimize images with Next.js Image, 4) Implement rate limiting middleware, 5) Add input sanitization utilities, 6) Integrate CAPTCHA service, 7) Configure CSP headers, 8) Create API key rotation system, 9) Run dependency vulnerability scan, 10) Implement request signing for S3"
+      }
+    ],
+    "metadata": {
+      "version": "1.0.0",
+      "lastModified": "2025-11-05T19:58:11.187Z",
+      "taskCount": 15,
+      "completedCount": 3,
+      "tags": [
+        "master"
+      ],
+      "created": "2025-11-05T20:06:13.892Z",
+      "description": "Tasks for master context",
+      "updated": "2025-11-05T20:15:04.679Z"
+    }
+  }
+}

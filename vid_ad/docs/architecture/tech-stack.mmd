@@ -1,0 +1,141 @@
+graph TB
+    subgraph "Frontend Layer"
+        A[Next.js 16.0.1<br/>React 19.2.0]
+        B[TypeScript 5.9.3<br/>Strict Mode]
+        C[Tailwind CSS 4.1.16<br/>PostCSS + Autoprefixer]
+        D[React Hook Form 7.66.0<br/>+ Zod 4.1.12 Validation]
+        A --> B
+        A --> C
+        A --> D
+    end
+
+    subgraph "API & Routing"
+        E[Next.js API Routes<br/>App Router]
+        F[Firebase Functions<br/>Node.js 20]
+        E --> F
+    end
+
+    subgraph "AI/ML Services"
+        G[OpenAI GPT 6.8.1<br/>Ad Copy Generation]
+        H[Replicate 1.3.1<br/>Image/Video ML Models]
+        E --> G
+        E --> H
+        F --> G
+    end
+
+    subgraph "Firebase Platform"
+        I[Firestore<br/>NoSQL Database]
+        J[Firebase Storage<br/>File Storage]
+        K[Firebase Hosting<br/>Static Export]
+        L[Firebase Auth<br/>+ AWS Cognito Integration]
+        F --> I
+        F --> J
+        K --> A
+        F --> L
+        E --> I
+        E --> J
+    end
+
+    subgraph "AWS Infrastructure - Terraform Managed"
+        M[VPC + Networking<br/>Subnets, Security Groups]
+        N[S3 Buckets<br/>Recordings + Transcripts]
+        O[ElastiCache Redis<br/>Cache + Celery Backend]
+        P[ECS + ECR<br/>Container Orchestration]
+        Q[SQS + DLQ<br/>Message Queues]
+        R[CloudWatch<br/>Logs, Metrics, Alarms]
+        S[AWS Cognito<br/>User Pool + Auth]
+        T[OpenSearch Serverless<br/>Vector Search]
+
+        M --> O
+        M --> P
+        M --> Q
+        M --> R
+        L --> S
+    end
+
+    subgraph "Database Layer"
+        U[MongoDB Atlas<br/>Document Database]
+        V[Firestore<br/>NoSQL]
+        W[Redis<br/>In-Memory Cache]
+
+        F --> U
+        F --> V
+        F --> W
+        U -.PrivateLink.-> M
+        O --> W
+    end
+
+    subgraph "Media Processing"
+        X[FFmpeg 5.2.0<br/>Video Processing]
+        Y[Sharp 0.33.0<br/>Image Optimization]
+        F --> X
+        F --> Y
+        E --> Y
+    end
+
+    subgraph "Storage Services"
+        Z[AWS S3<br/>Media Storage]
+        AA[Firebase Storage<br/>User Files]
+        AB[Google Cloud Storage<br/>Images]
+
+        N --> Z
+        J --> AA
+        F --> Z
+        F --> AA
+    end
+
+    subgraph "Development Tools"
+        AC[ESLint 9.39.1<br/>+ Prettier 3.6.2]
+        AD[Turbopack<br/>Next.js Build]
+        AE[PostCSS<br/>CSS Processing]
+        AF[Firebase Functions Test<br/>Testing Framework]
+
+        A --> AD
+        A --> AE
+        B --> AC
+        F --> AF
+    end
+
+    subgraph "Security & Infrastructure"
+        AG[Terraform 1.5+<br/>IaC]
+        AH[IAM Roles<br/>Access Control]
+        AI[Security Rules<br/>Firestore + Storage]
+        AJ[CSRF + CORS<br/>Security Headers]
+
+        AG --> M
+        AG --> N
+        AG --> O
+        AG --> P
+        AG --> Q
+        AG --> R
+        AG --> S
+        AG --> T
+        AG --> U
+        M --> AH
+        I --> AI
+        J --> AI
+        A --> AJ
+    end
+
+    A --> E
+    F --> N
+    F --> O
+    E --> L
+
+    classDef frontend fill:#61dafb,stroke:#333,stroke-width:2px,color:#000
+    classDef backend fill:#68a063,stroke:#333,stroke-width:2px,color:#fff
+    classDef database fill:#4db33d,stroke:#333,stroke-width:2px,color:#fff
+    classDef ai fill:#10a37f,stroke:#333,stroke-width:2px,color:#fff
+    classDef aws fill:#ff9900,stroke:#333,stroke-width:2px,color:#000
+    classDef firebase fill:#ffa611,stroke:#333,stroke-width:2px,color:#000
+    classDef tools fill:#6c757d,stroke:#333,stroke-width:2px,color:#fff
+    classDef security fill:#dc3545,stroke:#333,stroke-width:2px,color:#fff
+
+    class A,B,C,D frontend
+    class E,F backend
+    class U,V,W,I database
+    class G,H ai
+    class M,N,O,P,Q,R,S,T,Z aws
+    class J,K,L,AA firebase
+    class AC,AD,AE,AF tools
+    class AG,AH,AI,AJ security
